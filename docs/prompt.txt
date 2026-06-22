@@ -1,0 +1,318 @@
+I am designing an OpenCode multi-agent workflow and need help optimizing the agent prompts.
+
+My objective is NOT to maximize agent capability at any cost.
+
+My objective is to maximize:
+
+quality of outcomes / token consumed
+
+I want the smallest set of prompts that reliably produces good results.
+
+Please think like a prompt systems engineer.
+
+Analyze the workflow, identify unnecessary instructions, determine which instructions should live in shared context versus individual agents, and propose a final set of markdown files.
+
+The result should be optimized for:
+
+* low token usage
+* high signal-to-noise ratio
+* minimal duplication
+* maintainability
+* clear agent responsibilities
+
+Do not simply shorten prompts. Consider prompt architecture.
+
+## Context
+
+I use OpenCode.
+
+AGENTS.md is shared context and may be loaded frequently.
+
+Agent-specific files are loaded only when that agent is invoked.
+
+Because of this, instructions placed in AGENTS.md are more expensive than instructions placed in infrequently-used agents.
+
+Take invocation frequency into account when deciding where instructions should live.
+
+## User Profile
+
+I am a mechanical engineer who codes as a means to an end.
+
+I am a domain expert in my field.
+
+My coding and AI knowledge are moderate.
+
+I often know what I want but not the correct name for it.
+
+When relevant, I want the AI to explicitly name:
+
+* patterns
+* libraries
+* frameworks
+* architectural approaches
+
+Default language is Python unless there is a strong reason otherwise.
+
+I prefer practical solutions over academic purity.
+
+## Planned Workflow
+
+I intentionally removed the Orchestrator role.
+
+I will act as the orchestrator myself.
+
+Workflow:
+
+Idea
+↓
+Planner
+↓
+(spec.md, architecture.md, tasks.md)
+↓
+(Optional) Architect Review
+↓
+I choose the next task
+↓
+Tier-specific implementation agent
+↓
+(Optional) Reviewer
+
+The workflow is intentionally human-directed.
+
+I do not want autonomous task delegation.
+
+## Agent Responsibilities
+
+### Planner
+
+Purpose:
+
+Turn a vague idea into a concrete implementation plan.
+
+Responsibilities:
+
+* determine the appropriate tier
+* clarify requirements
+* identify scope
+* define success criteria
+* propose technologies and libraries
+* produce implementation tasks
+
+Outputs:
+
+spec.md
+architecture.md
+tasks.md
+
+The Planner does not write code.
+
+### Architect
+
+Purpose:
+
+Critically review plans before implementation begins.
+
+Inputs:
+
+* spec.md
+* architecture.md
+* tasks.md
+
+Responsibilities:
+
+* challenge assumptions
+* identify missing requirements
+* identify risks
+* identify overengineering
+* identify underengineering
+* propose simpler alternatives
+* challenge technology choices
+
+The Architect does not write implementation code.
+
+I expect to invoke this agent mainly for Application-tier projects or major architectural decisions.
+
+### Reviewer
+
+Purpose:
+
+Review implementation work.
+
+Responsibilities:
+
+* verify alignment with the plan
+* find bugs
+* identify major risks
+* calibrate rigor according to the selected tier
+
+The Reviewer does not modify code.
+
+I expect to invoke this manually when I believe review is valuable.
+
+### Tier Agents
+
+I have four implementation agents.
+
+#### jerryrig
+
+Throwaway code.
+
+Speed over quality.
+
+#### poc
+
+Answer whether something is possible.
+
+Minimal implementation.
+
+#### script
+
+Recurring automation.
+
+Reliability and logging matter.
+
+Avoid unnecessary abstractions.
+
+#### application
+
+Long-lived software.
+
+Maintainability, documentation, usability, and error handling matter.
+
+## Decisions Already Made
+
+* No Orchestrator agent.
+* Human acts as orchestrator.
+* Planner produces:
+
+  * spec.md
+  * architecture.md
+  * tasks.md
+* Architect is a design-review agent, not a planner.
+* Reviewer is manually invoked.
+* Tier agents perform implementation.
+* Prompt size matters.
+* Shared instructions should be minimized when possible.
+* Expensive reasoning should happen primarily in Planner and Architect.
+* Frequently invoked implementation agents should remain compact.
+
+## What I Want From You
+
+i showed 3 frontier models this same prompt and they gave me their answer. i want you to read their answer, reason over it and come up with an optimized path.
+
+0. read CC.md, GM.md and GP.md
+1. Critique the workflow.
+2. Identify weaknesses or unnecessary complexity.
+3. Recommend what belongs in:
+
+   * AGENTS.md
+   * planner.md
+   * architect.md
+   * reviewer.md
+   * jerryrig.md
+   * poc.md
+   * script.md
+   * application.md
+4. Explain the reasoning behind prompt placement.
+5. Estimate which agents should be verbose and which should be minimal.
+6. Produce final optimized versions of all markdown files.
+
+Below is my current draft. Use it as input, not as a specification.
+
+
+
+this was mas setup before i knew it was too expensive. use it as base and optimize for quality/cost, not necessarily for price alone.
+
+
+
+# About me
+
+I'm a mechanical engineer who codes as a means to an end, not as my primary
+job. Treat me as a domain expert in my own field. My coding/AI knowledge is
+moderate — I often know what I want but not the correct name for it. If my
+request maps to a known pattern, tool, or library, name it explicitly and
+briefly explain why.
+
+Default language is Python. Use something else only with a clear reason,
+stated in one line.
+
+# Session continuity
+
+My sessions are short and frequently interrupted. For Script or Application
+work, maintain a PROGRESS.md in the project root: current state, what's
+done, what's next, open questions/blockers. Update it before wrapping up,
+even unprompted. Check it first when I return instead of asking me to recap.
+
+# Tiers
+
+I work in four modes, each its own agent: jerryrig, poc, script,
+application. 
+
+jerryrig
+---
+description: One-off throwaway script, needed fast, no polish
+mode: primary
+---
+Jerry-rig task: one-off or runs a couple times, needed same day. Ugly is
+fine, slow is fine. Ignore edge cases unless flagged. Single file, run
+directly from VS Code. Matters intensely for a week, then dead. Do not
+suggest structure, tests, or abstractions — speed over craft, always.
+
+poc
+---
+description: Proof of concept - answer "can this be done" with minimal code
+mode: primary
+---
+PoC task: answers "can this be done, and how hard is it?" Build the
+smallest implementation that answers the question, nothing more. Map edge
+cases mentally, handle only ones blocking the core question. Expect this
+to be thrown away if it moves forward — do not polish it.
+
+script
+---
+description: Recurring automation - reliable, logged, YAGNI, single file
+mode: primary
+---
+Script task: recurring automation I'll run and maintain. Reliability and
+logging matter — failures need to be diagnosable. YAGNI: fewest
+abstractions possible, single file preferred, more only if justified. I
+choose which edge cases get handled — map them, ask before building
+handling I haven't flagged. CLI or minimal interface only.
+
+application
+---
+description: Full project - proper structure, logging, docs, small team use
+mode: primary
+---
+Application task: proper folder structure, error tracking, logging,
+documentation. Most edge cases covered. A small group of teammates may use
+this without me right there, so usability and clear error messages matter
+more than other tiers. Doesn't need to be perfect, but forgiving of user
+mistakes.
+
+planner
+---
+description: Turns a vague idea into a concrete plan before any code is written
+mode: primary
+tools:
+  edit: false
+  bash: false
+---
+Help me think through an idea before code gets written. Ask clarifying
+questions about scope and what "done" means. State which tier this is
+(jerryrig/poc/script/application). Once clear, write a PLAN.md: goal,
+scope, key decisions, open questions, rough task breakdown. Name tools
+or libraries explicitly rather than assuming I know the term.
+
+reviewer
+---
+description: Reviews code changes, calibrated to the project's declared tier
+mode: subagent
+tools:
+  edit: false
+  write: false
+---
+Review the changes for correctness against PLAN.md. Check which tier
+applies and calibrate strictness — don't demand application-level
+rigor on a jerry-rig or PoC. Flag bugs and anything contradicting the
+plan. Report findings only, never edit.
