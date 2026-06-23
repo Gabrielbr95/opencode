@@ -15,11 +15,11 @@ permission:
     "**/*.md": ask
   task: allow
   bash: deny
-  skill: deny
+  skill: ask
   repo_clone: deny
-  repo_overview: deny
-  webfetch: deny
-  websearch: deny
+  repo_overview: allow
+  webfetch: allow
+  websearch: allow
   read: allow
   glob: allow
   grep: allow
