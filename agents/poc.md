@@ -1,10 +1,6 @@
 ---
 description: Proof of concept — answer "can this be done?" with minimal throwaway code.
 mode: primary
-tools:
-  write: true
-  edit: true
-  bash: true
 permission:
   edit:
     "**/*": allow

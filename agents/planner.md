@@ -1,11 +1,6 @@
 ---
 description: Turn a vague idea into a concrete, tier-scaled implementation plan. No code.
 mode: primary
-tools:
-  write: true
-  edit: true
-  bash: false
-  task: true
 permission:
   edit:
     "*": deny

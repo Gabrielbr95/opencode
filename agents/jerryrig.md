@@ -1,10 +1,6 @@
 ---
 description: One-off throwaway implementations. Speed over quality, minimal polish.
 mode: primary
-tools:
-  write: true
-  edit: true
-  bash: true
 permission:
   edit:
     "**/*": allow

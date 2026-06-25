@@ -1,10 +1,6 @@
 ---
 description: Critically review planning artifacts before implementation starts. No code.
 mode: primary
-tools:
-  write: true
-  edit: true
-  bash: false
 permission:
   edit:
     "*": deny
@@ -17,8 +13,8 @@ permission:
   skill: deny
   repo_clone: deny
   repo_overview: deny
-  webfetch: deny
-  websearch: deny
+  webfetch: allow
+  websearch: allow
   read: allow
   glob: allow
   grep: allow

@@ -1,10 +1,6 @@
 ---
 description: Recurring automation. Single-file focus, reliability, logging, YAGNI.
 mode: primary
-tools:
-  write: true
-  edit: true
-  bash: true
 permission:
   edit:
     "**/*": allow

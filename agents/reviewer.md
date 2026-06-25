@@ -1,10 +1,6 @@
 ---
 description: Review implemented changes against the plan, calibrated exactly to tier. No edits.
 mode: primary
-tools:
-  write: true
-  edit: true
-  bash: true
 permission:
   edit:
     "**/*.md": ask

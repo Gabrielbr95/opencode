@@ -1,10 +1,6 @@
 ---
 description: Long-lived team software. Structure, docs, error handling, usability.
 mode: primary
-tools:
-  write: true
-  edit: true
-  bash: true
 permission:
   edit:
     "**/*": allow
