@@ -1,0 +1,100 @@
+{
+  // oc-profiles.jsonc — permission profiles for oc.ps1
+  // Edit this file to add or tune profiles. No script edits needed.
+  //
+  // Structure mirrors opencode agent frontmatter `permission:` blocks.
+  // OPENCODE_PERMISSION is a JSON deep-merge over all file-based config,
+  // so values here override global config AND agent frontmatter simultaneously.
+  //
+  // Ref: packages/opencode/src/config/config.ts loadGlobal() — Decision 001.
+
+  "normal": {
+    // Default profile — no overrides. Opencode uses its own built-in defaults
+    // and agent frontmatter as-is. Nothing is changed.
+  },
+
+  "yolo": {
+    // Autonomous PDCA run. No prompts, no questions anywhere.
+    // Per-agent overrides only — everything not listed here stays as defined
+    // in each agent's frontmatter.
+    //
+    // Call graph (asymmetric to prevent planner↔architect loop):
+    //   planner → orchestrator
+    //   architect → planner
+    //   orchestrator → builder
+    //   builder → reviewer
+    //   reviewer → planner, architect
+    //
+    // doom_loop is denied everywhere: autonomous runs must hard-stop, not hang.
+
+    "agents": {
+
+      "builder": {
+        // Can run tests and shell commands. Hands off to reviewer when done.
+        "bash": "allow",
+        "task": {
+          "planner": "deny",
+          "architect": "deny",
+          "orchestrator": "deny",
+          "builder": "deny",
+          "reviewer": "allow",
+          "explore": "deny",
+          "general": "deny"
+        },
+        "doom_loop": "deny"
+      },
+
+      "reviewer": {
+        // Read-only inspection + bash for test runs. Routes findings back into Plan phase.
+        "bash": "allow",
+        "task": {
+          "planner": "allow",
+          "architect": "allow",
+          "orchestrator": "deny",
+          "builder": "deny",
+          "reviewer": "deny",
+          "explore": "deny",
+          "general": "deny"
+        },
+        "doom_loop": "deny",
+        "question": "deny"
+      },
+
+      "planner": {
+        // Exits to orchestrator only. Cannot call architect (asymmetric — breaks loop).
+        "task": {
+          "planner": "deny",
+          "architect": "deny",
+          "orchestrator": "allow",
+          "builder": "deny",
+          "reviewer": "deny",
+          "explore": "deny",
+          "general": "deny"
+        },
+        "doom_loop": "deny",
+        "question": "deny"
+      },
+
+      "architect": {
+        // Can push back to planner for plan revisions. Cannot loop further.
+        "task": {
+          "planner": "allow",
+          "architect": "deny",
+          "orchestrator": "deny",
+          "builder": "deny",
+          "reviewer": "deny",
+          "explore": "deny",
+          "general": "deny"
+        },
+        "doom_loop": "deny",
+        "question": "deny"
+      },
+
+      "orchestrator": {
+        // Drives builder only. No design decisions, no user questions.
+        "doom_loop": "deny"
+      }
+
+    }
+  }
+}

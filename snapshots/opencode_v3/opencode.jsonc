@@ -1,0 +1,96 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // --- Providers ---
+  "provider": {
+    "corp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Corporate API",
+      "options": {
+        "baseURL": "http://localhost:8000/v1",
+        "apiKey": "anything"
+      },
+      "models": {
+        "us.anthropic.claude-sonnet-4-6": {
+          "name": "Claude Sonnet 4.6 (Corporate)"
+        },
+        "us.anthropic.claude-sonnet-4-5-20250929-v1:0": {
+          "name": "Claude Sonnet 4.5 (Corporate)"
+        },
+        "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
+          "name": "Claude Haiku 4.5 (Corporate)"
+        }
+      }
+    },
+    "petrobras": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Petrobras Chat (proxy)",
+      "options": {
+        "baseURL": "http://localhost:8787/v1",
+        "apiKey": "anything"
+      },
+      "models": {
+        "claude-sonnet-4-6": {
+          "name": "Claude Sonnet 4.6 (Petrobras)"
+        }
+      }
+    }
+  },
+
+  // --- Model ---
+  "model": "corp/us.anthropic.claude-sonnet-4-6",
+  "default_agent": "planner",
+
+  // --- Skills ---
+  // Registers the global custom skills directory.
+  "skills": {
+    "paths": ["~/.config/opencode/skills"]
+  },
+
+  // --- LSP ---
+  // true = enable all built-in LSP servers.
+  "lsp": true,
+
+  // --- MCP ---
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-af45b65b-e437-4cbe-95f7-2f5b5ef002cb"
+      },
+      "enabled": true
+    }
+  },
+
+  // --- Built-in agents ---
+  // Disable built-in primary agents replaced by custom ones.
+  // general and explore are subagents used internally — leave them enabled.
+  "agent": {
+    "build": { "disable": true },
+    "plan": { "disable": true }
+  },
+
+  // --- Sharing ---
+  // Corporate data must not leave the machine.
+  "share": "disabled",
+
+  // --- Updates ---
+  // Notify instead of auto-updating on a managed corporate machine.
+  "autoupdate": "notify",
+
+  // --- Watcher ---
+  // Exclude noisy directories from file watching to avoid injecting irrelevant
+  // content into context. Patterns follow glob syntax.
+  "watcher": {
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      ".git/**",
+      "**/*.lock",
+      "**/__pycache__/**",
+      "**/*.pyc"
+    ]
+  }
+}
