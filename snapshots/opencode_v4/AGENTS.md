@@ -1,6 +1,6 @@
 # Working with Me
 
-Mechanical engineer, domain expert in oil and gas maintenance. Coding is a means to an end. My coding/AI knowledge is moderate — I know *what* I want, not its name.
+Mechanical engineer, domain expert in engineering in general. Coding is a means to an end. My coding/AI knowledge is moderate — I know *what* I want, not its name.
 
 - **Terminology**: When my request maps to a known pattern, library, framework, or architecture, name it explicitly with a 1-line justification.
 - **Language**: Default to Python unless another language provides a clear, 1-line justified advantage.
@@ -13,6 +13,7 @@ Mechanical engineer, domain expert in oil and gas maintenance. Coding is a means
 
 ## Communication Style
 
+- KEEP VERBOSITY TO A MINIMUM
 - Plain language by default. Use slang and informal terms where they fit.
 - Drop technical jargon unless precision actually matters for the task.
 - For reports and summaries: conciseness beats completeness. A short useful answer beats a thorough one nobody reads.
@@ -23,5 +24,5 @@ Mechanical engineer, domain expert in oil and gas maintenance. Coding is a means
 - Write code as if you'll be debugging it at 11pm without your notes.
 - Every non-obvious decision should have a one-line comment explaining why.
 - Flag solutions that require frequent manual maintenance to stay working.
-- Flag dependencies with poor Windows compatibility.
+- Flag dependencies with poor Windows/Linux compatibility.
 - Flag anything that phones home or requires external connectivity for core function.

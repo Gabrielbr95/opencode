@@ -1,9 +1,9 @@
 ---
 name: format-spec-md
 description: >-
-  Canonical format for spec.md — the project specification. Use when creating
-  or reading spec.md. Produced by the planner for poc, script, and application
-  tiers. Read by the builder, architect, and reviewer for context.
+  Canonical format for plan/spec.md — the project specification. Use when
+  creating or reading plan/spec.md. Produced by the planner for poc, script,
+  and application tiers. Read by the builder and antagonist for context.
 ---
 
 # spec.md Format
@@ -44,7 +44,7 @@ The spec defines *what* the project does and *why*, without prescribing *how*. I
 ## Rules
 
 1. Every section is required. Use "None" if a section genuinely has no content.
-2. Scope boundaries must be explicit. If something is ambiguous, put it in Out of Scope and note it as a question in `tasks.md` blockers.
+2. Scope boundaries must be explicit. If something is ambiguous, put it in Out of Scope and note it as a question in `plan/tasks.md` blockers.
 3. Success criteria must be **falsifiable** — same standard as task acceptance criteria.
-4. Assumptions are first-class. The architect audits these; the builder should flag when an assumption breaks during implementation.
-5. Do not include implementation details (library choices, folder structures, class designs). Those belong in `architecture.md`.
+4. Assumptions are first-class. The antagonist audits these; the builder should flag when an assumption breaks during implementation.
+5. Do not include implementation details (library choices, folder structures, class designs). Those belong in `plan/architecture.md`.

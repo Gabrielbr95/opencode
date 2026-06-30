@@ -1,9 +1,9 @@
 ---
 name: format-architecture-md
 description: >-
-  Canonical format for architecture.md — the technical design document. Use when
-  creating or reading architecture.md. Produced by the planner for application-tier
-  projects only. Read by the builder, architect, and reviewer.
+  Canonical format for plan/architecture.md — the technical design document.
+  Use when creating or reading plan/architecture.md. Produced by the planner
+  for application-tier projects only. Read by the builder and antagonist.
 ---
 
 # architecture.md Format
@@ -63,4 +63,4 @@ project/
 3. Components should map to files or small modules, not abstract layers.
 4. Data flow describes the *runtime* path, not the build/deploy process.
 5. Key decisions capture choices the builder needs to respect but might not guess — "why X instead of Y."
-6. Do not duplicate spec.md content (purpose, scope, constraints). Reference it.
+6. Do not duplicate plan/spec.md content (purpose, scope, constraints). Reference it.
