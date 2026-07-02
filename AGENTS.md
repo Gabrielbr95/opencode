@@ -47,3 +47,4 @@ Agents do not execute complex, multi-step procedures from memory. They rely on s
   3. Token savings (offloading repetitive, bite-sized tasks).
 - **Coordination Boundary**: Session coordination and subagent dispatch decisions belong to the primary session agent. Subagents do not take over orchestration; they return findings, work products, or ambiguity to the primary agent.
 - **Orchestration**: Autonomous execution of multiple tasks is strictly User-invoked. Do not trigger batch orchestration autonomously.
+- **Tool Preference**: `bash` is a last resort. Use it only when no other tool solves the problem. Prefer `lsp`, `glob`, `grep`, and `list` when possible.
