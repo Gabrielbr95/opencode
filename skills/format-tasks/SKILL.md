@@ -12,7 +12,7 @@ description: Model-invoked. The canonical schema for plan/tasks.md. Loads when w
 3. Tasks must be strictly sequential (top-to-bottom).
 4. Tasks must be micro-scoped (approx 2-5 minutes of work each).
 5. Every task must include verification criteria (how do we know it's done?).
-6. Strict state symbols: `[ ]` (Pending), `[>]` (In Progress - strictly one at a time), `[x]` (Done), `[!]` (Failed/Blocked).
+6. Strict state symbols: `[ ]` (Pending), `[>]` (In Progress), `[x]` (Done), `[!]` (Failed/Blocked).
 
 ## Schema
 Follow this exact Markdown structure:

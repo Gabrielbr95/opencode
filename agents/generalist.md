@@ -6,7 +6,25 @@ permission:
   read: allow
   edit: allow
   write: allow
-  bash: ask
+  bash:
+    "*": ask
+    "git diff*": allow
+    "git log*": allow
+    "git status*": allow
+    "git fetch*": allow
+    "git show*": allow
+    "git *": ask
+    "python *": ask
+    "pip *": allow
+    "npm *": allow
+    "node *": allow
+    "pytest *": allow
+    "rg *": allow
+    "cat *": allow
+    "type *": allow
+    "echo *": allow
+    "where *": allow
+    "which *": allow
   glob: allow
   grep: allow
   list: allow
