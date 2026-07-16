@@ -1,0 +1,10 @@
+node_modules
+package.json
+package-lock.json
+bun.lock
+__pycache__/
+*.pyc
+*.pyo
+*.mhtml
+opencode_local.jsonc
+opencode_work.jsonc
