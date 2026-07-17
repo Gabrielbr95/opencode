@@ -8,7 +8,7 @@ disable-model-invocation: true
 **Triggered by:** The user manually calling `/wrap-session`.
 
 ## Procedure
-1. If the session changed code or planning artifacts, run `converge-work` and `sync-artifacts` first so durable files reflect reality.
+1. If the session materially changed implementation work or durable planning artifacts in a way that could mislead the next session, run `reconcile-work` first. Do not force a heavy reconciliation pass when the current state is already sufficiently clear.
 2. Load `format-active-context`.
 3. Read the current project state, `plan/tasks.md`, relevant `plan/*` files, and any recent discussions.
 4. Write only the resume baton to `activeContext.md` using the canonical schema:

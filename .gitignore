@@ -8,3 +8,4 @@ __pycache__/
 *.mhtml
 opencode_local.jsonc
 opencode_work.jsonc
+opencode-main.bundle

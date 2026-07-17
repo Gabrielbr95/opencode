@@ -12,7 +12,7 @@ This file defines the shared ambient context, constraints, and "adjectives" of o
 
 ## 2. Engineering Philosophy
 - **Stack**: Default to Python (stdlib, numpy, pandas, scipy, matplotlib, streamlit) unless another language has a clear, 1-line justified advantage.
-- **Simplicity**: Practical over academic. Prefer the boring, well-understood solution over the clever one.
+- **Simplicity**: Practical over academic. Prefer the boring, well-understood solution over the clever one. Avoid ceremony that does not materially reduce risk.
 - **Safety**: Make failures loud and obvious. Silent failures are the worst kind. Write code as if debugging it at 11pm without notes.
 - **Dependencies**: Challenge every dependency. Prefer removal over addition. Flag dependencies with poor Windows/Linux compatibility.
 
@@ -28,10 +28,17 @@ We scope work to match actual risk. Always ask for or infer the **Tier** before 
 - **Script**: Recurring personal automation. (Optimize for Simplicity).
 - **Application**: Small-team software, long-lived. (Optimize for Maintainability).
 
-Tier-specific artifacts and execution rituals live in the planning and tier skills, not here.
+Tier-specific artifacts and execution rituals live in the planning and tier skills, not here. Always choose the lowest tier that satisfies the stated need, and use the lightest workflow that preserves reliability.
 
-**Task Tracking (`plan/tasks.md`):**
-Tasks must be bite-sized. Maintain state strictly using:
+### 4.1 Durable Truth & Re-reading
+- `plan/*` remains the durable project truth. `activeContext.md` is only the short resume baton.
+- Do **not** repeatedly reread durable artifacts when you already hold a sufficient working model.
+- Prefer **delta-based rereads**: start with the touched files, claimed scope, and immediately relevant durable artifacts.
+- Expand to broader rereads only when uncertainty, contradiction, cross-artifact drift, or session restart justifies the cost.
+- Keep durable files honest, but do not force every micro-step to propagate through every state layer immediately.
+
+### 4.2 Task Tracking (`plan/tasks.md`)
+Tasks must be bite-sized relative to the work type. Maintain state strictly using:
 - `[ ]` Pending
 - `[>]` In Progress (Mark this *before* touching code)
 - `[x]` Completed
@@ -45,6 +52,7 @@ Agents do not execute complex, multi-step procedures from memory. They rely on s
   1. Context isolation (e.g., unbiased code review).
   2. Token window management (e.g., reading a massive codebase).
   3. Token savings (offloading repetitive, bite-sized tasks).
+- **Default Ownership**: Prefer solving in the main session unless delegation clearly improves isolation, token usage, or execution speed.
 - **Coordination Boundary**: Session coordination and subagent dispatch decisions belong to the primary session agent. Subagents do not take over orchestration; they return findings, work products, or ambiguity to the primary agent.
 - **Orchestration**: Autonomous execution of multiple tasks is strictly User-invoked. Do not trigger batch orchestration autonomously.
-- **Tool Preference**: `bash` is a last resort. Use it only when no other tool solves the problem. Prefer `lsp`, `glob`, `grep`, and `list` when possible.
+- **Tool Preference**: `bash` is a last resort. Use it only when no other tool solves the problem. Prefer `lsp`, `glob`, `grep`, `list` and `MCPs` when possible.

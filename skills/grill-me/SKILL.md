@@ -1,6 +1,6 @@
 ---
 name: grill-me
-description: User-invoked. Forces the agent to aggressively interview the user before any planning or coding begins.
+description: User-invoked. Interview the user one question at a time to stress-test a plan, decision, or idea before planning or coding begins.
 disable-model-invocation: true
 ---
 
@@ -9,7 +9,9 @@ disable-model-invocation: true
 
 ## Procedure
 1. **Stop:** Do not write any code, do not write a plan, do not summarize.
-2. **Interview:** Ask the user 1-2 highly targeted questions about the feature, edge cases, domain jargon, or missing requirements.
-3. **Wait:** Wait for the user to answer.
-4. **Repeat:** Continue asking questions one at a time until there is absolutely zero ambiguity about what needs to be built.
-5. **Summarize:** Once complete, synthesize the domain jargon and decisions into `plan/decisions.md` (or propose doing so) to lock in the shared vocabulary.
+2. **Look Up Facts First:** If a fact can be found by exploring the environment, project files, or available tools, look it up instead of asking the user.
+3. **Ask for Decisions:** Ask one highly targeted question at a time about the plan, edge cases, domain jargon, tradeoffs, or missing decisions. For each question, provide your recommended answer to speed convergence.
+4. **Wait:** Wait for the user to answer before asking the next question. Do not ask multiple questions at once.
+5. **Stop at Sufficient Clarity:** Continue until there is shared understanding that is good enough for the current objective and Tier. Do not force exhaustive questioning when the remaining uncertainty can be handled cheaply during planning or execution.
+6. **Confirmation Gate:** Do not act on the idea until the user confirms that shared understanding has been reached.
+7. **Summarize:** Once complete, summarize the resolved terms and decisions, and propose documenting them only if they are durable enough to matter later.
