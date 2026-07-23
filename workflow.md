@@ -52,7 +52,10 @@ Before choosing an approach, clarify whether the goal is primarily:
 If the goal is solving, prefer the simplest reliable path, including existing tools. If the goal is learning, deeper explanation or a custom build can be justified.
 
 ### Prevent Reinvention
-Before designing custom workflow machinery or code, check whether a mature, cost-effective, local-first tool already solves the problem well enough. Do not build custom systems by default when an existing boring solution is sufficient.
+Before designing custom workflow machinery or code, check whether a mature, cost-effective, local-first tool already solves the problem well enough. Do not build custom systems by default when an existing boring solution is sufficient. Extra complexity must earn its keep through better outcomes, lower risk, or lower total maintenance burden.
+
+### Workflow vs Agentic Control
+Prefer predefined workflow when the path is stable, inspectable, and known in advance. Use model-directed control only when dynamic judgment materially improves the result enough to justify the extra complexity, cost, testing difficulty, and control burden.
 
 ### A Gradient of Operation Modes
 Working modes are a spectrum, not rigid boxes. It should be normal to move between them inside the same project:
@@ -85,6 +88,12 @@ Long interruptions are normal. Durable truth should live in project artifacts th
 
 ### Corporate Safety
 Default to local-first behavior. No silent data exfiltration, no hidden network dependencies, no destructive actions without explicit awareness, and no workflow design that assumes admin privileges or relaxed corporate controls.
+
+### Protect Durable Writes
+Transient drafting can stay lightweight. Changes that become durable truth, long-lived behavior, repository rules, prompts, skills, config, or future defaults should cross stronger review, provenance, and sometimes approval boundaries.
+
+### Evidence-Driven Improvement
+Improve the harness based on observed behavior, real failure modes, and lightweight evaluation rather than taste, verbosity, or theoretical elegance alone. Observability records what happened; evaluation judges whether that behavior was good enough.
 
 ## 3. Tier System and Artifacts
 
@@ -128,6 +137,14 @@ Durable files are authoritative, but they do not need to be reread in full at ev
 
 The goal is honest durable state without wasting effort on repeated full context reacquisition.
 
+### Memory Is Not Context
+Memory and context are different layers.
+
+- **Memory** is information intentionally retained for later reuse.
+- **Context** is the information actually loaded for the current step.
+
+Do not treat everything visible in a session as something that should persist. Prefer selective durable memory, deliberate retrieval, and compact resume support over replaying large histories.
+
 ## 5. Responsibility Model
 
 The harness should center on **one primary session owner**.
@@ -157,6 +174,8 @@ Delegation should happen only when it clearly helps with one of these:
 3. **Token or time efficiency** — for example, offloading repetitive work that does not need to stay in the main thread.
 
 Avoid delegation when it adds more coordination overhead than value.
+
+Delegation is not the same as handoff. The primary session owner should normally retain responsibility for the overall result unless ownership is explicitly transferred.
 
 ## 6. Planning and Execution Boundaries
 
@@ -195,7 +214,43 @@ Honest reconciliation matters, but it should happen at meaningful boundaries suc
 
 The system should avoid treating every micro-step as a full-project convergence event.
 
-## 7. Recommended Operating Flow
+## 7. Control Boundaries
+
+The workflow should distinguish clearly between different kinds of control instead of treating all safety or governance as one thing.
+
+### Policy
+Policy guides what the model should try to do:
+- when to clarify
+- when to use tools
+- when to avoid acting
+- when to prefer drafting over execution
+
+Policy shapes behavior, but it is not hard enforcement.
+
+### Permissions
+Permissions define what the runtime will actually allow. A policy-compliant action can still be forbidden by permissions.
+
+### Guardrails
+Guardrails are automatic checks on inputs, outputs, tool calls, or intermediate states. They help catch malformed, unsafe, or suspicious actions, but they do not replace human judgment where consequence is high.
+
+### Approvals
+Approvals gate a specific run or action before it continues. Approval is not the same as authorization: authorization asks whether an actor may ever do something; approval asks whether this specific action may proceed now.
+
+### Human-in-the-Loop
+HITL is broader than approval. It includes review, edit, override, reject, clarify, or stop. Human involvement is most valuable at consequential boundaries, not as friction on every small step.
+
+### Side Effects Should Drive Friction
+Control intensity should rise with consequence.
+
+- low-risk reasoning and drafting should stay smooth
+- read-only retrieval should usually stay low-friction
+- temporary and reversible internal changes may need light or guarded control
+- durable internal mutations should face stronger review
+- destructive, privileged, or external side effects should face the strongest control
+
+This keeps low-risk work fluid without under-protecting consequential actions.
+
+## 8. Recommended Operating Flow
 
 This is the intended high-level flow, not a rigid script.
 
@@ -212,7 +267,7 @@ This is the intended high-level flow, not a rigid script.
 
 This flow should stay adaptable. It is a guide for how the harness should behave, not a mandate to add ceremony where it is unnecessary.
 
-## 8. Reference Documents
+## 9. Reference Documents
 
 ### Human-Facing Source Documents
 These may be longer and more expressive because they are not meant to be auto-loaded into every session.
@@ -233,7 +288,7 @@ The ideal state is:
 - `my-context.md` explains the human realities behind it
 - the agents and skills encode that intent in a lighter, more operational form
 
-## 9. Design Standard for the Harness Itself
+## 10. Design Standard for the Harness Itself
 
 When evolving the harness, prefer changes that make it:
 - easier to understand
@@ -244,5 +299,6 @@ When evolving the harness, prefer changes that make it:
 - more explicit where it matters
 - more local-first and portable
 - more proportional in its use of rigor
+- easier to observe and evaluate at meaningful boundaries
 
 Reject changes that mainly add sophistication, ceremony, or architectural complexity without delivering clear practical value.
