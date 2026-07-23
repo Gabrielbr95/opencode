@@ -4,6 +4,10 @@
 - `vocabulary.md` — shared terminology and boundary definitions across the research repository.
 - `control-boundaries.md` — practical control model connecting permissions, approvals, HITL, guardrails, side effects, and durable writes.
 - `principles-only.md` — implementation-agnostic design rules distilled from the researched topics.
+- `memory-policy.md` — practical repository policy for memory layers, durable-write gates, provenance, review thresholds, and retirement rules.
+- `observability-schema.md` — minimum useful trace and event schema for tasks, tool calls, approvals, durable writes, failures, and review outcomes.
+- `workflow-pattern-comparison.md` — decision-support matrix for choosing between chain, route, parallelize, orchestrator-worker, evaluator-optimizer, and ReAct.
+- `evaluation-method-comparison.md` — decision-support matrix for choosing between exact match, rubric, pairwise comparison, LLM judge, and human review.
 
 ## Current Topics
 

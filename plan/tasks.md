@@ -37,3 +37,16 @@
 ## Slice 9: Principles-only synthesis
 - [x] 19. Distill the durable, implementation-agnostic design principles from the researched topics into a single synthesis note. (Verification: a `research/principles-only.md` file exists and extracts reusable rules rather than repeating topic summaries.)
 - [x] 20. Update the research index and backlog to point to the principles-only synthesis. (Verification: `research/index.md` and/or `research/backlog.md` reference the principles-only document.)
+
+## Slice 10: Memory and observability policy foundation
+- [x] 21. Synthesize a repository memory policy from the existing research and write `research/memory-policy.md`. (Verification: the note defines memory tiers, durable-write gates, provenance requirements, and retirement/supersession rules grounded in the current research base.)
+- [x] 22. Update the research index and backlog to point to the memory-policy synthesis and capture any new follow-up questions it reveals. (Verification: `research/index.md` and `research/backlog.md` reference the new artifact and remain consistent with its scope.)
+- [x] 23. Synthesize the minimum useful observability schema for this workflow and write `research/observability-schema.md`. (Verification: the note defines canonical trace or event fields for sessions, tasks, tool calls, approvals, durable writes, decisions, and failures.)
+- [x] 24. Update the research index and backlog to point to the observability-schema synthesis and record any newly exposed gaps. (Verification: `research/index.md` and `research/backlog.md` reference the new artifact and stay aligned with the existing observability research.)
+
+## Slice 11: Decision-support comparison matrices
+- [x] 25. Create a workflow-pattern comparison matrix covering chain, route, parallelize, orchestrator-worker, evaluator-optimizer, and ReAct. (Verification: a comparison artifact exists and makes the tradeoffs, fit criteria, and failure modes easy to compare.)
+- [x] 26. Create an evaluation-method comparison matrix covering exact match, rubric, pairwise, LLM judge, and human review, then update the index/backlog as needed. (Verification: a comparison artifact exists and the research navigation points to it clearly enough for future reuse.)
+
+## Slice 12: Governance and architecture expansion
+- [ ] 27. Research the next expansion topics — likely policy-as-code, multi-agent collaboration, reflection/self-critique, model routing, and RAG for prompt repositories — and refine this slice when one becomes active. (Verification: the chosen topic is justified against the backlog and broken into concrete tasks before execution begins.)
