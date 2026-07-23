@@ -91,5 +91,9 @@
 - [x] 53. Tighten `opencode.jsonc` and the relevant agent frontmatter so bash, edit, external-directory, and related permissions better match the intended role boundaries for `generalist`, `coder`, `reviewer`, `explorer`, and `researcher`. (Verification: the config and agent files reflect the intended baseline, especially for coder/reviewer bash scope and generalist git workflow friction.)
 - [x] 54. Review the resulting permission model against the stated goals and document any remaining gaps that still require session approvals, user discipline, or a future plugin. (Verification: the remaining enforcement limits are explicit rather than implied.)
 
+## Slice 21: Workflow improvement cycle framing
+- [x] 55. Create a top-level `workflow-improvement-cycle.md` playbook that defines the recurring AI-workflow improvement loop as an operational cycle rather than a giant omnibus skill. (Verification: the document clearly separates the charter, the recurring cycle, and the still-deferred command/skill automation question.)
+- [x] 56. Record in the playbook when the cycle should remain a document-driven/manual process and when it may later justify a dedicated command or skill. (Verification: the graduation criteria are explicit enough to prevent premature automation.)
+
 ## Slice 16: Deferred harness-maintenance workflow follow-up
 - [ ] 38. Design a dedicated AI self-improvement or harness-maintenance skill later, after the general workflow skills are aligned and the need is still justified by observed maintenance work. (Verification: the deferred skill scope is explicit, not implemented prematurely, and clearly separated from the general-purpose planning, execution, review, and reconciliation skills.)

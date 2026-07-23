@@ -2,43 +2,32 @@
 
 ## Resume Here
 - **Tier:** POC
-- **Current Slice:** Transition from research to iteration / implementation
-- **Current Task:** N/A
-- **Next Action:** Start an implementation-focused session, not another broad research session. First read `plan/tasks.md`, `research/index.md`, `my-context.md`, `workflow.md`, and `ai-workflow-improvement.md`. Then inspect the current harness/setup and propose the smallest high-leverage improvement slice using the completed research base. Default stance: iterate with what already exists; only do targeted research if a real implementation decision is blocked.
+- **Current Slice:** Slice 21: Workflow improvement cycle framing
+- **Current Task:** 38 deferred; slices 20–21 complete
+- **Next Action:** Start the next clean session by reading `plan/tasks.md`, `plan/permission-policy.md`, and `workflow-improvement-cycle.md`, then decide whether to (a) test/adjust the new permission model in real use, or (b) revisit deferred task `38` only if repeated workflow-improvement passes show a dedicated maintenance skill is now justified.
 
 ## Completed This Session
-- Built a substantial local research base under `research/` covering agent architectures, skill systems, context engineering, planning systems, evaluation/prompt testing, memory systems, HITL control points, tool-use policy/permissions, prompt modularity/repository architecture, and observability/traceability.
-- Added synthesis docs that are meant to guide implementation decisions rather than continue broad theory gathering:
-  - `research/vocabulary.md`
-  - `research/control-boundaries.md`
-  - `research/principles-only.md`
-  - `research/memory-policy.md`
-  - `research/observability-schema.md`
-  - `research/workflow-pattern-comparison.md`
-  - `research/evaluation-method-comparison.md`
-- Completed `plan/tasks.md` through Slice 11. Slice 12 is still open only as a placeholder for future targeted research if implementation exposes a real gap.
-- Reached the conclusion that there is **no major missing core concept** blocking application of the research. The likely next broad topic would be policy-as-code for local-first governance, but it is **not a prerequisite** for starting iteration.
-- Reached the stronger conclusion that the project should now shift from broad research to **practical iteration** on the workflow/setup.
+- Completed the deferred operational polish backlog (`46`–`51`) and committed it as `ee5dc31` — `refactor: polish deferred operational workflow`.
+- Audited agent permissions against the research-backed control model.
+- Added a durable permission map in `plan/permission-policy.md`.
+- Tightened the enforcement baseline in `opencode.jsonc` and narrowed bash permissions for:
+  - `agents/generalist.md`
+  - `agents/coder.md`
+  - `agents/reviewer.md`
+- Committed the permission hardening slice as `671c394` — `refactor: harden agent permission model`.
+- Added `workflow-improvement-cycle.md` as a top-level operational playbook that separates:
+  - charter (`ai-workflow-improvement.md`)
+  - recurring cycle (`workflow-improvement-cycle.md`)
+  - still-deferred future automation (`38`)
 
 ## Blockers / Open Questions
 - No hard blocker.
-- The next session should decide the **first concrete improvement slice** for the current setup rather than continue open-ended research.
-- Important framing for the next agent session:
-  - the user is an **engineer, not a programmer**; coding is a means to an end
-  - be **pragmatic, not purist**
-  - the user is a **solo developer** and must be able to understand and maintain the system alone
-  - much online advice comes from programmers/researchers operating at much larger scale, so recommendations must be aggressively filtered for small-scale local-first practicality
-- Practical implication: prefer the smallest boring improvement that increases leverage, clarity, or safety. Avoid enterprise-style governance, premature multi-agent complexity, or design work that the user cannot realistically maintain.
+- Main open question: is the current permission model low-friction enough in real use, especially for Generalist git workflow and Coder test/implementation work?
+- Deferred design question: should task `38` stay deferred permanently, become a user-invoked command first, or later graduate into a dedicated skill after more repeated real cycles?
 
 ## Read These First
-- `plan/tasks.md`: Shows the completed research slices and that the next phase should be iteration, not more broad topic expansion.
-- `research/index.md`: Entry point to the full research base and the synthesis docs most relevant for implementation choices.
-- `research/principles-only.md`: The distilled decision rules; best high-level guide before changing the setup.
-- `research/control-boundaries.md`: Use this to decide where approvals, permissions, and durable-write controls should actually exist.
-- `research/memory-policy.md`: Use this before changing anything related to durable context, task memory, or promotion of state into long-lived artifacts.
-- `research/observability-schema.md`: Use this if the next iteration touches traceability, auditability, or debugging visibility.
-- `research/workflow-pattern-comparison.md`: Use this to avoid overbuilding the workflow architecture.
-- `research/evaluation-method-comparison.md`: Use this to choose lightweight evidence for future workflow changes.
-- `my-context.md`: Human-facing source of truth about the user’s constraints, working style, time limits, and cost/maintenance preferences.
-- `workflow.md`: Human-facing conceptual source of truth for the harness model, tiers, and operating philosophy.
-- `ai-workflow-improvement.md`: Human-facing mission and design brief for improving the AI workflow; reinforces simplicity, composability, maintainability, portability, observability, testability, and incremental change.
+- `plan/tasks.md`: Shows slices 20–21 completed and task `38` still deferred.
+- `plan/permission-policy.md`: Current human-readable source of truth for the intended allow / ask / deny model and known enforcement limits.
+- `workflow-improvement-cycle.md`: New operational playbook for recurring workflow-improvement passes.
+- `opencode.jsonc`: Current global permission baseline (`external_directory: ask`).
+- `agents/generalist.md`, `agents/coder.md`, `agents/reviewer.md`: Read together if the next session tests or refines the hardened permission model.
