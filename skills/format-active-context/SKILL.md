@@ -11,9 +11,10 @@ description: Model-invoked. The canonical schema for activeContext.md. Loads whe
 2. Write only the current resume state, not the full project history.
 3. Reference durable files instead of duplicating their contents.
 4. Be explicit about the next action, including file paths when possible.
+5. Update the baton proportionally: preserve the schema, but do not pad sections with extra history when a short note is enough.
 
 ## Schema
-Follow this exact Markdown structure:
+Use this canonical Markdown structure when writing or substantially refreshing `activeContext.md`:
 
 ```markdown
 # Active Context

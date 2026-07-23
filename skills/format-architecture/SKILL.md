@@ -7,7 +7,7 @@ description: Model-invoked. The canonical schema for plan/architecture.md. Loads
 **Purpose:** Defines *How* we are building it. (Used primarily for Application tier).
 
 ## Schema
-Follow this exact Markdown structure:
+Use this canonical Markdown structure when creating or substantially rewriting `plan/architecture.md`:
 
 ```markdown
 # Architecture

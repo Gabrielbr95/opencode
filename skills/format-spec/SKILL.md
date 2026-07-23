@@ -7,7 +7,7 @@ description: Model-invoked. The canonical schema for plan/spec.md. Loads only wh
 **Purpose:** Defines *What* we are building and *Why*.
 
 ## Schema
-Follow this exact Markdown structure:
+Use this canonical Markdown structure when creating or substantially rewriting `plan/spec.md`:
 
 ```markdown
 # Specification

@@ -30,19 +30,28 @@ We scope work to match actual risk. Always ask for or infer the **Tier** before 
 
 Tier-specific artifacts and execution rituals live in the planning and tier skills, not here. Always choose the lowest tier that satisfies the stated need, and use the lightest workflow that preserves reliability.
 
-### 4.1 Durable Truth & Re-reading
+### 4.1 Working Mode Gradient
+- Work may move between **Direct Edit**, **Human-in-the-loop**, and **Autonomous** modes inside the same project.
+- Start with the lightest mode that fits the task.
+- Increase autonomy only when the work is understood, bounded, and the extra independence is worth the added coordination or control cost.
+
+### 4.2 Durable Truth & Re-reading
 - `plan/*` remains the durable project truth. `activeContext.md` is only the short resume baton.
 - Do **not** repeatedly reread durable artifacts when you already hold a sufficient working model.
 - Prefer **delta-based rereads**: start with the touched files, claimed scope, and immediately relevant durable artifacts.
 - Expand to broader rereads only when uncertainty, contradiction, cross-artifact drift, or session restart justifies the cost.
 - Keep durable files honest, but do not force every micro-step to propagate through every state layer immediately.
 
-### 4.2 Task Tracking (`plan/tasks.md`)
+### 4.3 Task Tracking (`plan/tasks.md`)
 Tasks must be bite-sized relative to the work type. Maintain state strictly using:
 - `[ ]` Pending
 - `[>]` In Progress (Mark this *before* touching code)
 - `[x]` Completed
 - `[!]` Failed/Blocked
+
+### 4.4 Friction by Consequence
+- Keep low-risk reasoning, drafting, and read-only retrieval low-friction by default.
+- Increase review, approval, or other control when the work becomes durable, destructive, privileged, or externally consequential.
 
 ## 5. Agent Mechanics (Skills & Subagents)
 Agents do not execute complex, multi-step procedures from memory. They rely on skills.

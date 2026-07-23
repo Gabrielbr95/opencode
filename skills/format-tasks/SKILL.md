@@ -22,7 +22,7 @@ description: Model-invoked. The canonical schema for plan/tasks.md. Loads when w
 8. Strict state symbols: `[ ]` (Pending), `[>]` (In Progress), `[x]` (Done), `[!]` (Failed/Blocked).
 
 ## Schema
-Follow this exact Markdown structure:
+Use this canonical Markdown structure when creating or substantially rewriting `plan/tasks.md`:
 
 ```markdown
 # Implementation Plan
