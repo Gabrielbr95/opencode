@@ -6,7 +6,19 @@ permission:
   read: allow
   edit: allow
   write: allow
-  bash: allow
+  external_directory:
+    "*": ask
+  bash:
+    "*": ask
+    "pytest *": allow
+    "rg *": allow
+    "cat *": allow
+    "type *": allow
+    "git *": ask
+    "python *": ask
+    "pip *": ask
+    "npm *": ask
+    "node *": ask
   glob: allow
   grep: allow
   list: allow

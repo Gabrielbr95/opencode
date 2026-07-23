@@ -86,5 +86,10 @@
 - [x] 50. Review `skills/orchestrate-batch/SKILL.md` specifically for ownership, scope, and recursion-loop safety now that `workflow-execute` was tightened around session-owner escalation. (Verification: any changes preserve user-invoked autonomy while making ownership boundaries and loop resistance more explicit.)
 - [x] 51. Recheck `skills/wrap-session/SKILL.md` against the current resume-baton policy to confirm its reread/update instructions are still the lightest useful version. (Verification: the wrap behavior remains aligned with `activeContext.md` as a short baton rather than a durable log.)
 
+## Slice 20: Permission hardening and policy map
+- [x] 52. Create a human-readable permission policy map for the harness and record the intended allow / ask / deny model by agent, including known enforcement limits. (Verification: a durable policy note exists and clearly distinguishes intended policy from what OpenCode can enforce natively.)
+- [x] 53. Tighten `opencode.jsonc` and the relevant agent frontmatter so bash, edit, external-directory, and related permissions better match the intended role boundaries for `generalist`, `coder`, `reviewer`, `explorer`, and `researcher`. (Verification: the config and agent files reflect the intended baseline, especially for coder/reviewer bash scope and generalist git workflow friction.)
+- [x] 54. Review the resulting permission model against the stated goals and document any remaining gaps that still require session approvals, user discipline, or a future plugin. (Verification: the remaining enforcement limits are explicit rather than implied.)
+
 ## Slice 16: Deferred harness-maintenance workflow follow-up
 - [ ] 38. Design a dedicated AI self-improvement or harness-maintenance skill later, after the general workflow skills are aligned and the need is still justified by observed maintenance work. (Verification: the deferred skill scope is explicit, not implemented prematurely, and clearly separated from the general-purpose planning, execution, review, and reconciliation skills.)

@@ -6,7 +6,21 @@ permission:
   read: allow
   edit: deny
   write: deny
-  bash: allow
+  external_directory:
+    "*": ask
+  bash:
+    "*": ask
+    "git status*": allow
+    "git diff*": allow
+    "git log*": allow
+    "git show*": allow
+    "pytest *": allow
+    "rg *": allow
+    "cat *": allow
+    "type *": allow
+    "echo *": allow
+    "where *": allow
+    "which *": allow
   glob: allow
   grep: allow
   list: allow

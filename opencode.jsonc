@@ -46,6 +46,13 @@
     "plan": { "disable": true }
   },
 
+  // --- Permissions baseline ---
+  "permission": {
+    "external_directory": {
+      "*": "ask"
+    }
+  },
+
   // --- Sharing ---
   "share": "disabled",
 

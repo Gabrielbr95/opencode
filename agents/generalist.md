@@ -6,18 +6,21 @@ permission:
   read: allow
   edit: allow
   write: allow
+  external_directory:
+    "*": ask
   bash:
     "*": ask
+    "git *": ask
+    "python *": ask
+    "pip *": ask
+    "npm *": ask
+    "node *": ask
+    "git add*": allow
+    "git commit*": allow
     "git diff*": allow
     "git log*": allow
     "git status*": allow
-    "git fetch*": allow
     "git show*": allow
-    "git *": ask
-    "python *": ask
-    "pip *": allow
-    "npm *": allow
-    "node *": allow
     "pytest *": allow
     "rg *": allow
     "cat *": allow
