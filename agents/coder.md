@@ -14,6 +14,9 @@ permission:
     "rg *": allow
     "cat *": allow
     "type *": allow
+    "echo *": allow
+    "where *": allow
+    "which *": allow
     "git *": ask
     "python *": ask
     "pip *": ask
