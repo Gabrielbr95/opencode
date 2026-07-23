@@ -12,6 +12,7 @@ Use the completed research base and revised `workflow.md` to align the harness's
 - Align `agents/reviewer.md` so review intensity is proportional to tier, work type, and durable-write risk rather than blindly maximal.
 - Preserve the current strengths of the agent layer: small prompts, clear roles, and strong default ownership by the primary agent.
 - Defer procedural detail to skills instead of bloating ambient or role prompts.
+- Keep harness-maintenance or AI-self-improvement procedure out of the general-purpose workflow skills for now; capture it later in a dedicated skill only if the need remains justified.
 - Keep durable changes to prompts, skills, rules, or config reviewable and traceable as high-value internal mutations.
 - Prefer the smallest boring alignment slice that improves clarity, leverage, or safety.
 

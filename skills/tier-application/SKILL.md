@@ -7,8 +7,8 @@ description: Model-invoked. Coding guidelines for Application tier. Loads when w
 **Optimize for:** Maintainability, safety, and team scale.
 
 ## Engineering Rules
-1. **Architecture:** Enforce strict separation of concerns. UI, business logic, and data layers must not bleed into each other.
-2. **Testing First:** Write unit tests for core business logic. Code must be testable through clear interfaces.
-3. **Defensive Programming:** Assume external APIs will fail, files will be missing, and inputs will be malformed. Handle all errors gracefully.
-4. **Documentation:** Every non-obvious function must have a docstring. Every non-obvious decision needs a one-line comment.
-5. **Type Safety:** Use Type Hints (`typing`) consistently across the codebase.
+1. **Maintain Clear Boundaries:** Keep concerns separated enough that the code stays understandable, testable, and maintainable. Do not force extra layers that add ceremony without reducing risk.
+2. **Test Where It Pays Off:** Add tests for business-critical, failure-prone, or reusable logic. Do not skip testing where failures would be costly, but do not force the same test intensity on every small change.
+3. **Defensive Programming:** Assume inputs, files, integrations, and external systems can fail. Handle important failure modes clearly and avoid silent corruption.
+4. **Document What Future You Will Need:** Document non-obvious behavior, constraints, and decisions where they materially improve maintenance or handoff. Do not generate boilerplate comments just to satisfy a rule.
+5. **Prefer Explicitness:** Use clear names, clear interfaces, and type hints or other structure where they materially improve correctness and maintainability.

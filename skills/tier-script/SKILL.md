@@ -7,8 +7,8 @@ description: Model-invoked. Coding guidelines for Script tier. Loads when workin
 **Optimize for:** Simplicity and reliability for recurring personal use.
 
 ## Engineering Rules
-1. **YAGNI (You Aren't Gonna Need It):** Keep it simple. Avoid complex OOP; prefer pure functions.
-2. **Dependency Police:** Rely on the Python standard library as much as possible. Only add external dependencies if absolutely necessary.
-3. **Loud Failures:** Fail fast and print clear, actionable error messages. No silent `except: pass`.
-4. **Basic Logging:** Use the `logging` module instead of `print()` for critical path events.
-5. **Configuration:** Parameterize inputs via CLI arguments (`argparse`) or simple `.env` files. Avoid hardcoding paths.
+1. **Keep It Simple:** Use the lightest boring structure that preserves reliability for recurring use. Prefer simple functions and straightforward flow over heavy architecture.
+2. **Be Careful With Dependencies:** Prefer the Python standard library when it is good enough. Add dependencies only when they clearly reduce effort or improve reliability.
+3. **Loud Failures:** Fail fast and surface clear, actionable error messages. No silent `except: pass`.
+4. **Use Right-Sized Observability:** Add enough output, logging, or status reporting to make recurring runs debuggable. Do not force formal logging when simple output is sufficient.
+5. **Parameterize When It Helps Reuse:** Avoid baking in paths or inputs that make the script fragile, but do not force a full configuration layer when a simple argument or constant is enough.
