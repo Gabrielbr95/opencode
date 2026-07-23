@@ -16,12 +16,15 @@ permission:
     "npm *": ask
     "node *": ask
     "git add*": allow
+    "git branch*": allow
+    "git bundle*": allow
     "git commit*": allow
     "git diff*": allow
     "git log*": allow
     "git status*": allow
     "git show*": allow
     "pytest *": allow
+    "Test-Path *": allow
     "rg *": allow
     "cat *": allow
     "type *": allow

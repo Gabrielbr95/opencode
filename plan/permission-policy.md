@@ -156,7 +156,7 @@ Desired default:
 - Stronger enforcement of repo-local-only shell mutation would likely require a custom plugin or wrapper-command approach.
 
 ## Current Hardening Outcome
-- `generalist` now has low-friction local git inspection plus local `git add*` / `git commit*`, while broader git, interpreter, and package-manager commands still ask.
+- `generalist` now has low-friction local git inspection plus local `git add*` / `git commit*`, and also allows `git branch*`, `git bundle*`, and simple PowerShell path checks with `Test-Path *`, while broader git, interpreter, and package-manager commands still ask.
 - `coder` now uses the `edit` tool freely for repo-local changes, but broad bash is no longer fully open; only a small read/test allowlist remains automatic.
 - `reviewer` now has a read/test-oriented bash allowlist instead of unrestricted shell access.
 - `explorer` and `researcher` were already aligned closely enough and were left unchanged.
