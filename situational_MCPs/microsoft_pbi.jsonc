@@ -1,0 +1,19 @@
+﻿{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Microsoft official local Power BI Modeling MCP.
+  // Default server behavior is read/write with confirmation prompts,
+  // so edits still require approval in the client.
+  "mcp": {
+    "powerbi-modeling-mcp": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@microsoft/powerbi-modeling-mcp@latest",
+        "--start"
+      ]
+    }
+  }
+}
