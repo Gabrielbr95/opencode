@@ -1,24 +1,25 @@
 # Specification
 
 ## Objective
-Build a local, incremental research knowledge base for improving the AI workflow, starting with a small batch of foundational topics researched from web sources and documented with citations.
+Use the completed research base and revised `workflow.md` to align the harness's operational layer so `AGENTS.md`, `agents/*`, and later the key workflow skills reflect the intended way of working without adding unnecessary ceremony.
 
 ## Core Requirements
-- Create a durable `research/` directory structure that can grow incrementally over time.
-- Research the approved starting topics: agent architectures, skill systems, context engineering, planning systems, and evaluation/prompt testing.
-- Expand the research base over time by prioritizing the highest-value backlog topics and adding newly discovered adjacent topics when they appear repeatedly across sources.
-- Revisit already researched topics to deepen understanding, clarify misconceptions, and sharpen boundaries between related concepts instead of only adding breadth.
-- Add synthesis documents when the topic set is mature enough to justify them, starting with a shared vocabulary to reduce terminology drift.
-- Add higher-level synthesis notes that connect multiple researched topics into practical design guidance, starting with control boundaries for actions, approvals, and durable writes.
-- Distill implementation-agnostic design principles from the researched topics so the repository accumulates portable rules, not just topic summaries.
-- Write one structured Markdown note per topic with clear sections for summary, problem, patterns, tradeoffs, practical implications, open questions, and references.
-- Cite sources in every research note so findings can be traced and revisited later.
-- Keep the structure simple, local-first, and easy to extend without a major reorganization.
+- Preserve the current tier as **POC** and keep the workflow alignment effort proportional to that tier.
+- Treat `workflow.md` as the conceptual source of truth, `plan/*` as durable project truth, `AGENTS.md` and `agents/*` as role/ownership definitions, and `skills/*` as reusable procedures.
+- Re-anchor the plan around the implementation/alignment phase before making durable prompt changes.
+- Inspect `AGENTS.md` and all files under `agents/*` before changing workflow skills.
+- Align the primary session-owner behavior in `agents/generalist.md` with the revised workflow, especially around clarification, tier/mode choice, planning vs execution boundaries, delegation limits, and solo-maintainable pragmatism.
+- Align `agents/reviewer.md` so review intensity is proportional to tier, work type, and durable-write risk rather than blindly maximal.
+- Preserve the current strengths of the agent layer: small prompts, clear roles, and strong default ownership by the primary agent.
+- Defer procedural detail to skills instead of bloating ambient or role prompts.
+- Keep durable changes to prompts, skills, rules, or config reviewable and traceable as high-value internal mutations.
+- Prefer the smallest boring alignment slice that improves clarity, leverage, or safety.
 
 ## Out of Scope (Crucial)
-- No implementation changes to agents, skills, prompts, or config files yet.
-- No attempt to exhaustively cover every topic listed in `ai-workflow-improvement.md` in one pass.
-- No full knowledge management system, database, or automation pipeline for research capture.
+- No broad rewrite of the harness architecture.
+- No expansion into new research topics before the current alignment pass is scoped and executed.
+- No skill edits until the agent layer has been inspected and the next skill targets are explicitly identified.
+- No enterprise-style governance, large multi-agent redesign, or prompt proliferation unless clearly justified by observed problems.
 
 ## User Interaction
-The user asks for research on selected topics. The agent creates and maintains local Markdown files under `research/`, performs web research, writes structured notes with citations, and can extend the repository in later sessions by adding new topics or refining existing notes.
+The user directs a phased alignment pass. The agent first updates the durable plan, then reviews and refines the agent-layer prompts, surfaces the planned execution order for approval, and only after that proceeds to targeted prompt edits and later skill alignment work.

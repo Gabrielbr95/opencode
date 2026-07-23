@@ -50,3 +50,11 @@
 
 ## Slice 12: Governance and architecture expansion
 - [ ] 27. Research the next expansion topics — likely policy-as-code, multi-agent collaboration, reflection/self-critique, model routing, and RAG for prompt repositories — and refine this slice when one becomes active. (Verification: the chosen topic is justified against the backlog and broken into concrete tasks before execution begins.)
+
+## Slice 13: Workflow-to-operational alignment kickoff
+- [x] 28. Re-anchor the durable plan around the workflow-alignment implementation phase and keep the next slice small, explicit, and grounded in the revised `workflow.md`. (Verification: `plan/spec.md` and `plan/tasks.md` describe the alignment objective, scope, and immediate sequence without stale research-only framing.)
+- [x] 29. Review `AGENTS.md` and all files under `agents/*`, then identify where the agent layer drifts from the revised workflow intent. (Verification: the main drift points and their relative priority are summarized clearly enough to justify the next prompt edits.)
+- [x] 30. Align `agents/generalist.md` with the revised workflow responsibilities, especially session ownership, work-mode selection, planning vs execution boundaries, delegation limits, and pragmatic solo-maintainable defaults. (Verification: the prompt clearly encodes these responsibilities without importing procedural detail that belongs in skills.)
+- [x] 31. Align `agents/reviewer.md` and any small follow-up agent prompts needed so review expectations stay proportional to work type, tier, and durable-write risk. (Verification: the prompt distinguishes adversarial review from blanket maximal review and any follow-up agent edits remain small and justified.)
+- [x] 33. Remove harness-edit-specific instructions from the agent layer so `agents/*` stays general and procedural detail is deferred to later skills. (Verification: `agents/generalist.md` and `agents/reviewer.md` keep general role boundaries without instructions aimed specifically at editing prompts, skills, rules, or config.)
+- [ ] 32. Reassess the key workflow skills only after the agent-layer alignment is complete, then define the next skill-edit slice before modifying those skills. (Verification: the next skill scope is explicitly identified from observed drift rather than broadened preemptively.)
