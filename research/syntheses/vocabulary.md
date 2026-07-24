@@ -412,6 +412,6 @@ A short current-state summary meant to restart work after interruption without b
 - If a **human must decide**, it is **HITL/approval**.
 
 ## Related Documents
-- Topic notes under `research/topics/`
+- Concept notes under `research/concepts/`
 - `research/index.md`
 - `research/backlog.md`

@@ -296,7 +296,7 @@ This is not a maturity ladder. It is a bias toward objective evidence first, the
 
 ## Relationship to Other Documents
 
-- `research/topics/evaluation-prompt-testing.md`
-- `research/principles-only.md`
-- `research/observability-schema.md`
-- `research/vocabulary.md`
+- `research/concepts/evaluation-prompt-testing.md`
+- `research/syntheses/principles-only.md`
+- `research/syntheses/observability-schema.md`
+- `research/syntheses/vocabulary.md`

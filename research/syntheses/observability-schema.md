@@ -75,7 +75,7 @@ Examples:
 One bounded unit of work inside a session.
 
 Examples:
-- write `research/memory-policy.md`
+- write `research/syntheses/memory-policy.md`
 - update `plan/tasks.md`
 - run a review pass
 
@@ -398,11 +398,11 @@ Retain the records needed to explain durable changes and meaningful failures. Su
   "end_time": "2026-07-23T10:18:00Z",
   "repo_scope": [
     "plan/tasks.md",
-    "research/topics/observability-traceability.md",
-    "research/observability-schema.md"
+    "research/concepts/observability-traceability.md",
+    "research/syntheses/observability-schema.md"
   ],
   "goal": "Define the minimum useful observability schema for this repository.",
-  "result_summary": "Created research/observability-schema.md and grounded it in existing synthesis notes."
+  "result_summary": "Created research/syntheses/observability-schema.md and grounded it in existing synthesis notes."
 }
 ```
 
@@ -420,20 +420,20 @@ Retain the records needed to explain durable changes and meaningful failures. Su
   },
   "timestamp": "2026-07-23T10:12:00Z",
   "status": "succeeded",
-  "summary": "Created research/observability-schema.md.",
+  "summary": "Created research/syntheses/observability-schema.md.",
   "artifacts": [
     {
-      "path": "research/observability-schema.md",
+      "path": "research/syntheses/observability-schema.md",
       "artifact_kind": "research_note",
       "operation": "create",
       "authoritative": true
     }
   ],
   "source_refs": [
-    "research/topics/observability-traceability.md",
-    "research/control-boundaries.md",
-    "research/principles-only.md",
-    "research/memory-policy.md"
+    "research/concepts/observability-traceability.md",
+    "research/syntheses/control-boundaries.md",
+    "research/syntheses/principles-only.md",
+    "research/syntheses/memory-policy.md"
   ]
 }
 ```
@@ -500,8 +500,8 @@ If the answer to the first four is no, the schema is too weak. If the answer to 
 
 ## Relationship to Other Documents
 
-- `research/topics/observability-traceability.md`
-- `research/control-boundaries.md`
-- `research/principles-only.md`
-- `research/memory-policy.md`
-- `research/topics/evaluation-prompt-testing.md`
+- `research/concepts/observability-traceability.md`
+- `research/syntheses/control-boundaries.md`
+- `research/syntheses/principles-only.md`
+- `research/syntheses/memory-policy.md`
+- `research/concepts/evaluation-prompt-testing.md`

@@ -1,4 +1,4 @@
-# [Topic Name]
+# [Concept Name]
 
 ## Summary
 - Brief summary of the topic and why it matters.
@@ -35,7 +35,7 @@
 ## Tradeoffs
 - What gets better and what gets worse.
 
-## Relationships to Other Topics
+## Relationships to Other Concepts / Notes
 - Links to related research notes.
 
 ## Practical Applications for This Repository

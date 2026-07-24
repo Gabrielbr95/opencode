@@ -31,10 +31,10 @@
 - Provenance models for prompts, memory, and evaluations
 
 ## Follow-Up Ideas From Initial Research
-- Create a comparison matrix of workflow patterns: chain, route, parallelize, orchestrator-worker, evaluator-optimizer, ReAct. [Done: `research/workflow-pattern-comparison.md`]
-- Create a comparison matrix of evaluation methods: exact match, rubric, pairwise, LLM judge, human review. [Done: `research/evaluation-method-comparison.md`]
-- Distill a repository-specific vocabulary: workflow, agent, skill, project context, MCP, memory, evaluation. [Done: `research/vocabulary.md`]
-- Add a “principles only” note that extracts durable rules from the first five topics. [Done: `research/principles-only.md`]
-- Add a “control boundaries” note connecting permissions, HITL, and side-effect classes. [Done: `research/control-boundaries.md`]
-- Add an “observability schema” note defining canonical trace/span fields for this repository. [Done: `research/observability-schema.md`]
-- Add a “memory policy” note defining write gates, provenance, and retirement rules. [Done: `research/memory-policy.md`]
+- Create a comparison matrix of workflow patterns: chain, route, parallelize, orchestrator-worker, evaluator-optimizer, ReAct. [Done: `research/syntheses/workflow-pattern-comparison.md`]
+- Create a comparison matrix of evaluation methods: exact match, rubric, pairwise, LLM judge, human review. [Done: `research/syntheses/evaluation-method-comparison.md`]
+- Distill a repository-specific vocabulary: workflow, agent, skill, project context, MCP, memory, evaluation. [Done: `research/syntheses/vocabulary.md`]
+- Add a “principles only” note that extracts durable rules from the first five concepts. [Done: `research/syntheses/principles-only.md`]
+- Add a “control boundaries” note connecting permissions, HITL, and side-effect classes. [Done: `research/syntheses/control-boundaries.md`]
+- Add an “observability schema” note defining canonical trace/span fields for this repository. [Done: `research/syntheses/observability-schema.md`]
+- Add a “memory policy” note defining write gates, provenance, and retirement rules. [Done: `research/syntheses/memory-policy.md`]

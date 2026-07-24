@@ -423,6 +423,6 @@ Before adding a new agent, skill, prompt layer, memory mechanism, or control rul
 7. What future maintenance burden does it create?
 
 ## Related Documents
-- `research/vocabulary.md`
-- `research/control-boundaries.md`
-- `research/topics/`
+- `research/syntheses/vocabulary.md`
+- `research/syntheses/control-boundaries.md`
+- `research/concepts/`

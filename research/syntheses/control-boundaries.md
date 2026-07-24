@@ -388,9 +388,9 @@ Stop and hand off when:
 ---
 
 ## Relationship to Other Documents
-- `research/vocabulary.md`
-- `research/topics/tool-use-policy-and-permission-systems.md`
-- `research/topics/human-in-the-loop-control-points.md`
-- `research/topics/memory-systems.md`
-- `research/topics/evaluation-prompt-testing.md`
-- `research/topics/observability-traceability.md`
+- `research/syntheses/vocabulary.md`
+- `research/concepts/tool-use-policy-and-permission-systems.md`
+- `research/concepts/human-in-the-loop-control-points.md`
+- `research/concepts/memory-systems.md`
+- `research/concepts/evaluation-prompt-testing.md`
+- `research/concepts/observability-traceability.md`

@@ -312,7 +312,7 @@ This order is not universal, but it fits the repository’s bias toward inspecta
 
 ## Relationship to Other Documents
 
-- `research/topics/agent-architectures.md`
-- `research/topics/planning-systems.md`
-- `research/principles-only.md`
-- `research/vocabulary.md`
+- `research/concepts/agent-architectures.md`
+- `research/concepts/planning-systems.md`
+- `research/syntheses/principles-only.md`
+- `research/syntheses/vocabulary.md`

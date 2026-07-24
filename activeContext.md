@@ -2,32 +2,36 @@
 
 ## Resume Here
 - **Tier:** POC
-- **Current Slice:** Slice 21: Workflow improvement cycle framing
-- **Current Task:** 38 deferred; slices 20–21 complete
-- **Next Action:** Start the next clean session by reading `plan/tasks.md`, `plan/permission-policy.md`, and `workflow-improvement-cycle.md`, then decide whether to (a) test/adjust the new permission model in real use, or (b) revisit deferred task `38` only if repeated workflow-improvement passes show a dedicated maintenance skill is now justified.
+- **Current Slice:** Research directory repartition + opencode product branch build-out
+- **Current Task:** N/A
+- **Next Action:** Read `research/products/opencode/README.md`, then continue the opencode branch with either `research/products/opencode/practical-safe-baseline.md` or `research/products/opencode/custom-agents-and-role-shaping.md`.
 
 ## Completed This Session
-- Completed the deferred operational polish backlog (`46`–`51`) and committed it as `ee5dc31` — `refactor: polish deferred operational workflow`.
-- Audited agent permissions against the research-backed control model.
-- Added a durable permission map in `plan/permission-policy.md`.
-- Tightened the enforcement baseline in `opencode.jsonc` and narrowed bash permissions for:
-  - `agents/generalist.md`
-  - `agents/coder.md`
-  - `agents/reviewer.md`
-- Committed the permission hardening slice as `671c394` — `refactor: harden agent permission model`.
-- Added `workflow-improvement-cycle.md` as a top-level operational playbook that separates:
-  - charter (`ai-workflow-improvement.md`)
-  - recurring cycle (`workflow-improvement-cycle.md`)
-  - still-deferred future automation (`38`)
+- Repartitioned `research/` into `concepts/`, `capabilities/`, `products/`, `syntheses/`, and updated repository docs/templates accordingly.
+- Renamed `research/topics/` to `research/concepts/` and moved cross-cutting notes into `research/syntheses/`.
+- Built out a substantial `research/products/opencode/` branch with foundation and advanced notes, including:
+  - `foundations.md`
+  - `config-and-instruction-loading.md`
+  - `agents-permissions-and-skills-basics.md`
+  - `references-and-external-context-basics.md`
+  - `local-first-models-and-providers.md`
+  - `config-surface-and-volatility-map.md`
+  - `permissions-and-agent-safety.md`
+  - `instruction-layering.md`
+  - `advanced-features-map.md`
+  - `system-prompt-control.md`
+  - `session-control-and-recovery.md`
+  - `mcp-and-tooling.md`
+- Rewrote `research/products/opencode/system-prompt-control.md` into the standard product-note format after verifying its claims against current docs/source.
 
 ## Blockers / Open Questions
 - No hard blocker.
-- Main open question: is the current permission model low-friction enough in real use, especially for Generalist git workflow and Coder test/implementation work?
-- Deferred design question: should task `38` stay deferred permanently, become a user-invoked command first, or later graduate into a dedicated skill after more repeated real cycles?
+- Main open question: should the next opencode research note focus on a practical safe baseline first, or on custom agent/role shaping?
+- `system-prompt-control.md` confirms the hook exists, but the local practical spike for `experimental.chat.system.transform` is still intentionally unrun.
 
 ## Read These First
-- `plan/tasks.md`: Shows slices 20–21 completed and task `38` still deferred.
-- `plan/permission-policy.md`: Current human-readable source of truth for the intended allow / ask / deny model and known enforcement limits.
-- `workflow-improvement-cycle.md`: New operational playbook for recurring workflow-improvement passes.
-- `opencode.jsonc`: Current global permission baseline (`external_directory: ask`).
-- `agents/generalist.md`, `agents/coder.md`, `agents/reviewer.md`: Read together if the next session tests or refines the hardened permission model.
+- `research/products/opencode/README.md`: Current branch map and reading order for the opencode product research.
+- `research/index.md`: Updated global research map showing the new partition and opencode branch entries.
+- `research/products/opencode/advanced-features-map.md`: Best current guide for what advanced areas matter next.
+- `research/products/opencode/permissions-and-agent-safety.md`: Most actionable note if the next step moves toward practical setup guidance.
+- `research/products/opencode/system-prompt-control.md`: Verified advanced note if prompt-control work is revisited later.

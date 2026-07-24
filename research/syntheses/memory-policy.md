@@ -418,8 +418,8 @@ If those questions cannot be answered clearly, the write is probably premature.
 
 ## Relationship to Other Documents
 
-- `research/principles-only.md`
-- `research/control-boundaries.md`
-- `research/vocabulary.md`
-- `research/topics/memory-systems.md`
-- `research/topics/observability-traceability.md`
+- `research/syntheses/principles-only.md`
+- `research/syntheses/control-boundaries.md`
+- `research/syntheses/vocabulary.md`
+- `research/concepts/memory-systems.md`
+- `research/concepts/observability-traceability.md`
