@@ -14,6 +14,10 @@ This directory stores fast-moving notes about specific tools and implementations
 - Claude Code
 - LM Studio
 - Obsidian
+- Joplin
+- AnythingLLM
+- Open WebUI
+- Khoj
 - SQLite / SQLite FTS5
 - Docling
 - Qdrant

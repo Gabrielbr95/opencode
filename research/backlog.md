@@ -29,6 +29,7 @@ It is not the place for repository structure rules, solved cleanup items, or the
 - When should a memory item be superseded in place versus retired and left as historical record?
 - Which memory writes should be allowed automatically versus only proposed for review?
 - What is the right repository-specific adoption boundary between direct navigation, attachments, retrieval pipelines, and durable memory?
+- When should an off-the-shelf second-brain product remain the source of truth versus being mirrored into a retrieval-centric workspace?
 
 ### Policy and control
 - Which permission and tool-governance patterns best fit a local-first corporate environment?
@@ -48,6 +49,7 @@ It is not the place for repository structure rules, solved cleanup items, or the
 - Source metadata minimum for any future local consultation tool
 - Refresh and re-index policy that survives long interruptions
 - Evidence-return format for retrieval results used in audit or debugging
+- Whether one product should hold both curated notes and heavy manual/PDF corpora, or whether a split note-product plus retrieval-product architecture is more maintainable
 
 ## Candidate Capability Notes
 - `delegation-contracts-and-agent-interoperability.md`

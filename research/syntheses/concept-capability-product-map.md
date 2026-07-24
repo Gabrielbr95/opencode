@@ -131,6 +131,11 @@ Primary rule:
 - **Capability owner**
   - `../capabilities/retrieval-pipelines.md`
 - **Product owners**
+  - `../products/joplin.md`
+  - `../products/obsidian.md`
+  - `../products/anythingllm.md`
+  - `../products/open-webui.md`
+  - `../products/khoj.md`
   - `../products/sqlite-fts5.md`
   - `../products/docling.md`
   - `../products/qdrant.md`
@@ -138,11 +143,12 @@ Primary rule:
   - `../products/chroma.md`
 - **Synthesis owner**
   - `../syntheses/local-first-retrieval-tool-comparison.md`
+  - `../syntheses/second-brain-and-retrieval-product-comparison.md`
 
 Primary rule:
 - general retrieval mechanism lives in the capability note
 - each tool note records product facts about one tool
-- cross-tool role comparison lives in the synthesis note
+- cross-tool role and product-family comparison live in the synthesis notes
 
 ---
 

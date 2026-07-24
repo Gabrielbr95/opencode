@@ -47,6 +47,11 @@ For unresolved questions and future topics, see `backlog.md`.
 | Product / Branch | File | Notes |
 |---|---|---|
 | Product branch guide | `products/README.md` | Role and freshness expectations for product notes. |
+| Joplin | `products/joplin.md` | Note-centric second-brain candidate with strong API/MCP retrieval surfaces. |
+| Obsidian | `products/obsidian.md` | Markdown-first local knowledge product with strong file transparency and weaker official automation surface. |
+| AnythingLLM | `products/anythingllm.md` | Retrieval-first local knowledge workspace with API and MCP relevance. |
+| Open WebUI | `products/open-webui.md` | Knowledge-base-centric retrieval platform with strong scoped corpus model and broader API surface. |
+| Khoj | `products/khoj.md` | Second-brain/search product with strong semantic retrieval fit and weaker Windows setup fit. |
 | SQLite FTS5 | `products/sqlite-fts5.md` | Embedded lexical plus structured retrieval. |
 | Docling | `products/docling.md` | Mixed-document parsing and chunking for ingestion pipelines. |
 | Qdrant | `products/qdrant.md` | Local semantic/vector retrieval with payload filtering. |
@@ -80,6 +85,7 @@ For unresolved questions and future topics, see `backlog.md`.
 | Memory policy | `syntheses/memory-policy.md` | Repository policy for memory layers, provenance, and durable-write gates. |
 | Observability schema | `syntheses/observability-schema.md` | Canonical event and trace fields for workflow observability. |
 | Principles only | `syntheses/principles-only.md` | Distilled durable principles across the research tree. |
+| Second-brain and retrieval product comparison | `syntheses/second-brain-and-retrieval-product-comparison.md` | Decision aid for off-the-shelf local-first products under this repository's constraints. |
 | Task, run, and artifact records | `syntheses/task-run-artifact-records.md` | Shared record model linking work definitions, runs, artifacts, events, and lineage. |
 | Vocabulary | `syntheses/vocabulary.md` | Canonical glossary for repository terms. |
 | Workflow pattern comparison | `syntheses/workflow-pattern-comparison.md` | Comparison of chain, route, parallelize, evaluator-optimizer, ReAct, and orchestrator-worker. |
