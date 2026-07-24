@@ -8,6 +8,7 @@
 - `observability-schema.md` — minimum useful trace and event schema for tasks, tool calls, approvals, durable writes, failures, and review outcomes.
 - `workflow-pattern-comparison.md` — decision-support matrix for choosing between chain, route, parallelize, orchestrator-worker, evaluator-optimizer, and ReAct.
 - `evaluation-method-comparison.md` — decision-support matrix for choosing between exact match, rubric, pairwise comparison, LLM judge, and human review.
+- `opencode-system-prompt-control.md` — finding: the `experimental.chat.system.transform` plugin hook as the untested escape hatch for trimming opencode's baked core system prompt.
 
 ## Current Topics
 
