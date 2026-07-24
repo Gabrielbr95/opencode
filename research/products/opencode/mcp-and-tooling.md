@@ -15,6 +15,15 @@
 - How MCP fits into the harness relative to references, permissions, and other control layers
 - Why MCP should be adopted cautiously in this environment
 
+## Canonical Boundary
+This note is for **how opencode implements MCP today**.
+
+For the cross-tool capability itself, see:
+- `research/capabilities/mcp.md`
+
+For the lighter-weight external context pattern that often comes first, see:
+- `research/capabilities/context-attachments.md`
+
 ## Why This Matters Here
 - MCP is one of the most powerful expansion points in opencode.
 - It can greatly expand what the harness can see and do.
@@ -132,6 +141,8 @@ MCP is not only a capability decision; it can also enlarge the prompt surface.
 - Which MCP uses would beat simpler references or local scripts.
 
 ## Relationship to Other Notes
+- `research/capabilities/mcp.md`
+- `research/capabilities/context-attachments.md`
 - `research/products/opencode/references-and-external-context-basics.md`
 - `research/products/opencode/permissions-and-agent-safety.md`
 - `research/products/opencode/system-prompt-control.md`

@@ -10,7 +10,7 @@ This directory stores structured research notes for improving the AI workflow ov
 
 ## Partitioning Rule: Organize by Stability Horizon
 
-This repository uses three research layers.
+This repository uses three primary research layers plus a synthesis layer.
 
 ### 1. `concepts/` — Concepts
 Slow-moving ideas that should remain useful across vendor or framework churn.
@@ -57,6 +57,20 @@ These notes answer:
 - What matters for this local workflow?
 - What might go stale soon?
 
+### 4. `syntheses/` — Repository-Level Knowledge
+Cross-cutting conclusions distilled from multiple concepts, capabilities, and product notes.
+
+Examples:
+- vocabulary
+- control boundaries
+- memory policy
+- comparison matrices
+
+These notes answer:
+- What have we concluded for this repository?
+- Which distinctions should stay stable across future research?
+- What decision aids reduce re-learning after long gaps?
+
 ## Structure
 - `index.md` — research map, grouped by layer.
 - `backlog.md` — future concepts, capabilities, open questions, and follow-up ideas.
@@ -78,4 +92,5 @@ These notes answer:
 - Cross-link related notes when useful.
 - Update the index when a new note is added.
 - Put vendor-neutral understanding in `concepts/` or `capabilities/`, not in `products/`.
+- Use `syntheses/` for repository conclusions and decision aids, not for raw product findings.
 - Treat product notes as dated snapshots, not timeless truth.

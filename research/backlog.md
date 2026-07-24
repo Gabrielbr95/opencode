@@ -24,11 +24,21 @@
 ## Candidate Future Topics
 - Reflection and self-critique
 - Multi-agent collaboration patterns
-- Model routing
 - RAG for prompt repositories
 - Knowledge representation / ontology for prompt repositories
-- Policy-as-code for agent governance
+- Retrieval ingestion and index freshness pipelines
 - Provenance models for prompts, memory, and evaluations
+
+## Next Capability Contenders
+- `task-artifact-and-run-record-models.md` — bridge note for tasks, artifacts, statuses, lineage, and non-transcript system records.
+- `retrieval-ingestion-and-index-freshness-pipelines.md` — bridge note for ingestion, document identity, freshness, provenance, and retrieval evaluation.
+- `delegation-contracts-and-agent-interoperability.md` — bridge note for handoffs, capability descriptors, async job handles, auth scope, cancellation, and result channels.
+- `approval-pause-resume-and-human-gates.md` — bridge note for resumable approvals, pending questions, approver identity, timeout/escalation, and audit records.
+
+## Naming Cleanup Notes
+- Capability filenames should look like subsystem topics, not mini-essays.
+- Prefer short names such as `tool-calling.md`, `model-routing.md`, `eval-harnesses.md`, `policy-engines.md`, `sessions.md`, and `context-attachments.md`.
+- Broad architecture ideas such as instruction layering or durable execution belong in `concepts/`.
 
 ## Follow-Up Ideas From Initial Research
 - Create a comparison matrix of workflow patterns: chain, route, parallelize, orchestrator-worker, evaluator-optimizer, ReAct. [Done: `research/syntheses/workflow-pattern-comparison.md`]

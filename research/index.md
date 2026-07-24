@@ -8,7 +8,10 @@
 - `syntheses/observability-schema.md` — minimum useful trace and event schema for tasks, tool calls, approvals, durable writes, failures, and review outcomes.
 - `syntheses/workflow-pattern-comparison.md` — decision-support matrix for choosing between chain, route, parallelize, orchestrator-worker, evaluator-optimizer, and ReAct.
 - `syntheses/evaluation-method-comparison.md` — decision-support matrix for choosing between exact match, rubric, pairwise comparison, LLM judge, and human review.
-- `products/opencode/system-prompt-control.md` — finding: the `experimental.chat.system.transform` plugin hook as the untested escape hatch for trimming opencode's baked core system prompt.
+- `syntheses/concept-capability-product-map.md` — operational knowledge map linking durable concepts to reusable capabilities, current product notes, and repository conclusions.
+
+## Highlighted Product Finding
+- `products/opencode/system-prompt-control.md` — product-specific finding: the `experimental.chat.system.transform` plugin hook appears to be the current escape hatch for trimming or reshaping opencode's baked system prompt.
 
 ## Concepts (`concepts/`)
 
@@ -17,7 +20,9 @@
 | Agent architectures | Researched | `concepts/agent-architectures.md` | Foundational concept for role boundaries, orchestration patterns, and autonomy tradeoffs. |
 | Skill systems | Researched | `concepts/skill-systems.md` | Focus on reusable capability packaging, invocation, and progressive disclosure. |
 | Context engineering | Researched | `concepts/context-engineering.md` | Focus on memory boundaries, retrieval, salience, and context shaping. |
+| Instruction layering | Researched | `concepts/instruction-layering.md` | Concept note on layered ambient instructions, precedence, and separation from on-demand procedures. |
 | Planning systems | Researched | `concepts/planning-systems.md` | Focus on decomposition, replanning, orchestration, and stop conditions. |
+| Durable execution | Researched | `concepts/durable-execution.md` | Runtime architecture note on run identity, replay, retries, side-effect isolation, and long-running execution semantics. |
 | Evaluation / prompt testing | Researched | `concepts/evaluation-prompt-testing.md` | Focus on reliability, regressions, workflow-level testing, and evidence-driven iteration. |
 | Memory systems | Researched | `concepts/memory-systems.md` | Focus on memory tiers, retrieval, durable writes, and provenance. |
 | Human-in-the-loop control points | Researched | `concepts/human-in-the-loop-control-points.md` | Focus on approvals, escalation, review/edit loops, and safe pause/resume. |
@@ -29,7 +34,14 @@
 
 | Capability | Status | File | Notes |
 |---|---|---|---|
-| Branch scaffold | Initialized | `capabilities/README.md` | Medium-volatility layer for MCP, RAG, tool calling, routing, and similar reusable capabilities. |
+| Capability branch scaffold | Active | `capabilities/README.md` | Medium-volatility bridge layer between durable concepts and volatile product implementations. |
+| Context attachments | Researched | `capabilities/context-attachments.md` | Cross-tool note on named outside context roots, aliasing, provenance, and permission-aware boundaries. |
+| Model routing | Researched | `capabilities/model-routing.md` | Cross-tool note on backend routing, model catalogs, and local/internal/external boundaries. |
+| Sessions | Researched | `capabilities/sessions.md` | Cross-tool note on session continuity, compaction, interrupt/resume, and bounded rollback. |
+| MCP | Researched | `capabilities/mcp.md` | Cross-tool protocol note on capability expansion, tool/resource exposure, and trust/runtime implications. |
+| Tool calling | Researched | `capabilities/tool-calling.md` | Cross-tool note on callable action shape, invocation lifecycle, validation boundaries, and result correlation. |
+| Eval harnesses | Researched | `capabilities/eval-harnesses.md` | Cross-tool eval infrastructure for cases, trajectories, score schemas, thresholds, and release or approval gates. |
+| Policy engines | Researched | `capabilities/policy-engines.md` | Cross-tool note on structured policy inputs, explicit decisions, enforcement hooks, auditability, and testability. |
 
 ## Products (`products/`)
 
@@ -61,6 +73,15 @@
 8. `concepts/observability-traceability.md`
 9. `concepts/evaluation-prompt-testing.md`
 10. `concepts/prompt-modularity-repository-architecture.md`
+11. `concepts/instruction-layering.md`
+12. `concepts/durable-execution.md`
+13. `capabilities/context-attachments.md`
+14. `capabilities/model-routing.md`
+15. `capabilities/sessions.md`
+16. `capabilities/mcp.md`
+17. `capabilities/tool-calling.md`
+18. `capabilities/eval-harnesses.md`
+19. `capabilities/policy-engines.md`
 
 ## Cross-Cutting Themes
 - Prefer simple, inspectable workflows before adding autonomy.
@@ -76,10 +97,10 @@
 ## Suggested Next Topics
 - Multi-agent collaboration
 - Reflection and self-critique
-- Model routing
-- RAG for prompt repositories
 - Knowledge representation / ontology for prompt repositories
-- Policy-as-code for agent governance
+- Retrieval ingestion and index freshness pipelines
+- Task, artifact, and run record models
+- Delegation contracts and agent interoperability
 
 ## Maintenance Rules
 - Put slower-moving, vendor-neutral ideas in `concepts/`.

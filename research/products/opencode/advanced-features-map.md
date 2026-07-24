@@ -15,6 +15,12 @@
 - Which advanced areas are worth learning next for this repository
 - Which advanced areas look powerful but volatile
 
+## Canonical Boundary
+This note is the opencode-specific **what next / what to defer** map.
+
+It should remain the main place for ranked next-step guidance inside the opencode branch.
+Other notes should point here instead of repeating the same roadmap.
+
 ## Why This Matters Here
 - The foundation notes now cover the base product model.
 - This note exists to prevent “advanced features” from becoming a grab bag.

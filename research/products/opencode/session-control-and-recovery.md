@@ -15,6 +15,12 @@
 - Why they matter for interrupted work and long-gap resumability
 - Which parts seem practically useful before deeper customization work
 
+## Canonical Boundary
+This note is for **how opencode implements session continuity today**.
+
+For the reusable capability pattern, see:
+- `research/capabilities/sessions.md`
+
 ## Why This Matters Here
 - This workflow has long interruptions and heavy context decay.
 - A harness that supports interruption, recovery, and controlled rollback is more valuable than one that only feels powerful in the moment.
@@ -109,6 +115,9 @@ If long gaps are common, session naming, summaries, and related documentation di
 - How much session recovery helps after a true 14-day gap versus just a short interruption.
 
 ## Relationship to Other Notes
+- `research/capabilities/sessions.md`
+- `research/syntheses/memory-policy.md`
+- `research/syntheses/observability-schema.md`
 - `research/products/opencode/advanced-features-map.md`
 - `research/products/opencode/system-prompt-control.md`
 - `research/concepts/memory-systems.md`

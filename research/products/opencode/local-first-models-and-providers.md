@@ -15,6 +15,12 @@
 - What local-first usage looks like in practice
 - Why provider understanding matters before more advanced product features
 
+## Canonical Boundary
+This note is for **current opencode provider behavior and local-first fit**.
+
+For the reusable routing concept, see:
+- `research/capabilities/model-routing.md`
+
 ## Why This Matters Here
 - This environment values local-first behavior and controlled network exposure.
 - Before going deeper into advanced opencode features, it helps to know how the harness reaches models at all.
@@ -116,8 +122,10 @@ When evaluating a provider setup, ask:
 5. Would troubleshooting be easy after a long interruption?
 
 ## Relationship to General Concepts
-- `research/concepts/agent-harnesses.md`
 - `research/concepts/context-engineering.md`
+
+## Relationship to Capabilities
+- `research/capabilities/model-routing.md`
 
 ## Open Questions
 - Which local provider path is simplest to maintain on a locked-down Windows laptop?

@@ -15,6 +15,18 @@
 - How instruction files are discovered
 - Which precedence rules matter first for practical customization
 
+## Canonical Boundary
+This note is the main product note for **loader mechanics**:
+- where config comes from
+- where instruction sources come from
+- which precedence rules appear to matter
+
+For the reusable cross-tool idea of layered ambient instructions, see:
+- `research/concepts/instruction-layering.md`
+
+For the narrower question of how to divide ambient instructions versus skills in opencode, see:
+- `research/products/opencode/instruction-layering.md`
+
 ## Why This Matters Here
 - This repository already depends heavily on ambient instructions and local customization.
 - If config and instruction precedence are unclear, later changes to agents, permissions, or skills become confusing fast.
@@ -105,6 +117,9 @@ That sequence should prevent a lot of false guesses.
 ## Relationship to General Concepts
 - `research/concepts/prompt-modularity-repository-architecture.md`
 - `research/concepts/context-engineering.md`
+
+## Relationship to Capabilities
+- `research/concepts/instruction-layering.md`
 
 ## Open Questions
 - Which parts of the source-order behavior are stable public surface versus implementation detail?

@@ -15,6 +15,15 @@
 - Which defaults matter most for a cautious local-first workflow
 - What to understand before granting more autonomy
 
+## Canonical Boundary
+This note is for **runtime safety posture**:
+- permission semantics
+- external boundary effects
+- practical safe-baseline reasoning
+
+It assumes the structural mental model from:
+- `research/products/opencode/agents-permissions-and-skills-basics.md`
+
 ## Why This Matters Here
 - This repository cares a lot about controllable, understandable behavior.
 - The most useful question is not whether opencode supports powerful actions, but how narrowly those actions can be bounded.
@@ -128,6 +137,7 @@ The safer durable understanding is:
 ## Relationship to Other Notes
 - `research/products/opencode/agents-permissions-and-skills-basics.md`
 - `research/products/opencode/references-and-external-context-basics.md`
+- `research/syntheses/control-boundaries.md`
 - `research/concepts/tool-use-policy-and-permission-systems.md`
 
 ## Open Questions

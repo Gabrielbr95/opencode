@@ -15,6 +15,15 @@
 - The basic relationship between agents, permissions, and skills in opencode
 - What seems foundational before studying more advanced features
 
+## Canonical Boundary
+This note is for the **structural mental model**:
+- agent = who acts
+- permission = what is allowed
+- skill = reusable procedure
+
+For runtime safety posture and cautious defaults, see:
+- `research/products/opencode/permissions-and-agent-safety.md`
+
 ## Why This Matters Here
 - This repository already uses agent roles and skills heavily.
 - The main practical question is not “what advanced feature exists?” but “who is doing what, under which permissions, with which reusable procedures?”
@@ -115,6 +124,9 @@ So this note should be read as a current practical snapshot, not a permanent con
 - `research/concepts/agent-architectures.md`
 - `research/concepts/tool-use-policy-and-permission-systems.md`
 - `research/concepts/skill-systems.md`
+
+## Relationship to Syntheses
+- `research/syntheses/control-boundaries.md`
 
 ## Open Questions
 - Which built-in agents are durable enough to depend on long-term?

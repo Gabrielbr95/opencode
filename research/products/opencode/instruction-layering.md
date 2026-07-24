@@ -15,6 +15,19 @@
 - How `AGENTS.md`, `CLAUDE.md`, and configured `instructions` interact
 - How ambient instructions differ from skills
 
+## Canonical Boundary
+This note is intentionally narrower than `config-and-instruction-loading.md`.
+
+Use this note for:
+- how to reason about ambient instruction placement inside opencode
+- where to put repo norms versus additive instruction files versus skills
+
+Use `config-and-instruction-loading.md` for:
+- loader/discovery mechanics and merged-source debugging
+
+Use `research/concepts/instruction-layering.md` for:
+- the cross-tool concept model
+
 ## Why This Matters Here
 - This repository relies heavily on durable instructions and on-demand skills.
 - If instruction layering is fuzzy, it becomes hard to know which file actually shaped behavior.
@@ -145,6 +158,7 @@ When adding a new rule, ask:
 ## Relationship to Other Notes
 - `research/products/opencode/config-and-instruction-loading.md`
 - `research/products/opencode/agents-permissions-and-skills-basics.md`
+- `research/concepts/instruction-layering.md`
 - `research/concepts/prompt-modularity-repository-architecture.md`
 - `research/concepts/skill-systems.md`
 

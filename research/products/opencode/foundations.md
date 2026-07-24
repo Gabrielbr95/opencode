@@ -15,6 +15,16 @@
 - Which control surfaces matter before chasing advanced features
 - Which areas seem stable enough to learn first
 
+## Branch Boundary
+This note is the short product mental model.
+
+For reusable cross-tool explanations, prefer:
+- `research/concepts/instruction-layering.md`
+- `research/capabilities/context-attachments.md`
+- `research/capabilities/model-routing.md`
+- `research/capabilities/sessions.md`
+- `research/capabilities/mcp.md`
+
 ## Why This Matters Here
 - This repository already uses opencode as the active harness.
 - Before researching advanced features, it helps to understand the basic control model: where instructions come from, how agents are shaped, and where permissions sit.
@@ -60,16 +70,9 @@ The model backends opencode can call, including local or OpenAI-compatible endpo
 ### 7. Extensions
 MCP servers, plugins, and commands extend the harness further, but they are not the first layer to master.
 
-## Practical Reading Order
-For this repository, the likely best foundation-first sequence is:
-
-1. `foundations.md`
-2. `config-and-instruction-loading.md`
-3. `agents-permissions-and-skills-basics.md`
-4. `references-and-external-context-basics.md`
-5. `local-first-models-and-providers.md`
-
-Only after those: advanced features, MCP depth, plugins, and system-prompt surgery.
+## Practical Reading Rule
+Start with the short product notes that explain current opencode behavior.
+When a note starts feeling cross-tool, jump up to the matching capability note instead of repeating the same explanation here.
 
 ## Likely Stable vs Volatile Areas
 
@@ -103,6 +106,13 @@ If those are clear, the advanced features become easier to evaluate.
 - `research/concepts/tool-use-policy-and-permission-systems.md`
 - `research/concepts/prompt-modularity-repository-architecture.md`
 - `research/concepts/skill-systems.md`
+
+## Relationship to Capabilities
+- `research/concepts/instruction-layering.md`
+- `research/capabilities/context-attachments.md`
+- `research/capabilities/model-routing.md`
+- `research/capabilities/sessions.md`
+- `research/capabilities/mcp.md`
 
 ## Open Questions
 - Which parts of the current product surface are stable enough to rely on for long periods?

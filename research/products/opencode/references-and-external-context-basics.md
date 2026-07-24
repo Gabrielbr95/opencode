@@ -15,6 +15,12 @@
 - How references relate to external context and permissions
 - Why references should be understood before deeper MCP or plugin work
 
+## Canonical Boundary
+This note is the product-specific implementation note for opencode references.
+
+For the reusable cross-tool pattern, see:
+- `research/capabilities/context-attachments.md`
+
 ## Why This Matters Here
 - This repository values local-first, inspectable context.
 - References appear to be one of the simplest ways to extend context safely without jumping straight into remote MCP or more complex integrations.
@@ -119,6 +125,10 @@ When deciding whether to use a reference, ask:
 ## Relationship to General Concepts
 - `research/concepts/context-engineering.md`
 - `research/concepts/tool-use-policy-and-permission-systems.md`
+
+## Relationship to Capabilities
+- `research/capabilities/context-attachments.md`
+- `research/capabilities/mcp.md`
 
 ## Open Questions
 - How exactly does opencode materialize and refresh Git references in day-to-day use?
