@@ -21,22 +21,6 @@
         "CONTEXT7_API_KEY": "ctx7sk-af45b65b-e437-4cbe-95f7-2f5b5ef002cb"
       },
       "enabled": true
-    },
-    "filesystem": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "/home/gabriel/.config/opencode",
-        "/home/gabriel/Documents"
-      ],
-      "enabled": true
-    },
-    "git": {
-      "type": "local",
-      "command": ["uvx", "mcp-server-git"],
-      "enabled": true
     }
   },
 

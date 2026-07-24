@@ -6,6 +6,4 @@ __pycache__/
 *.pyc
 *.pyo
 *.mhtml
-opencode_local.jsonc
-opencode_work.jsonc
 opencode-main.bundle
