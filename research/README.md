@@ -1,96 +1,166 @@
 # AI Workflow Research
 
-This directory stores structured research notes for improving the AI workflow over time.
+This directory stores structured research for improving the AI workflow over time.
 
-## Goals
-- Keep findings local and durable.
-- Separate slower-changing ideas from faster-changing ecosystem and product details.
-- Make it easy to extend topic-by-topic across interrupted sessions.
-- Preserve source traceability through citations.
+Its job is to preserve durable understanding, reduce re-learning after long gaps, and keep product-specific findings separated from slower-moving ideas.
 
-## Partitioning Rule: Organize by Stability Horizon
+## Repository Role
 
-This repository uses three primary research layers plus a synthesis layer.
+The research tree is a knowledge base, not a task list and not a chat transcript.
 
-### 1. `concepts/` — Concepts
-Slow-moving ideas that should remain useful across vendor or framework churn.
+It is meant to answer three kinds of questions:
+- what the durable ideas are
+- what reusable mechanisms sit between those ideas and products
+- what this repository currently knows about specific tools
+
+## The Four Research Layers
+
+### 1. `concepts/`
+Canonical home for slower-moving ideas, boundaries, and design principles.
+
+Questions this layer answers:
+- what is this idea?
+- what problem does it solve?
+- what distinctions and tradeoffs stay useful across tool churn?
 
 Examples:
 - agent architectures
 - planning systems
+- context engineering
 - memory systems
-- evaluation
-- agent harnesses
+- instruction layering
 
-These notes answer:
-- What is it?
-- Why does it matter?
-- What are the main tradeoffs and boundaries?
+### 2. `capabilities/`
+Canonical home for reusable cross-tool subsystems or facilities.
 
-### 2. `capabilities/` — General Tools and Functionalities
-Medium-moving capabilities, protocols, and building blocks that outlive any one product but can evolve with the ecosystem.
+Questions this layer answers:
+- what mechanism does this provide?
+- what is the minimal durable model?
+- what parts are portable across tools, and what parts drift faster?
 
 Examples:
-- MCP
-- RAG
 - tool calling
-- model routing
+- policy engines
+- sessions
+- context attachments
 - retrieval pipelines
 
-These notes answer:
-- What capability does this provide?
-- What are the common implementation patterns?
-- What is portable versus tool-specific?
+### 3. `products/`
+Canonical home for product-specific snapshots.
 
-### 3. `products/` — Tool-Specific Implementations
-Fast-moving notes about how a specific product works right now.
+Questions this layer answers:
+- how does one tool implement a concept or capability today?
+- what exact behavior or config surface matters here?
+- what looks volatile and likely to need rechecking?
 
 Examples:
 - opencode
-- Claude Code
-- LM Studio
-- Obsidian
+- SQLite FTS5
+- Docling
+- Qdrant
+- LanceDB
+- Chroma
 
-These notes answer:
-- What does this tool support today?
-- How is it configured?
-- What matters for this local workflow?
-- What might go stale soon?
+### 4. `syntheses/`
+Canonical home for cross-note vocabulary, comparison docs, repository-level maps, and distilled conclusions.
 
-### 4. `syntheses/` — Repository-Level Knowledge
-Cross-cutting conclusions distilled from multiple concepts, capabilities, and product notes.
+Questions this layer answers:
+- how should the repository classify this body of knowledge?
+- which distinctions should remain stable across future notes?
+- what comparison or glossary reduces future re-learning?
 
 Examples:
 - vocabulary
 - control boundaries
-- memory policy
-- comparison matrices
+- workflow-pattern comparison
+- evaluation-method comparison
+- concept-capability-product map
 
-These notes answer:
-- What have we concluded for this repository?
-- Which distinctions should stay stable across future research?
-- What decision aids reduce re-learning after long gaps?
+## Entry Points and Their Jobs
 
-## Structure
-- `index.md` — research map, grouped by layer.
-- `backlog.md` — future concepts, capabilities, open questions, and follow-up ideas.
-- `concepts/` — concept notes.
-- `capabilities/` — medium-volatility capability notes.
-- `products/` — fast-moving product notes.
-- `syntheses/` — cross-cutting distilled notes, vocabularies, and comparison docs.
-- `templates/` — reusable note templates for consistent capture.
+- `README.md` — repository architecture, placement rules, and note-writing conventions
+- `index.md` — inventory and reading paths
+- `backlog.md` — unresolved questions and candidate future topics
+- `syntheses/vocabulary.md` — canonical glossary for overloaded operating terms
 
-## Freshness Expectations
-- **Concepts**: prioritize durable definitions, boundaries, and tradeoffs.
-- **Capabilities**: include likely drift areas and portability notes.
-- **Products**: include explicit freshness metadata such as last verified date, source checked, and recheck triggers.
+These files should not duplicate each other.
 
-## Working Rules
-- Prefer small, focused notes over giant summary documents.
-- Record tradeoffs, not just summaries.
-- Cite sources in every research note.
-- Cross-link related notes when useful.
-- Update the index when a new note is added.
-- Put vendor-neutral understanding in `concepts/` or `capabilities/`, not in `products/`.
-- Use `syntheses/` for repository conclusions and decision aids, not for raw product findings.
-- Treat product notes as dated snapshots, not timeless truth.
+## Canonical Ownership Rule
+
+Each idea should have one primary home.
+
+Use this test before writing or expanding a note:
+
+1. Is this mainly a durable idea or boundary?
+   - put it in `concepts/`
+2. Is this mainly a reusable mechanism several tools could implement?
+   - put it in `capabilities/`
+3. Is this mainly current behavior of one tool?
+   - put it in `products/`
+4. Is this mainly a glossary, comparison, map, or repository-level conclusion?
+   - put it in `syntheses/`
+
+If a note needs several paragraphs to re-explain another note's core idea, that is a sign the canonical home is wrong or the reference should be tighter.
+
+## Referencing Rule
+
+When an idea already has a canonical note:
+- summarize it in one or two sentences at most
+- link to the canonical note
+- only add local detail that is genuinely specific to the current note's layer
+
+Do not let the same explanation become authoritative in several places.
+
+## Terminology Rule
+
+Use `syntheses/vocabulary.md` as the canonical source for overloaded terms such as:
+- workflow
+- agent
+- skill
+- session
+- run
+- memory
+- retrieval
+- attachment
+- approval
+- permission
+- durable truth
+
+If a source uses a term differently, record that source-local meaning explicitly instead of silently redefining the repository meaning.
+
+## Note Shape and Tone
+
+Research notes are descriptive first.
+
+They should prefer:
+- definitions
+- boundaries
+- tradeoffs
+- relationships
+- implications for this repository
+- open questions
+
+They should avoid turning into:
+- hidden task lists
+- recommendation dumps
+- implementation instructions unless the note is explicitly product-specific and evidence-backed
+
+Repository-specific implications are useful, but they should still read as structured knowledge rather than as marching orders.
+
+## Minimal Conventions
+
+- Keep one topic per note.
+- Put scope boundaries near the top when confusion is likely.
+- Use explicit relationship links to canonical neighboring notes.
+- Keep product notes dated with freshness metadata.
+- Prefer shorter, more focused notes over omnibus essays.
+- Update `index.md` when a new durable note is added.
+- Update `backlog.md` when a gap or unresolved question becomes visible.
+
+## Subtree Guides
+
+- `concepts/README.md`
+- `capabilities/README.md`
+- `products/README.md`
+- `syntheses/README.md`
+- `templates/README.md`

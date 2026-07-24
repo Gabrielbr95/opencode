@@ -170,7 +170,7 @@ Do **not** start by writing a complex trimming plugin.
 - Any solution that depends on version-sensitive prompt internals is a maintenance commitment.
 - For a solo maintainer with long interruption gaps, this should remain an exception path, not the default workflow pattern.
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/products/opencode/instruction-layering.md`
 - `research/products/opencode/advanced-features-map.md`
 - `research/products/opencode/config-surface-and-volatility-map.md`

@@ -73,7 +73,7 @@
 - `../products/opencode/local-first-models-and-providers.md`
 - `../products/opencode/config-surface-and-volatility-map.md`
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Document whether a backend is local, internal, or external before optimizing prompts around it.
 - Keep model availability explicit instead of assuming whatever the provider exposes.
 - Treat provider config as control-plane infrastructure, not as a prompt detail.

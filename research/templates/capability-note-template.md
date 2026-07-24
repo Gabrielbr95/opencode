@@ -45,8 +45,8 @@
 ## Relationships to Other Notes
 - Links to related concept, capability, or product notes.
 
-## Practical Applications for This Repository
-- What this might change in tools, prompts, skills, structure, or workflow.
+## Relevance to This Repository
+- What this note clarifies about the repository's mechanisms, boundaries, or likely future design questions.
 
 ## Open Questions
 - Question 1

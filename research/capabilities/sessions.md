@@ -72,7 +72,7 @@
 - `../syntheses/observability-schema.md`
 - `../products/opencode/session-control-and-recovery.md`
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Treat resumable sessions as helpful runtime state, not as the only durable truth.
 - Keep external wrap-up artifacts even if the harness has good resume features.
 - Verify revert behavior before relying on it under stress.

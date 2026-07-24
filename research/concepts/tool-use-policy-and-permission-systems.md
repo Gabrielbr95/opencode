@@ -76,7 +76,7 @@
 - Policy is part of repository structure; see [Prompt Modularity / Repository Architecture](./prompt-modularity-repository-architecture.md).
 - Tool-policy effectiveness should be measured via [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Maintain a tool registry with purpose, schema, sensitivity, side-effect class, and approval rules.
 - Separate read-only and mutating tools.
 - Define a simple policy matrix: auto / review / approve / forbidden.

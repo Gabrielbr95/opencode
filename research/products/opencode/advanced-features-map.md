@@ -160,7 +160,7 @@ It should **not** mean:
 - more magic layers
 - more hard-to-debug moving parts just because they exist
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/products/opencode/foundations.md`
 - `research/products/opencode/config-surface-and-volatility-map.md`
 - `research/products/opencode/permissions-and-agent-safety.md`

@@ -74,7 +74,7 @@
 - Review events should appear in [Observability / Traceability](./observability-traceability.md).
 - Control-point quality should be tested through [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Require review for new or materially changed prompts, expanded permissions, and durable memory updates.
 - Require approve-before-act for external side effects or risky tool calls.
 - Escalate when instructions conflict, task classification is uncertain, or retries keep failing.

@@ -8,6 +8,7 @@ This directory stores cross-cutting synthesis documents derived from concept, ca
 - repository-level policies
 - cross-topic synthesis notes
 - distilled principles
+- shared cross-note record models
 
 ## What Does Not Belong Here
 - raw concept notes that stand on their own

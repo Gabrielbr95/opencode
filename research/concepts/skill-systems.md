@@ -73,7 +73,7 @@
 - Skill invocation and composition should be checked through [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
 - Many skills encode reusable planning procedures; see [Planning Systems](./planning-systems.md).
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Keep skill metadata short, explicit, and trigger-oriented.
 - Prefer one skill per capability instead of omnibus “god skills.”
 - Separate connectivity docs from procedural skill instructions.

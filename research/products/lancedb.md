@@ -56,7 +56,7 @@ That matters in mixed corpora where semantic retrieval often needs structured na
 - retrieval quality still depends on ingestion, chunking, and query design upstream
 - operational simplicity versus split-stack approaches depends on the surrounding architecture
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/capabilities/retrieval-pipelines.md`
 - `research/concepts/context-engineering.md`
 - `research/syntheses/local-first-retrieval-tool-comparison.md`

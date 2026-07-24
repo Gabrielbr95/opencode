@@ -112,8 +112,8 @@ If a workflow depends on a specific model/backend shape, it is better surfaced i
 - Any `apiKey`, headers, or auth storage still deserve review, even if the model host is internal.
 - If a provider config points to a remote endpoint, that should be treated as a network boundary decision, not as a neutral default.
 
-## Working Heuristic for This Repository
-When evaluating a provider setup, ask:
+## Relevance to This Repository
+When evaluating a provider setup, the main recurring questions are:
 
 1. Is the backend local, internal, or external?
 2. Which models are intentionally exposed to opencode?
@@ -121,10 +121,8 @@ When evaluating a provider setup, ask:
 4. Are credentials stored or injected in a way that matches local policy?
 5. Would troubleshooting be easy after a long interruption?
 
-## Relationship to General Concepts
+## Relationships to Other Notes
 - `research/concepts/context-engineering.md`
-
-## Relationship to Capabilities
 - `research/capabilities/model-routing.md`
 
 ## Open Questions

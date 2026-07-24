@@ -1,120 +1,117 @@
 # Research Index
 
-## Synthesis Documents
-- `syntheses/vocabulary.md` — shared terminology and boundary definitions across the research repository.
-- `syntheses/control-boundaries.md` — practical control model connecting permissions, approvals, HITL, guardrails, side effects, and durable writes.
-- `syntheses/principles-only.md` — implementation-agnostic design rules distilled from the researched concepts.
-- `syntheses/memory-policy.md` — practical repository policy for memory layers, durable-write gates, provenance, review thresholds, and retirement rules.
-- `syntheses/observability-schema.md` — minimum useful trace and event schema for tasks, tool calls, approvals, durable writes, failures, and review outcomes.
-- `syntheses/workflow-pattern-comparison.md` — decision-support matrix for choosing between chain, route, parallelize, orchestrator-worker, evaluator-optimizer, and ReAct.
-- `syntheses/evaluation-method-comparison.md` — decision-support matrix for choosing between exact match, rubric, pairwise comparison, LLM judge, and human review.
-- `syntheses/concept-capability-product-map.md` — operational knowledge map linking durable concepts to reusable capabilities, current product notes, and repository conclusions.
-- `syntheses/local-first-retrieval-tool-comparison.md` — descriptive comparison of SQLite FTS5, Docling, Qdrant, LanceDB, and Chroma as local-first retrieval building blocks.
+This file is the navigation map for the research tree.
 
-## Highlighted Product Finding
-- `products/opencode/system-prompt-control.md` — product-specific finding: the `experimental.chat.system.transform` plugin hook appears to be the current escape hatch for trimming or reshaping opencode's baked system prompt.
+For placement rules and note-writing conventions, see `README.md`.
+For unresolved questions and future topics, see `backlog.md`.
+
+## Entry Points
+
+- `README.md` — how the research tree is organized
+- `backlog.md` — open questions and candidate future topics
+- `syntheses/vocabulary.md` — canonical glossary
+- `syntheses/concept-capability-product-map.md` — map of canonical note ownership across the tree
 
 ## Concepts (`concepts/`)
 
-| Concept | Status | File | Notes |
-|---|---|---|---|
-| Agent architectures | Researched | `concepts/agent-architectures.md` | Foundational concept for role boundaries, orchestration patterns, and autonomy tradeoffs. |
-| Skill systems | Researched | `concepts/skill-systems.md` | Focus on reusable capability packaging, invocation, and progressive disclosure. |
-| Context engineering | Researched | `concepts/context-engineering.md` | Focus on memory boundaries, retrieval, salience, and context shaping. |
-| Instruction layering | Researched | `concepts/instruction-layering.md` | Concept note on layered ambient instructions, precedence, and separation from on-demand procedures. |
-| Planning systems | Researched | `concepts/planning-systems.md` | Focus on decomposition, replanning, orchestration, and stop conditions. |
-| Durable execution | Researched | `concepts/durable-execution.md` | Runtime architecture note on run identity, replay, retries, side-effect isolation, and long-running execution semantics. |
-| Evaluation / prompt testing | Researched | `concepts/evaluation-prompt-testing.md` | Focus on reliability, regressions, workflow-level testing, and evidence-driven iteration. |
-| Memory systems | Researched | `concepts/memory-systems.md` | Focus on memory tiers, retrieval, durable writes, and provenance. |
-| Human-in-the-loop control points | Researched | `concepts/human-in-the-loop-control-points.md` | Focus on approvals, escalation, review/edit loops, and safe pause/resume. |
-| Tool-use policy and permission systems | Researched | `concepts/tool-use-policy-and-permission-systems.md` | Focus on least privilege, scoped autonomy, prompt-injection defense, and approval boundaries. |
-| Prompt modularity / repository architecture | Researched | `concepts/prompt-modularity-repository-architecture.md` | Focus on structure, layering, overrides, and eval-backed prompt maintenance. |
-| Observability / traceability | Researched | `concepts/observability-traceability.md` | Focus on traces, spans, provenance, auditability, and debugging. |
+| Concept | File | Notes |
+|---|---|---|
+| Agent architectures | `concepts/agent-architectures.md` | Ownership, coordination, autonomy, and architecture boundaries for agent systems. |
+| Context engineering | `concepts/context-engineering.md` | Information shaping, salience, retrieval use, and context boundaries. |
+| Durable execution | `concepts/durable-execution.md` | Run identity, replay, retries, checkpoints, pause/resume, and side-effect isolation. |
+| Evaluation / prompt testing | `concepts/evaluation-prompt-testing.md` | Evidence-driven prompt and workflow evaluation. |
+| Human-in-the-loop control points | `concepts/human-in-the-loop-control-points.md` | Review, approval, override, and escalation boundaries. |
+| Instruction layering | `concepts/instruction-layering.md` | Layered ambient instruction systems as a durable idea. |
+| Memory systems | `concepts/memory-systems.md` | Tiered memory, promotion, governance, and recall. |
+| Observability / traceability | `concepts/observability-traceability.md` | Traces, spans, provenance, and auditability. |
+| Planning systems | `concepts/planning-systems.md` | Decomposition, replanning, and stop-condition design. |
+| Prompt modularity / repository architecture | `concepts/prompt-modularity-repository-architecture.md` | Prompt-repository structure, modularity, and precedence. |
+| Skill systems | `concepts/skill-systems.md` | Reusable procedural capability packaging. |
+| Tool-use policy and permission systems | `concepts/tool-use-policy-and-permission-systems.md` | Durable control and least-privilege principles for tool use. |
 
 ## Capabilities (`capabilities/`)
 
-| Capability | Status | File | Notes |
-|---|---|---|---|
-| Capability branch scaffold | Active | `capabilities/README.md` | Medium-volatility bridge layer between durable concepts and volatile product implementations. |
-| Context attachments | Researched | `capabilities/context-attachments.md` | Cross-tool note on explicit external context binding through files, roots, stores, and bounded attachment surfaces. |
-| Retrieval pipelines | Researched | `capabilities/retrieval-pipelines.md` | Cross-tool note on document identity, ingestion, indexing, freshness, retrieval evidence, and the boundary from simple attachment into RAG-like systems. |
-| Model routing | Researched | `capabilities/model-routing.md` | Cross-tool note on backend routing, model catalogs, and local/internal/external boundaries. |
-| Sessions | Researched | `capabilities/sessions.md` | Cross-tool note on session continuity, compaction, interrupt/resume, and bounded rollback. |
-| MCP | Researched | `capabilities/mcp.md` | Cross-tool protocol note on capability expansion, tool/resource exposure, and trust/runtime implications. |
-| Tool calling | Researched | `capabilities/tool-calling.md` | Cross-tool note on callable action shape, invocation lifecycle, validation boundaries, and result correlation. |
-| Eval harnesses | Researched | `capabilities/eval-harnesses.md` | Cross-tool eval infrastructure for cases, trajectories, score schemas, thresholds, and release or approval gates. |
-| Policy engines | Researched | `capabilities/policy-engines.md` | Cross-tool note on structured policy inputs, explicit decisions, enforcement hooks, auditability, and testability. |
+| Capability | File | Notes |
+|---|---|---|
+| Context attachments | `capabilities/context-attachments.md` | Explicit binding of external context surfaces. |
+| Eval harnesses | `capabilities/eval-harnesses.md` | Cases, runs, graders, metrics, and release/review gates. |
+| MCP | `capabilities/mcp.md` | Protocol-mediated capability expansion through tools, resources, and prompts. |
+| Model routing | `capabilities/model-routing.md` | Backend routing, model catalogs, and trust/network boundaries. |
+| Policy engines | `capabilities/policy-engines.md` | Structured runtime decision and enforcement planes. |
+| Retrieval pipelines | `capabilities/retrieval-pipelines.md` | Ingestion, indexing, freshness, and evidence-return retrieval systems. |
+| Sessions | `capabilities/sessions.md` | Interrupt/resume, compaction, and bounded rollback. |
+| Tool calling | `capabilities/tool-calling.md` | Structured action contracts, call/result correlation, and invocation lifecycle. |
 
 ## Products (`products/`)
 
-| Product | Status | File | Notes |
-|---|---|---|---|
-| Product branch scaffold | Initialized | `products/README.md` | Fast-moving product snapshot layer for tool-specific notes and feature maps. |
-| SQLite FTS5 | Researched | `products/sqlite-fts5.md` | Product note on embedded full-text search plus structured local storage through SQLite. |
-| Docling | Researched | `products/docling.md` | Product note on mixed-document parsing, chunking, and structured extraction relevant to retrieval ingestion. |
-| Qdrant | Researched | `products/qdrant.md` | Product note on local semantic/vector retrieval with payload metadata filters and hybrid-style patterns. |
-| LanceDB | Researched | `products/lancedb.md` | Product note on embedded full-text, vector, and hybrid retrieval in one retrieval-oriented engine. |
-| Chroma | Researched | `products/chroma.md` | Product note on local persistent vector retrieval with metadata and document filters. |
-| opencode | Initialized | `products/opencode/README.md` | Starter branch for product-specific opencode research and advanced-feature mapping. |
-| opencode foundations | Researched | `products/opencode/foundations.md` | Foundation-first overview of opencode as a harness: control surfaces, reading order, and what to learn before advanced features. |
-| opencode config and instruction loading | Researched | `products/opencode/config-and-instruction-loading.md` | Snapshot of merged config behavior, instruction precedence, and practical debugging heuristics. |
-| opencode agents / permissions / skills basics | Researched | `products/opencode/agents-permissions-and-skills-basics.md` | Foundation note on named workers, runtime control, and on-demand procedural modules. |
-| opencode references and external context basics | Researched | `products/opencode/references-and-external-context-basics.md` | Foundation note on named external context, aliasing, and how references relate to external-directory boundaries. |
-| opencode local-first models and providers | Researched | `products/opencode/local-first-models-and-providers.md` | Foundation note on provider routing, local backends, and why provider clarity matters before deeper feature work. |
-| opencode config surface and volatility map | Researched | `products/opencode/config-surface-and-volatility-map.md` | Snapshot of where current docs and v2 spec direction appear aligned versus in flux. |
-| opencode permissions and agent safety | Researched | `products/opencode/permissions-and-agent-safety.md` | Product note on permission semantics, external boundaries, and why safety comes from the agent-plus-permission envelope. |
-| opencode memory and retrieval | Researched | `products/opencode/memory-and-retrieval.md` | Product boundary note on session-backed working memory, references, bounded search/navigation, and the absence of first-class built-in RAG-style retrieval. |
-| opencode advanced features map | Researched | `products/opencode/advanced-features-map.md` | Ranked map of which advanced areas matter most next, and which should be deferred as higher-risk or more volatile. |
-| opencode instruction layering | Researched | `products/opencode/instruction-layering.md` | Product note on how AGENTS, CLAUDE fallback, configured instructions, and skills appear to layer in practice. |
-| opencode system prompt control | Researched | `products/opencode/system-prompt-control.md` | Verified note on code-built prompt assembly, confirmed plugin transform hook, and what remains untested about practical prompt surgery. |
-| opencode session control and recovery | Researched | `products/opencode/session-control-and-recovery.md` | Product note on sessions, interruption, compaction, snapshots, and why recovery features matter for interrupted workflows. |
-| opencode MCP and tooling | Researched | `products/opencode/mcp-and-tooling.md` | Product note on local/remote MCP, capability expansion, prompt-surface cost, and cautious adoption order. |
+| Product / Branch | File | Notes |
+|---|---|---|
+| Product branch guide | `products/README.md` | Role and freshness expectations for product notes. |
+| SQLite FTS5 | `products/sqlite-fts5.md` | Embedded lexical plus structured retrieval. |
+| Docling | `products/docling.md` | Mixed-document parsing and chunking for ingestion pipelines. |
+| Qdrant | `products/qdrant.md` | Local semantic/vector retrieval with payload filtering. |
+| LanceDB | `products/lancedb.md` | Embedded full-text, vector, and hybrid retrieval engine. |
+| Chroma | `products/chroma.md` | Local persistent vector retrieval with filtering support. |
+| opencode branch | `products/opencode/README.md` | Navigation for product-specific opencode notes. |
 
-## Suggested Reading Order
-1. `concepts/agent-architectures.md`
-2. `concepts/planning-systems.md`
-3. `concepts/context-engineering.md`
-4. `concepts/memory-systems.md`
-5. `concepts/skill-systems.md`
-6. `concepts/tool-use-policy-and-permission-systems.md`
-7. `concepts/human-in-the-loop-control-points.md`
-8. `concepts/observability-traceability.md`
-9. `concepts/evaluation-prompt-testing.md`
-10. `concepts/prompt-modularity-repository-architecture.md`
-11. `concepts/instruction-layering.md`
-12. `concepts/durable-execution.md`
-13. `capabilities/context-attachments.md`
-14. `capabilities/retrieval-pipelines.md`
-15. `capabilities/model-routing.md`
-16. `capabilities/sessions.md`
-17. `capabilities/mcp.md`
-18. `capabilities/tool-calling.md`
-19. `capabilities/eval-harnesses.md`
-20. `capabilities/policy-engines.md`
-21. `products/opencode/memory-and-retrieval.md`
-22. `syntheses/local-first-retrieval-tool-comparison.md`
+### opencode product notes
+- `products/opencode/foundations.md`
+- `products/opencode/config-and-instruction-loading.md`
+- `products/opencode/instruction-layering.md`
+- `products/opencode/agents-permissions-and-skills-basics.md`
+- `products/opencode/references-and-external-context-basics.md`
+- `products/opencode/local-first-models-and-providers.md`
+- `products/opencode/permissions-and-agent-safety.md`
+- `products/opencode/memory-and-retrieval.md`
+- `products/opencode/session-control-and-recovery.md`
+- `products/opencode/mcp-and-tooling.md`
+- `products/opencode/config-surface-and-volatility-map.md`
+- `products/opencode/advanced-features-map.md`
+- `products/opencode/system-prompt-control.md`
 
-## Cross-Cutting Themes
-- Prefer simple, inspectable workflows before adding autonomy.
-- Separate principles from product-specific implementations.
-- Keep procedure modular and reusable.
-- Treat context as a scarce resource.
-- Evaluate changes with evidence, not vibes.
-- Put humans at consequential boundaries.
-- Preserve provenance for memory, tool use, and decisions.
-- Keep permissions narrow and explicit.
-- Treat traces as part of the system design, not only debugging exhaust.
+## Syntheses (`syntheses/`)
 
-## Suggested Next Topics
-- Multi-agent collaboration
-- Reflection and self-critique
-- Knowledge representation / ontology for prompt repositories
-- Retrieval ingestion and index freshness pipelines
-- Task, artifact, and run record models
-- Delegation contracts and agent interoperability
+| Synthesis | File | Notes |
+|---|---|---|
+| Concept-capability-product map | `syntheses/concept-capability-product-map.md` | Canonical ownership map for the research tree. |
+| Control boundaries | `syntheses/control-boundaries.md` | Layered control model across policy, permission, guardrails, approvals, and durable writes. |
+| Evaluation method comparison | `syntheses/evaluation-method-comparison.md` | Comparison of exact match, rubric, pairwise, LLM judge, and human review. |
+| Local-first retrieval tool comparison | `syntheses/local-first-retrieval-tool-comparison.md` | Role comparison of SQLite FTS5, Docling, Qdrant, LanceDB, and Chroma. |
+| Memory policy | `syntheses/memory-policy.md` | Repository policy for memory layers, provenance, and durable-write gates. |
+| Observability schema | `syntheses/observability-schema.md` | Canonical event and trace fields for workflow observability. |
+| Principles only | `syntheses/principles-only.md` | Distilled durable principles across the research tree. |
+| Task, run, and artifact records | `syntheses/task-run-artifact-records.md` | Shared record model linking work definitions, runs, artifacts, events, and lineage. |
+| Vocabulary | `syntheses/vocabulary.md` | Canonical glossary for repository terms. |
+| Workflow pattern comparison | `syntheses/workflow-pattern-comparison.md` | Comparison of chain, route, parallelize, evaluator-optimizer, ReAct, and orchestrator-worker. |
 
-## Maintenance Rules
-- Put slower-moving, vendor-neutral ideas in `concepts/`.
-- Put medium-volatility cross-tool capabilities in `capabilities/`.
-- Put fast-moving tool snapshots in `products/`.
-- Product notes should include freshness metadata.
+## Suggested Reading Paths
+
+### Foundations path
+1. `syntheses/vocabulary.md`
+2. `concepts/agent-architectures.md`
+3. `concepts/planning-systems.md`
+4. `concepts/context-engineering.md`
+5. `concepts/memory-systems.md`
+
+### Control and reliability path
+1. `concepts/tool-use-policy-and-permission-systems.md`
+2. `concepts/human-in-the-loop-control-points.md`
+3. `capabilities/policy-engines.md`
+4. `concepts/durable-execution.md`
+5. `syntheses/control-boundaries.md`
+6. `syntheses/observability-schema.md`
+
+### Retrieval and memory path
+1. `concepts/context-engineering.md`
+2. `concepts/memory-systems.md`
+3. `capabilities/context-attachments.md`
+4. `capabilities/retrieval-pipelines.md`
+5. `products/opencode/memory-and-retrieval.md`
+6. `syntheses/local-first-retrieval-tool-comparison.md`
+
+### opencode product path
+1. `products/opencode/README.md`
+2. `products/opencode/foundations.md`
+3. `products/opencode/config-and-instruction-loading.md`
+4. `products/opencode/agents-permissions-and-skills-basics.md`
+5. `products/opencode/references-and-external-context-basics.md`

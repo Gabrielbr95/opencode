@@ -38,8 +38,8 @@
 ## Relationships to Other Concepts / Notes
 - Links to related research notes.
 
-## Practical Applications for This Repository
-- What this might change in agents, skills, prompts, structure, or workflow.
+## Relevance to This Repository
+- What this note clarifies about the repository's current design space, terminology, or tradeoffs.
 
 ## Open Questions
 - Question 1

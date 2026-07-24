@@ -330,7 +330,7 @@ Single aggregate scores can hide dangerous tradeoffs.
 - `../syntheses/observability-schema.md`
 - `../syntheses/control-boundaries.md`
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Treat eval infrastructure as a first-class workflow component rather than an afterthought.
 - Keep small versioned case sets for research quality, workflow correctness, approval behavior, and safety-sensitive changes.
 - Capture enough run metadata to compare prompt, workflow, and tool changes without guessing what changed.

@@ -58,7 +58,7 @@ This is relevant when documents contain tables or semi-structured information th
 - it adds a real ingestion dependency and processing pipeline
 - later retrieval quality still depends on how outputs are chunked, stored, and indexed downstream
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/capabilities/retrieval-pipelines.md`
 - `research/concepts/context-engineering.md`
 - `research/syntheses/local-first-retrieval-tool-comparison.md`

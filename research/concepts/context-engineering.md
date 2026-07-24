@@ -112,7 +112,7 @@ Best for:
 - Context quality should be tested through [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
 - Retrieval subsystem design lives in `../capabilities/retrieval-pipelines.md`.
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Keep stable policies separate from task-specific context.
 - Define context contracts for prompts, agents, and skills.
 - Prefer small, coherent, retrieval-friendly documents.

@@ -75,7 +75,7 @@
 - It benefits from [Observability / Traceability](./observability-traceability.md) when tracing prompt versions and behavior changes.
 - It should be stabilized through [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Keep top-level operating rules small and stable.
 - Add local overrides only where behavior genuinely differs.
 - Separate policy prompts from task prompts.

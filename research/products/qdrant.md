@@ -68,7 +68,7 @@ This makes Qdrant relevant beyond pure dense-vector retrieval.
 - semantic retrieval quality depends on embedding choices and corpus preparation
 - hybrid retrieval still requires orchestration beyond bare storage/query primitives
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/capabilities/retrieval-pipelines.md`
 - `research/concepts/context-engineering.md`
 - `research/syntheses/local-first-retrieval-tool-comparison.md`

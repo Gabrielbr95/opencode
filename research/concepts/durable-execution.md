@@ -303,7 +303,7 @@ More runtime freedom can improve flexibility, but it makes replay and long-lived
 - `../syntheses/workflow-pattern-comparison.md`
 - `../syntheses/concept-capability-product-map.md`
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Treat long-running agent work as runs with explicit state and checkpoints, not just as chat continuity.
 - Keep pause/resume, approval, and durable-write boundaries explicit enough that a later reread can explain them.
 - Prefer event or trace records for run behavior, and keep durable project truth in repository artifacts rather than hidden runtime state.

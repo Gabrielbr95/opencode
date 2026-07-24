@@ -73,7 +73,7 @@
 - `../products/opencode/mcp-and-tooling.md`
 - `../products/opencode/references-and-external-context-basics.md`
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Prefer references or simpler local mechanisms before adopting MCP.
 - If MCP is justified, start with one concrete local use case.
 - Treat auth, timeout, and prompt-surface cost as first-class design concerns.

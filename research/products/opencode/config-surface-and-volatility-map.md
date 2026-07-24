@@ -113,7 +113,7 @@ This keeps the notes honest.
 ### Do not confuse
 - future direction with current guaranteed behavior
 
-## Practical Guidance for This Repository
+## Relevance to This Repository
 
 ### Document stable ideas separately from moving syntax
 If a note is about:
@@ -144,7 +144,7 @@ For any opencode feature, ask:
 3. Would I design around this for six months without checking again?
 4. Does this belong in a foundation note or a volatility note?
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/products/opencode/foundations.md`
 - `research/products/opencode/config-and-instruction-loading.md`
 - `research/products/opencode/agents-permissions-and-skills-basics.md`

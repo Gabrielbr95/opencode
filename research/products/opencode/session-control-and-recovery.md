@@ -90,7 +90,7 @@ The most important practical value here is not novelty. It is:
 
 For this workflow, those matter more than fancy autonomous behavior.
 
-## Practical Guidance
+## Relevance to This Repository
 
 ### 1. Treat sessions as durable work objects
 If opencode uses real session semantics, then session hygiene matters.
@@ -114,7 +114,7 @@ If long gaps are common, session naming, summaries, and related documentation di
 - How compaction behaves in a real long-running workflow.
 - How much session recovery helps after a true 14-day gap versus just a short interruption.
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/capabilities/sessions.md`
 - `research/syntheses/memory-policy.md`
 - `research/syntheses/observability-schema.md`

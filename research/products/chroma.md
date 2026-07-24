@@ -55,7 +55,7 @@ This matters because pure vector similarity often needs additional narrowing.
 - ingestion, chunking, and extraction quality remain upstream responsibilities
 - mixed-corpus systems may still need separate structured or lexical retrieval surfaces beside it
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/capabilities/retrieval-pipelines.md`
 - `research/concepts/context-engineering.md`
 - `research/syntheses/local-first-retrieval-tool-comparison.md`

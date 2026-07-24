@@ -134,7 +134,7 @@ The safer durable understanding is:
 - per-agent envelopes matter
 - external access needs special treatment
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/products/opencode/agents-permissions-and-skills-basics.md`
 - `research/products/opencode/references-and-external-context-basics.md`
 - `research/syntheses/control-boundaries.md`

@@ -80,7 +80,7 @@
 - Some planning procedures can be packaged as [Skill Systems](./skill-systems.md).
 - Planning quality should be judged through [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Maintain a small set of reusable planning/orchestration patterns.
 - Document for each pattern: inputs, tools, stop conditions, failure handling, and evaluation criteria.
 - Use fixed workflows first for repeatable work.

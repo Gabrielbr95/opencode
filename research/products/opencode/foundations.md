@@ -11,41 +11,33 @@
   - local behavior differs from docs
 
 ## Scope
-- What opencode appears to be, at a practical level
-- Which control surfaces matter before chasing advanced features
-- Which areas seem stable enough to learn first
+- short product mental model for opencode
+- the main control surfaces that shape day-to-day behavior
+- the boundary between foundational understanding and more advanced branch notes
 
-## Branch Boundary
-This note is the short product mental model.
+## Canonical Boundary
+This note is the branch mental model.
 
-For reusable cross-tool explanations, prefer:
-- `research/concepts/instruction-layering.md`
-- `research/capabilities/context-attachments.md`
-- `research/capabilities/model-routing.md`
-- `research/capabilities/sessions.md`
-- `research/capabilities/mcp.md`
+It is not the main home for:
+- durable instruction-layer theory
+- general permission or memory concepts
+- ranked product roadmap decisions already tracked elsewhere in the branch
 
 ## Why This Matters Here
-- This repository already uses opencode as the active harness.
-- Before researching advanced features, it helps to understand the basic control model: where instructions come from, how agents are shaped, and where permissions sit.
+- opencode is the active harness in this repository.
+- A short mental model reduces re-learning cost before diving into narrower product notes.
 
 ## Current Findings
-- opencode is not just a chat UI. It is a configurable coding harness with:
+- opencode is not just a chat interface; it is a configurable harness with:
   - instruction loading
-  - agent roles
+  - named agents
   - permission control
-  - skill loading
+  - skills
   - references
   - provider routing
   - MCP support
-  - plugin hooks
-- The most important learning surfaces do **not** seem to be the flashy ones.
-- For practical use, the foundation appears to be:
-  1. config loading and precedence
-  2. instruction layering
-  3. agents and permissions
-  4. skills
-  5. references
+  - plugins and hooks
+- The most reusable understanding starts with the ordinary control surfaces rather than the most experimental ones.
 
 ## Core Product Model
 
@@ -56,63 +48,48 @@ Always-on guidance loaded from files such as `AGENTS.md` and configured instruct
 Named workers with their own prompt, model, mode, and permissions.
 
 ### 3. Permissions
-The runtime control layer that decides what tools/actions are allowed, denied, or require asking.
+Runtime control over what tools and actions are allowed, denied, or require asking.
 
 ### 4. Skills
-On-demand procedural modules loaded when relevant, rather than injected all the time.
+On-demand procedural modules loaded when relevant rather than injected all the time.
 
 ### 5. References
-Named external context sources such as local directories or Git repositories.
+Named external context roots such as local directories or Git repositories.
 
 ### 6. Providers
-The model backends opencode can call, including local or OpenAI-compatible endpoints.
+The model backends opencode can call, including local and OpenAI-compatible endpoints.
 
 ### 7. Extensions
-MCP servers, plugins, and commands extend the harness further, but they are not the first layer to master.
+MCP servers, plugins, and commands expand the harness further, but they sit on top of the earlier layers.
 
-## Practical Reading Rule
-Start with the short product notes that explain current opencode behavior.
-When a note starts feeling cross-tool, jump up to the matching capability note instead of repeating the same explanation here.
+## More Stable vs More Volatile Learning Surfaces
 
-## Likely Stable vs Volatile Areas
-
-### More stable to learn first
-- AGENTS/rules style instruction layering
+### Relatively stable surfaces
+- instruction loading as a category of behavior
 - named agents
-- permission boundaries
+- permission envelopes
 - skills as reusable procedural modules
-- references as external context
+- references as explicit external context roots
 
-### More volatile or advanced
-- plugins
-- experimental hooks
-- deeper MCP integration shape
+### More volatile surfaces
+- plugins and experimental hooks
+- deeper MCP integration details
 - exact config key naming during spec transitions
-- command surface and legacy config forms
+- legacy command/config surface details
 
-## Practical Recommendation
-For now, treat opencode primarily as a harness with five main questions:
-
-1. What context does it load automatically?
-2. Which agent is active?
-3. What is that agent allowed to do?
-4. Which skills are available and when are they loaded?
-5. Which external sources can it read from safely?
-
-If those are clear, the advanced features become easier to evaluate.
-
-## Relationship to General Concepts
+## Relationships to Other Notes
+- `research/products/opencode/README.md`
+- `research/products/opencode/config-and-instruction-loading.md`
+- `research/products/opencode/advanced-features-map.md`
 - `research/concepts/agent-architectures.md`
 - `research/concepts/tool-use-policy-and-permission-systems.md`
 - `research/concepts/prompt-modularity-repository-architecture.md`
 - `research/concepts/skill-systems.md`
 
-## Relationship to Capabilities
-- `research/concepts/instruction-layering.md`
-- `research/capabilities/context-attachments.md`
-- `research/capabilities/model-routing.md`
-- `research/capabilities/sessions.md`
-- `research/capabilities/mcp.md`
+## Repository Relevance
+- This note is the shortest product-level re-entry point for the opencode branch.
+- Notes that need to explain opencode-specific behavior should point here for the basic mental model, then narrow to their own topic.
+- The branch roadmap lives in `advanced-features-map.md`, not here.
 
 ## Open Questions
 - Which parts of the current product surface are stable enough to rely on for long periods?
@@ -121,4 +98,4 @@ If those are clear, the advanced features become easier to evaluate.
 
 ## References
 - Context7 `/anomalyco/opencode` — current docs/source excerpts used for this note.
-- `research/products/opencode/system-prompt-control.md` — later advanced/unverified branch.
+- `research/products/opencode/system-prompt-control.md` — advanced branch note on system prompt transformation hooks.

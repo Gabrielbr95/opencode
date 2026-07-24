@@ -161,7 +161,7 @@ Confusing these usually leads to bad write policies and poor retrieval behavior.
 - Retrieval infrastructure details live in `../capabilities/retrieval-pipelines.md`.
 - Repository write/retire/review rules live in `../syntheses/memory-policy.md`.
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Keep at least three memory layers: current task state, durable repo knowledge, and reusable lessons from prior runs.
 - Prefer structured durable memory for rules, terminology, and decisions.
 - Use write gates before promoting model-generated claims into durable truth.

@@ -96,7 +96,7 @@ This layered view matches the capability note more closely than treating all of 
 
 ---
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 
 - `../capabilities/retrieval-pipelines.md`
 - `../concepts/context-engineering.md`

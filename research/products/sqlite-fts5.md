@@ -71,7 +71,7 @@ That is an ecosystem convenience, not the core FTS implementation itself.
 - retrieval quality depends on tokenizer choice and upstream text extraction
 - hybrid fusion must be built around SQLite rather than assumed to exist automatically
 
-## Relationship to Other Notes
+## Relationships to Other Notes
 - `research/capabilities/retrieval-pipelines.md`
 - `research/concepts/context-engineering.md`
 - `research/syntheses/local-first-retrieval-tool-comparison.md`

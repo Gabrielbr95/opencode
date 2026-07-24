@@ -1,60 +1,44 @@
 # opencode Research
 
-This branch is for fast-moving notes about opencode itself.
+This branch stores product-specific research notes about opencode.
 
-## Scope
-- foundations
-- configuration model
-- agents and modes
-- permissions
-- skills
-- references
-- providers
-- advanced features
-- MCP integration
-- instruction layering and repo customization
+## Branch Role
 
-## Why This Branch Exists
-opencode is the active harness in this repository, so product-specific learning here can directly improve day-to-day workflow.
+This directory is for current opencode behavior, not for vendor-neutral theory.
 
-## Branch Role in the Research Stack
-This directory should answer:
+Use it to answer:
 - how opencode implements a capability today
-- which exact behaviors or config surfaces are product-specific
-- which parts look volatile and need rechecking
+- which config or runtime surfaces matter in practice
+- which areas appear stable versus volatile
 
-This directory should **not** be the main home for:
-- durable concept definitions
-- repository-wide policy
-- cross-tool capability explanations that belong in `../../capabilities/`
+For cross-tool explanations, defer to:
+- `../../concepts/`
+- `../../capabilities/`
+- `../../syntheses/`
 
-## Suggested Reading Order
+## Reading Order
 1. `foundations.md`
 2. `config-and-instruction-loading.md`
-3. `instruction-layering.md`
-4. `agents-permissions-and-skills-basics.md`
-5. `references-and-external-context-basics.md`
-6. `local-first-models-and-providers.md`
-7. `permissions-and-agent-safety.md`
-8. `config-surface-and-volatility-map.md`
-9. `session-control-and-recovery.md`
-10. `memory-and-retrieval.md`
-11. `mcp-and-tooling.md`
-12. `advanced-features-map.md`
-13. `system-prompt-control.md` *(advanced, verified hook exists, practical spike still unrun)*
+3. `agents-permissions-and-skills-basics.md`
+4. `references-and-external-context-basics.md`
+5. `local-first-models-and-providers.md`
+6. `permissions-and-agent-safety.md`
+7. `memory-and-retrieval.md`
+8. `session-control-and-recovery.md`
+9. `mcp-and-tooling.md`
+10. `config-surface-and-volatility-map.md`
+11. `advanced-features-map.md`
+12. `instruction-layering.md`
+13. `system-prompt-control.md`
 
-## Capability Bridges
-- `../../concepts/instruction-layering.md`
-- `../../capabilities/context-attachments.md`
-- `../../capabilities/retrieval-pipelines.md`
-- `../../capabilities/model-routing.md`
-- `../../capabilities/sessions.md`
-- `../../capabilities/mcp.md`
-
-## Suggested Next Notes
-- `plugin-and-hook-customization.md`
-- `custom-agents-and-role-shaping.md`
-- `practical-safe-baseline.md`
+## Canonical Bridges Upward
+- instruction theory -> `../../concepts/instruction-layering.md`
+- prompt-repo structure -> `../../concepts/prompt-modularity-repository-architecture.md`
+- context attachment -> `../../capabilities/context-attachments.md`
+- retrieval systems -> `../../capabilities/retrieval-pipelines.md`
+- sessions -> `../../capabilities/sessions.md`
+- MCP -> `../../capabilities/mcp.md`
+- vocabulary -> `../../syntheses/vocabulary.md`
 
 ## Freshness
 - Last verified: 2026-07-24

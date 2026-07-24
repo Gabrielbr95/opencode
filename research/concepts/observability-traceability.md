@@ -78,7 +78,7 @@
 - It records review and approval events from [Human-in-the-loop control points](./human-in-the-loop-control-points.md).
 - It helps debug [Agent Architectures](./agent-architectures.md), [Planning Systems](./planning-systems.md), and [Tool-Use Policy and Permission Systems](./tool-use-policy-and-permission-systems.md).
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Define a canonical trace shape for runs, model calls, retrievals, tool calls, and evaluators.
 - Attach prompt version, workflow name, model, tool version, and repo revision to traces.
 - Treat prompt rendering as a traceable step, not just the final model call.

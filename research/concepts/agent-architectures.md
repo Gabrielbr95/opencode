@@ -73,7 +73,7 @@
 - Should be validated through [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
 - Skills can package reusable procedures used inside an agent architecture; see [Skill Systems](./skill-systems.md).
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Maintain a small catalog of architecture patterns with “when to use / not use” guidance.
 - Keep tool contracts and stop conditions explicit.
 - Default to simple workflows first, then escalate to more agentic loops only when evidence justifies it.

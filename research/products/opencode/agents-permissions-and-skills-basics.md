@@ -12,76 +12,29 @@
   - current docs and spec drift further apart
 
 ## Scope
-- The basic relationship between agents, permissions, and skills in opencode
-- What seems foundational before studying more advanced features
+- the basic structural relationship between agents, permissions, and skills in opencode
+- the smallest product mental model needed before narrower branch notes
 
 ## Canonical Boundary
-This note is for the **structural mental model**:
+This note is for the **basic structural mental model**:
 - agent = who acts
 - permission = what is allowed
-- skill = reusable procedure
+- skill = reusable procedure the actor may load
 
-For runtime safety posture and cautious defaults, see:
+For runtime safety posture and stricter operational interpretation, see:
 - `research/products/opencode/permissions-and-agent-safety.md`
 
 ## Why This Matters Here
-- This repository already uses agent roles and skills heavily.
-- The main practical question is not “what advanced feature exists?” but “who is doing what, under which permissions, with which reusable procedures?”
+- This repository uses agent roles and skills heavily.
+- The useful product question is the separation between worker identity, permission envelope, and reusable procedure.
 
 ## Current Findings
 - opencode appears to treat agents, permissions, and skills as separate layers.
-- That separation is useful:
-  - agents = workers
-  - permissions = runtime control
-  - skills = on-demand procedural help
-- This is a good foundation for a controllable harness.
+- agents look like named workers with their own model/prompt/mode/permission envelope.
+- permissions look like runtime enforcement rules with allow/ask/deny style outcomes.
+- skills look like on-demand procedural modules rather than ambient instructions.
 
-## Agents: Practical Model
-Agents appear to be named workers with configurable fields such as:
-- model
-- description
-- prompt/system text
-- mode
-- steps
-- permissions
-
-The docs and source excerpts also suggest:
-- built-in agents exist
-- custom agents can be defined in config or loaded from markdown files
-- some modes are primary-facing while others are subagent-facing
-
-Practical takeaway:
-- agents define **who the worker is**
-- they do not by themselves define what is allowed
-
-## Permissions: Practical Model
-Permissions appear to be the runtime enforcement layer.
-
-Key ideas found in docs/spec:
-- rules can allow, ask, or deny
-- per-agent overrides exist
-- rule matching is pattern-based
-- the last matching rule appears to win in newer rule-based evaluation logic
-
-Practical takeaway:
-- permissions are where autonomy should be tightened first
-- if an agent feels unsafe or too broad, permissions are usually the first lever to inspect
-
-## Skills: Practical Model
-Skills appear to be reusable procedural modules discovered from skill directories or configured sources.
-
-Important distinction:
-- skills are not ambient instructions
-- they are loaded on demand when relevant
-
-Another useful detail from current source excerpts:
-- the system prompt only appears to list skills that pass the agent's permission filter
-
-Practical takeaway:
-- skills are part of the available capability surface
-- permissions can shape which skills an agent effectively sees or uses
-
-## Clean Mental Model
+## Product Mental Model
 
 ### Agent
 Who is acting.
@@ -90,43 +43,42 @@ Who is acting.
 What that actor may do.
 
 ### Skill
-Reusable procedure the actor may load if allowed.
+Reusable procedure the actor may load if available and allowed.
 
-That is probably the simplest durable mental model for this repository.
+## Observed Product Details
 
-## Practical Guidance for This Repository
+### Agents
+Current docs/source excerpts suggest agents can carry fields such as:
+- model
+- description
+- prompt/system text
+- mode
+- steps
+- permissions
 
-### Start with permissions before advanced delegation
-If a role feels too broad, tighten permissions before inventing more roles.
+### Permissions
+Current docs/spec excerpts suggest:
+- rules can allow, ask, or deny
+- per-agent overrides exist
+- rule matching is pattern-based
 
-### Use skills to reduce prompt bloat
-If a procedure is reusable but not always relevant, prefer a skill over adding more ambient instructions.
+### Skills
+Current source excerpts suggest:
+- skills are discovered from skill directories or configured sources
+- they are not ambient instructions
+- visible/usable skills are shaped by the permission envelope
 
-### Keep agent roles narrow and understandable
-Avoid many overlapping agents without a clear difference in:
-- responsibility
-- permission envelope
-- expected use case
-
-## Product Drift Warning
-There appears to be some drift between:
-- current docs/config shapes
-- newer v2 spec direction
-
-Areas likely to drift:
-- singular vs plural config keys
-- permission shape details
-- command vs skill emphasis
-
-So this note should be read as a current practical snapshot, not a permanent contract.
-
-## Relationship to General Concepts
+## Relationships to Other Notes
+- `research/products/opencode/foundations.md`
+- `research/products/opencode/permissions-and-agent-safety.md`
+- `research/products/opencode/instruction-layering.md`
 - `research/concepts/agent-architectures.md`
 - `research/concepts/tool-use-policy-and-permission-systems.md`
 - `research/concepts/skill-systems.md`
 
-## Relationship to Syntheses
-- `research/syntheses/control-boundaries.md`
+## Relevance to This Repository
+- This note is the shortest product-level bridge between the opencode branch overview and narrower notes on permissions, instruction placement, and customization.
+- It should stay a simple model, not a second home for branch roadmap or safety policy.
 
 ## Open Questions
 - Which built-in agents are durable enough to depend on long-term?

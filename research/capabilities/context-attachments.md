@@ -181,7 +181,7 @@ Others reference a live local file or external resource that may change undernea
 - `../products/opencode/references-and-external-context-basics.md`
 - `../products/opencode/mcp-and-tooling.md`
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Prefer named local references before adopting heavier external integration.
 - Prefer the narrowest useful attachment unit:
   - file before root

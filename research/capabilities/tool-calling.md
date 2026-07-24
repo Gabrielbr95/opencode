@@ -197,7 +197,7 @@ Too many tools degrade selection quality and enlarge prompt/context surface.
 - `../capabilities/context-attachments.md`
 - `../syntheses/control-boundaries.md`
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Define tool/action surfaces with explicit purpose, inputs, and side-effect class.
 - Keep permission policy near the action surface instead of hiding it only in prompts.
 - Treat tool invocation loops as observable runtime behavior, not as prompt magic.

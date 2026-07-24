@@ -334,7 +334,7 @@ Writing long-lived truth often deserves stronger gating than ordinary drafting.
 - `../syntheses/control-boundaries.md`
 - `../syntheses/observability-schema.md`
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Keep prompt guidance for behavior shaping, but put real execution control in explicit runtime decisions.
 - Represent control outcomes as a small standard envelope such as `allow` / `deny` / `approve` / `escalate` / `rewrite` with reason codes.
 - Put enforcement hooks near consequential boundaries:

@@ -274,6 +274,116 @@ Persistent information kept beyond a single run or session for reuse later.
 
 ---
 
+## Attachment
+An explicit binding that makes some outside context available to the current task, session, or tool surface.
+
+**Core idea:** bounded availability of external context.
+
+**Not the same as:** retrieval, memory.
+
+**Boundary:** attachment answers what is available; retrieval answers how relevant pieces are selected from what is available.
+
+---
+
+## Reference / Reference Root
+A named external root or alias that points to a bounded context source such as a directory, repository, store, or resource namespace.
+
+**Core idea:** addressable external context boundary.
+
+**Not the same as:** retrieval index, ambient filesystem access.
+
+**Boundary:** a reference root defines an approved surface; it does not by itself define ranking, chunking, or retrieval quality.
+
+---
+
+## Session
+A continuity container for an ongoing interaction or body of work.
+
+**Core idea:** conversational or work continuity across turns or interruptions.
+
+**Not the same as:** run.
+
+**Boundary:** one session may contain zero, one, or several concrete runs depending on the harness design.
+
+---
+
+## Run
+A concrete execution instance with its own identity, state progression, and observable steps.
+
+**Core idea:** one bounded execution object.
+
+**Not the same as:** session, trace.
+
+**Boundary:** a session is a continuity container; a run is the execution whose lifecycle can be paused, resumed, retried, completed, or failed.
+
+---
+
+## Task Run
+A run scoped to one bounded unit of work inside a broader session or workflow.
+
+**Core idea:** execution identity for one task slice.
+
+**Not the same as:** whole session, whole project.
+
+**Boundary:** some systems expose only sessions; others expose task or workflow runs explicitly.
+
+---
+
+## Checkpoint
+A durable saved state boundary that makes later resume, replay, revert, or audit practical.
+
+**Core idea:** stable recovery boundary.
+
+**Not the same as:** summary, full event history.
+
+**Boundary:** a checkpoint can preserve enough state to continue later without storing every detail inline in current context.
+
+---
+
+## Compaction
+The process of reducing visible history or state into a smaller retained representation while preserving enough continuity to continue.
+
+**Core idea:** bounded continuity under limited context.
+
+**Not the same as:** deletion, durable memory promotion.
+
+**Boundary:** compaction usually serves session continuity; it does not automatically create authoritative durable truth.
+
+---
+
+## Revert
+A controlled move back to an earlier saved boundary in a run or session.
+
+**Core idea:** bounded rollback.
+
+**Not the same as:** business compensation, correction of all external side effects.
+
+**Boundary:** internal rollback may restore session or file state without undoing everything the run caused outside the boundary.
+
+---
+
+## Authoritative Artifact
+A repository artifact that currently serves as the best source of truth for a fact, rule, decision, or status.
+
+**Core idea:** trusted home for durable truth.
+
+**Not the same as:** any saved file, temporary working note.
+
+**Boundary:** several artifacts may mention the same topic, but only one should act as the authoritative home for the main explanation.
+
+---
+
+## Durable Write
+A write that changes persistent state expected to shape future work or future understanding.
+
+**Core idea:** persistence with future consequence.
+
+**Not the same as:** scratch draft mutation, temporary session state.
+
+**Boundary:** durable writes deserve stronger review and provenance expectations than transient drafting.
+
+---
+
 ## Semantic / Episodic / Procedural Memory
 - **Semantic memory:** facts, concepts, stable knowledge.
 - **Episodic memory:** events, experiences, prior runs.
@@ -412,6 +522,7 @@ A short current-state summary meant to restart work after interruption without b
 - If a **human must decide**, it is **HITL/approval**.
 
 ## Related Documents
+- `research/README.md`
 - Concept notes under `research/concepts/`
 - `research/index.md`
 - `research/backlog.md`

@@ -12,27 +12,26 @@
 ## Scope
 - What part of the product this note covers.
 
+## Canonical Boundary
+- What this note owns.
+- Which nearby notes own neighboring ideas instead.
+
 ## Why This Matters Here
-- Why this product matters for this repository or workflow.
+- Why this product topic matters for this repository or workflow.
 
 ## Current Findings
 - Finding 1
 - Finding 2
 
-## Advanced Features / Relevant Capabilities
-- Feature 1
-- Feature 2
+## Product-Specific Details
+- Behavior 1
+- Behavior 2
 
-## Configuration or Operational Notes
-- Note 1
-- Note 2
+## Relationships to Other Notes
+- Neighboring concept, capability, synthesis, or product notes.
 
-## Known Constraints / Gotchas
-- Constraint 1
-- Constraint 2
-
-## Relationship to General Concepts
-- Which concept or capability notes this connects to.
+## Relevance to This Repository
+- What this note clarifies about current product behavior, boundaries, or drift.
 
 ## Open Questions
 - Question 1

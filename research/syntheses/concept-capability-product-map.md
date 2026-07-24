@@ -1,333 +1,175 @@
 # Concept -> Capability -> Product Map
 
-This document turns the current research tree into an operational knowledge map.
+This document maps canonical ownership across the research tree.
 
-Its goal is not to repeat every note. Its goal is to answer:
+Its purpose is structural:
+- where each kind of idea belongs
+- which note currently owns each repeated topic cluster
+- where nearby notes should defer instead of re-explaining
 
-- which durable concepts explain the repository best
-- which capabilities sit between those concepts and specific tools
-- how the current opencode product branch fits into that stack
-- what conclusions seem justified now, while still leaving room for near-term drift
-
----
-
-## Summary
-
-The current research supports a simple structural conclusion:
-
-> **The most useful mental model is a four-layer stack: concepts -> capabilities -> products -> syntheses.**
-
-Where that means:
-
-- **concepts** explain stable ideas and boundaries
-- **capabilities** explain reusable mechanisms that several tools can implement
-- **products** explain how one tool behaves today
-- **syntheses** capture the conclusions this repository should carry forward
-
-The main cleanup lesson from the current pass is:
-
-> **Most prior duplication came from capability-level reasoning being stored inside product notes.**
-
-That does not mean the product notes were bad. It means the middle layer was missing.
+It is not meant to be a second home for domain conclusions already captured elsewhere.
 
 ---
 
-## Operating Conclusion
+## The Four-Layer Model
 
-When a fact is being documented, ask three questions in order:
+The repository uses four research layers:
+
+- **concepts** — durable ideas and boundaries
+- **capabilities** — reusable cross-tool mechanisms
+- **products** — current tool-specific behavior
+- **syntheses** — glossary, comparisons, maps, and distilled repository-level views
+
+When a note starts drifting, the most useful diagnostic question is usually:
+
+> Is this note explaining a concept, a mechanism, a product behavior, or a repository synthesis?
+
+---
+
+## Placement Questions
+
+Use these in order.
 
 1. **Is this a durable idea or boundary?**
-   - Put it in `concepts/`.
-2. **Is this a reusable mechanism that several tools could implement differently?**
-   - Put it in `capabilities/`.
-3. **Is this an exact current behavior, config surface, or quirk of one tool?**
-   - Put it in `products/`.
-
-Then ask one final question:
-
-4. **What should this repository conclude or standardize from that knowledge?**
-   - Put that in `syntheses/`.
+   - canonical home: `concepts/`
+2. **Is this a reusable mechanism several tools could implement differently?**
+   - canonical home: `capabilities/`
+3. **Is this an exact current behavior or configuration surface of one tool?**
+   - canonical home: `products/`
+4. **Is this a glossary, comparison, ownership map, or repository-level conclusion?**
+   - canonical home: `syntheses/`
 
 ---
 
-## Current Knowledge Map
+## Canonical Ownership by Topic Cluster
 
-### 1. Prompt and instruction shaping
+### Instruction and prompt structure
+- **Concept owners**
+  - `../concepts/instruction-layering.md`
+  - `../concepts/prompt-modularity-repository-architecture.md`
+- **Product owners**
+  - `../products/opencode/config-and-instruction-loading.md`
+  - `../products/opencode/instruction-layering.md`
+  - `../products/opencode/system-prompt-control.md`
 
-#### Concept
-- `../concepts/prompt-modularity-repository-architecture.md`
-- `../concepts/instruction-layering.md`
+Primary rule:
+- durable layering theory lives in the concept notes
+- opencode loader mechanics live in `config-and-instruction-loading.md`
+- advanced prompt-surgery evidence lives in `system-prompt-control.md`
 
-#### Product
-- `../products/opencode/config-and-instruction-loading.md`
-- `../products/opencode/instruction-layering.md`
-- `../products/opencode/system-prompt-control.md`
+### Control and safety boundaries
+- **Concept owners**
+  - `../concepts/tool-use-policy-and-permission-systems.md`
+  - `../concepts/human-in-the-loop-control-points.md`
+- **Capability owner**
+  - `../capabilities/policy-engines.md`
+- **Synthesis owners**
+  - `../syntheses/vocabulary.md`
+  - `../syntheses/control-boundaries.md`
+- **Product owner**
+  - `../products/opencode/permissions-and-agent-safety.md`
 
-#### Repository conclusion
-- Always-on instructions should stay small, inspectable, and separated from procedures.
-- Skills are the preferred home for conditional reusable procedure.
-- Product-specific prompt surgery should stay exceptional and heavily justified.
+Primary rule:
+- principles live in the concept notes
+- explicit runtime decision/enforcement mechanics live in `policy-engines.md`
+- control-stack terminology and boundary summaries live in the syntheses
 
----
+### Memory, context, attachment, and retrieval
+- **Concept owners**
+  - `../concepts/context-engineering.md`
+  - `../concepts/memory-systems.md`
+- **Capability owners**
+  - `../capabilities/context-attachments.md`
+  - `../capabilities/retrieval-pipelines.md`
+  - `../capabilities/sessions.md`
+- **Synthesis owner**
+  - `../syntheses/memory-policy.md`
+- **Product owners**
+  - `../products/opencode/references-and-external-context-basics.md`
+  - `../products/opencode/memory-and-retrieval.md`
+  - `../products/opencode/session-control-and-recovery.md`
 
-### 2. Tool access, permissions, and control boundaries
+Primary rule:
+- theory of memory and context lives in the concept notes
+- explicit binding of external context lives in `context-attachments.md`
+- indexed corpus consultation lives in `retrieval-pipelines.md`
+- repository write/promotion rules live in `memory-policy.md`
 
-#### Concepts
-- `../concepts/tool-use-policy-and-permission-systems.md`
-- `../concepts/human-in-the-loop-control-points.md`
+### Runs, sessions, observability, and evaluation
+- **Concept owners**
+  - `../concepts/durable-execution.md`
+  - `../concepts/observability-traceability.md`
+  - `../concepts/evaluation-prompt-testing.md`
+- **Capability owners**
+  - `../capabilities/sessions.md`
+  - `../capabilities/eval-harnesses.md`
+- **Synthesis owners**
+  - `../syntheses/observability-schema.md`
+  - `../syntheses/evaluation-method-comparison.md`
 
-#### Capability
-- `../capabilities/tool-calling.md`
+Primary rule:
+- run/session/execution theory lives in the concept notes
+- session-continuity mechanics live in `sessions.md`
+- canonical event/trace fields live in `observability-schema.md`
+- eval-method comparison lives in `evaluation-method-comparison.md`
 
-#### Product
-- `../products/opencode/agents-permissions-and-skills-basics.md`
-- `../products/opencode/permissions-and-agent-safety.md`
+### Workflow and planning patterns
+- **Concept owners**
+  - `../concepts/agent-architectures.md`
+  - `../concepts/planning-systems.md`
+  - `../concepts/skill-systems.md`
+- **Synthesis owners**
+  - `../syntheses/workflow-pattern-comparison.md`
+  - `../syntheses/principles-only.md`
 
-#### Syntheses
-- `../syntheses/control-boundaries.md`
-- `../syntheses/vocabulary.md`
+Primary rule:
+- durable theory lives in the concept notes
+- side-by-side pattern selection lives in `workflow-pattern-comparison.md`
+- compressed durable rules live in `principles-only.md`
 
-#### Repository conclusion
-- The safest durable control model is layered, not monolithic:
-  - policy tells the model what it should do
-  - permissions tell the runtime what it may do
-  - approvals/HITL gate consequential actions
-- Product prompts are never enough as the real safety boundary.
-- Structured action contracts are the missing middle layer between abstract tool policy and product-specific tool implementations.
+### Retrieval product stack
+- **Capability owner**
+  - `../capabilities/retrieval-pipelines.md`
+- **Product owners**
+  - `../products/sqlite-fts5.md`
+  - `../products/docling.md`
+  - `../products/qdrant.md`
+  - `../products/lancedb.md`
+  - `../products/chroma.md`
+- **Synthesis owner**
+  - `../syntheses/local-first-retrieval-tool-comparison.md`
 
----
-
-### 3. Runtime policy, approvals, and enforcement
-
-#### Concepts
-- `../concepts/tool-use-policy-and-permission-systems.md`
-- `../concepts/human-in-the-loop-control-points.md`
-
-#### Capability
-- `../capabilities/policy-engines.md`
-
-#### Syntheses
-- `../syntheses/control-boundaries.md`
-- `../syntheses/observability-schema.md`
-
-#### Repository conclusion
-- Prompt guidance is not the real safety boundary.
-- A reusable control plane needs:
-  - structured policy inputs
-  - explicit decision outputs
-  - real enforcement hooks
-  - audit and replay surfaces
-- `allow` / `deny` alone is often too weak; `approve`, `escalate`, and `rewrite` are also first-class outcomes.
-
----
-
-### 4. Context, references, and external attachment
-
-#### Concept
-- `../concepts/context-engineering.md`
-
-#### Capability
-- `../capabilities/context-attachments.md`
-- `../capabilities/retrieval-pipelines.md`
-
-#### Product
-- `../products/opencode/memory-and-retrieval.md`
-- `../products/opencode/references-and-external-context-basics.md`
-- `../products/opencode/mcp-and-tooling.md`
-- `../products/sqlite-fts5.md`
-- `../products/docling.md`
-- `../products/qdrant.md`
-- `../products/lancedb.md`
-- `../products/chroma.md`
-
-#### Syntheses
-- `../syntheses/memory-policy.md`
-- `../syntheses/local-first-retrieval-tool-comparison.md`
-
-#### Repository conclusion
-- The right default is not “give the system more context.”
-- The right default is **attach bounded external context deliberately**.
-- In this workflow, references come before heavier integrations like MCP.
-- Attachment and retrieval are related but not identical:
-  - attachments decide what outside context surface is available
-  - retrieval decides how relevant evidence is selected from a larger available corpus
-- Memory is broader still: persistence and promotion across time belong in memory architecture, not in attachment notes.
-- In opencode today, the product boundary appears to be:
-  - references and `@` surfaces for attachment
-  - bounded file/navigation tools for deterministic search
-  - not a first-class built-in semantic retrieval pipeline
-- External retrieval tooling shows the product layer splitting into distinct roles:
-  - lexical/structured local retrieval (SQLite FTS5)
-  - document ingestion/parsing (Docling)
-  - semantic retrieval engines (Qdrant, Chroma)
-  - integrated hybrid retrieval engines (LanceDB)
+Primary rule:
+- general retrieval mechanism lives in the capability note
+- each tool note records product facts about one tool
+- cross-tool role comparison lives in the synthesis note
 
 ---
 
-### 5. Provider choice and model routing
+## Notes That Act as Canonical Glue
 
-#### Concepts
-- `../concepts/context-engineering.md`
-- `../concepts/agent-architectures.md`
+- `../syntheses/vocabulary.md` — canonical glossary
+- `../syntheses/control-boundaries.md` — canonical control-stack summary
+- `../syntheses/memory-policy.md` — canonical repository memory policy
+- `../syntheses/observability-schema.md` — canonical trace/event vocabulary
 
-#### Capability
-- `../capabilities/model-routing.md`
-
-#### Product
-- `../products/opencode/local-first-models-and-providers.md`
-- `../products/opencode/config-surface-and-volatility-map.md`
-
-#### Repository conclusion
-- Provider configuration is infrastructure, not just product setup trivia.
-- Backend choice affects trust boundary, latency, token limits, and debugging quality.
-- Stable understanding should focus on routing concepts, not on today's exact field names.
+These notes should be referenced when neighboring notes need the distinction, instead of rewriting the same boundary in full.
 
 ---
 
-### 6. Runtime durability, continuity, and recovery
+## Current Structural Gaps
 
-#### Concepts
-- `../concepts/memory-systems.md`
-- `../concepts/observability-traceability.md`
-- `../concepts/planning-systems.md`
-- `../concepts/durable-execution.md`
-
-#### Capability
-- `../capabilities/sessions.md`
-
-#### Product
-- `../products/opencode/memory-and-retrieval.md`
-- `../products/opencode/session-control-and-recovery.md`
-
-#### Syntheses
-- `../syntheses/memory-policy.md`
-- `../syntheses/observability-schema.md`
-
-#### Repository conclusion
-- Durable execution is broader than session continuity.
-- The underlying runtime model needs:
-  - run identity
-  - explicit state
-  - replay/checkpoint semantics
-  - side-effect isolation
-  - retry and idempotency rules
-- Good session continuity is valuable, but it is not a substitute for durable external documentation.
-- Recovery features are strongest when paired with explicit wrap-up habits and Git-backed file history.
-- In opencode specifically, session continuity looks like working-memory infrastructure, not full long-term semantic memory.
+- run/session/checkpoint terminology still depends heavily on `vocabulary.md`
+- some opencode branch notes still carry roadmap or guidance text better kept in branch README or dedicated map notes
+- some concept and capability notes still use older “Practical Applications” phrasing that reads more prescriptive than descriptive
 
 ---
 
-### 7. Evaluation infrastructure and release evidence
+## Maintenance Rule
 
-#### Concepts
-- `../concepts/evaluation-prompt-testing.md`
-- `../concepts/observability-traceability.md`
-- `../concepts/human-in-the-loop-control-points.md`
+When a new duplication hotspot appears, fix the canonical owner first.
 
-#### Capability
-- `../capabilities/eval-harnesses.md`
-
-#### Syntheses
-- `../syntheses/evaluation-method-comparison.md`
-- `../syntheses/observability-schema.md`
-
-#### Repository conclusion
-- Evaluation methods alone are not enough; they need infrastructure.
-- Durable eval practice depends on:
-  - versioned cases
-  - captured trajectories/evidence
-  - score schemas
-  - threshold or baseline comparison
-  - explicit gate decisions
-- Workflow-level eval must judge more than final answers.
-
----
-
-### 8. MCP as capability expansion
-
-#### Concepts
-- `../concepts/context-engineering.md`
-- `../concepts/tool-use-policy-and-permission-systems.md`
-
-#### Capability
-- `../capabilities/mcp.md`
-
-#### Product
-- `../products/opencode/mcp-and-tooling.md`
-
-#### Repository conclusion
-- MCP should be treated as capability expansion, not as simple “extra context.”
-- In this environment, adoption should be incremental, local-first, and justified by a concrete use case.
-
----
-
-## What Seems Stable Versus Likely To Drift
-
-### Stable enough to build around
-- separate always-on instructions from on-demand skills
-- use permissions as runtime safety boundaries
-- use explicit action contracts and policy decisions instead of relying on prompt prose alone
-- keep external context bounded and named
-- treat provider choice as a trust and routing decision
-- treat long-running work as runs with state, not just chat sessions
-- treat evaluation as infrastructure, not only as ad hoc review
-- prefer resumability plus external durable notes over transcript replay
-
-### Likely to drift soon
-- exact opencode config key names and nesting
-- exact MCP config shape
-- extension/plugin hook details
-- experimental system-prompt transform usage patterns
-
----
-
-## Practical Rules For Future Notes
-
-### Add a concept note when
-- the idea should survive vendor churn mostly unchanged
-
-### Add a capability note when
-- several product notes keep re-explaining the same mechanism
-- the mechanism is more stable than one product's syntax
-
-### Add a product note when
-- exact behavior, defaults, config, or drift matter
-
-### Add a synthesis when
-- the repository needs a settled distinction, policy, or decision aid
-
----
-
-## Remaining Gaps
-
-The tree is cleaner now, but the following capability-level gaps still exist:
-
-- `task-artifact-and-run-record-models.md`
-- `delegation-contracts-and-agent-interoperability.md`
-- `approval-pause-resume-and-human-gates.md`
-- possibly `plugin-and-hook-extensibility.md`
-- possibly a future note on eval harnesses once there are more product branches to compare
-
-Those are worth adding only if repetition actually reappears.
-
----
-
-## Final Conclusion
-
-The research is no longer just a pile of notes about AI workflow ideas and one active tool.
-
-It now supports a more durable repository belief:
-
-> **A maintainable local-first AI workflow is mostly a control-and-structure problem, not a novelty-feature problem.**
-
-The highest-value knowledge so far points toward:
-
-- small ambient instructions
-- modular procedures in skills
-- explicit permission envelopes
-- bounded external context
-- explicit provider routing
-- resumable work with external durable truth
-- cautious adoption of advanced extension surfaces
-
-That is a more useful operational conclusion than any one product feature list.
+Then trim neighboring notes so they:
+- keep only local detail
+- point back to the canonical note
+- stop behaving like a second source of truth

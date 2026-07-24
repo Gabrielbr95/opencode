@@ -80,7 +80,7 @@
 - It should measure planning quality and orchestration behavior from [Planning Systems](./planning-systems.md).
 - It can test skill triggering, usefulness, and boundaries from [Skill Systems](./skill-systems.md).
 
-## Practical Applications for This Repository
+## Relevance to This Repository
 - Treat every prompt, skill, or workflow change as something that should have at least lightweight evidence.
 - Keep reusable fixtures for happy-path, edge-case, safety, and workflow-behavior tests.
 - Maintain a small evaluator library: format checks, exact/categorical checks, safety checks, tool-use checks, and rubric-based quality checks.
