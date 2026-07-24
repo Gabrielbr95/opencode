@@ -9,6 +9,7 @@
 - `syntheses/workflow-pattern-comparison.md` — decision-support matrix for choosing between chain, route, parallelize, orchestrator-worker, evaluator-optimizer, and ReAct.
 - `syntheses/evaluation-method-comparison.md` — decision-support matrix for choosing between exact match, rubric, pairwise comparison, LLM judge, and human review.
 - `syntheses/concept-capability-product-map.md` — operational knowledge map linking durable concepts to reusable capabilities, current product notes, and repository conclusions.
+- `syntheses/local-first-retrieval-tool-comparison.md` — descriptive comparison of SQLite FTS5, Docling, Qdrant, LanceDB, and Chroma as local-first retrieval building blocks.
 
 ## Highlighted Product Finding
 - `products/opencode/system-prompt-control.md` — product-specific finding: the `experimental.chat.system.transform` plugin hook appears to be the current escape hatch for trimming or reshaping opencode's baked system prompt.
@@ -49,6 +50,11 @@
 | Product | Status | File | Notes |
 |---|---|---|---|
 | Product branch scaffold | Initialized | `products/README.md` | Fast-moving product snapshot layer for tool-specific notes and feature maps. |
+| SQLite FTS5 | Researched | `products/sqlite-fts5.md` | Product note on embedded full-text search plus structured local storage through SQLite. |
+| Docling | Researched | `products/docling.md` | Product note on mixed-document parsing, chunking, and structured extraction relevant to retrieval ingestion. |
+| Qdrant | Researched | `products/qdrant.md` | Product note on local semantic/vector retrieval with payload metadata filters and hybrid-style patterns. |
+| LanceDB | Researched | `products/lancedb.md` | Product note on embedded full-text, vector, and hybrid retrieval in one retrieval-oriented engine. |
+| Chroma | Researched | `products/chroma.md` | Product note on local persistent vector retrieval with metadata and document filters. |
 | opencode | Initialized | `products/opencode/README.md` | Starter branch for product-specific opencode research and advanced-feature mapping. |
 | opencode foundations | Researched | `products/opencode/foundations.md` | Foundation-first overview of opencode as a harness: control surfaces, reading order, and what to learn before advanced features. |
 | opencode config and instruction loading | Researched | `products/opencode/config-and-instruction-loading.md` | Snapshot of merged config behavior, instruction precedence, and practical debugging heuristics. |
@@ -57,6 +63,7 @@
 | opencode local-first models and providers | Researched | `products/opencode/local-first-models-and-providers.md` | Foundation note on provider routing, local backends, and why provider clarity matters before deeper feature work. |
 | opencode config surface and volatility map | Researched | `products/opencode/config-surface-and-volatility-map.md` | Snapshot of where current docs and v2 spec direction appear aligned versus in flux. |
 | opencode permissions and agent safety | Researched | `products/opencode/permissions-and-agent-safety.md` | Product note on permission semantics, external boundaries, and why safety comes from the agent-plus-permission envelope. |
+| opencode memory and retrieval | Researched | `products/opencode/memory-and-retrieval.md` | Product boundary note on session-backed working memory, references, bounded search/navigation, and the absence of first-class built-in RAG-style retrieval. |
 | opencode advanced features map | Researched | `products/opencode/advanced-features-map.md` | Ranked map of which advanced areas matter most next, and which should be deferred as higher-risk or more volatile. |
 | opencode instruction layering | Researched | `products/opencode/instruction-layering.md` | Product note on how AGENTS, CLAUDE fallback, configured instructions, and skills appear to layer in practice. |
 | opencode system prompt control | Researched | `products/opencode/system-prompt-control.md` | Verified note on code-built prompt assembly, confirmed plugin transform hook, and what remains untested about practical prompt surgery. |
@@ -84,6 +91,8 @@
 18. `capabilities/tool-calling.md`
 19. `capabilities/eval-harnesses.md`
 20. `capabilities/policy-engines.md`
+21. `products/opencode/memory-and-retrieval.md`
+22. `syntheses/local-first-retrieval-tool-comparison.md`
 
 ## Cross-Cutting Themes
 - Prefer simple, inspectable workflows before adding autonomy.

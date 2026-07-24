@@ -14,10 +14,16 @@ This directory stores fast-moving notes about specific tools and implementations
 - Claude Code
 - LM Studio
 - Obsidian
+- SQLite / SQLite FTS5
+- Docling
+- Qdrant
+- LanceDB
+- Chroma
 
 ## What Does Not Belong Here
 - Vendor-neutral concepts or general design rules. Put those in `../concepts/`.
 - Capability-level notes that apply across many tools. Put those in `../capabilities/`.
+- Cross-product comparisons or repository-level conclusions. Put those in `../syntheses/`.
 
 ## Freshness Guidance
 Every product note should carry a small freshness block near the top.

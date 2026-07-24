@@ -4,7 +4,7 @@
 - **Tier:** POC
 - **Current Slice:** Research capability-boundary cleanup + capability build-out
 - **Current Task:** N/A
-- **Next Action:** Read `research/index.md`, `research/capabilities/README.md`, and `research/syntheses/concept-capability-product-map.md`, then continue capability research with either `research/capabilities/retrieval-pipelines.md` or `research/capabilities/task-artifact-and-run-record-models.md`.
+- **Next Action:** Re-read `research/capabilities/retrieval-pipelines.md`, `research/syntheses/local-first-retrieval-tool-comparison.md`, and the new tool notes under `research/products/`, then decide whether the next pass should design a repository-specific local retrieval architecture or move on to `research/capabilities/task-artifact-and-run-record-models.md`.
 
 ## Completed This Session
 - Audited the whole `research/` tree and concluded the capabilities layer was the most behind.
@@ -17,10 +17,21 @@
   - `research/concepts/durable-execution.md`
 - Renamed capability files to short subsystem-style names and rewired indexes/maps/product links accordingly.
 - Tightened the meaning of `research/capabilities/` so it now better matches cross-tool subsystems/facilities rather than broad architecture essays.
+- Deepened the memory vs retrieval distinction across layers:
+  - strengthened `research/concepts/memory-systems.md`
+  - tightened `research/capabilities/retrieval-pipelines.md`
+  - added `research/products/opencode/memory-and-retrieval.md`
+  - updated indexes/maps/readme links to point at the new product boundary note
+- Did a deeper pass on local-first corpus/database retrieval beyond `grep` / `glob`:
+  - strengthened `research/concepts/context-engineering.md` around retrieval-oriented context shapes
+  - significantly expanded `research/capabilities/retrieval-pipelines.md` for mixed corpora, local-first design goals, and practical local architectures
+  - corrected the layer split by replacing the invalid comparison-style product note with:
+    - product notes for `research/products/sqlite-fts5.md`, `research/products/docling.md`, `research/products/qdrant.md`, `research/products/lancedb.md`, and `research/products/chroma.md`
+    - a synthesis note at `research/syntheses/local-first-retrieval-tool-comparison.md`
 
 ## Blockers / Open Questions
 - No hard blocker.
-- Main open question: which capability note should come next between retrieval pipelines, task/artifact/run records, delegation/interoperability, and approval pause/resume gates?
+- Main open question: should the next pass design a repository-specific local retrieval architecture/tool shape, or shift focus to task/artifact/run records?
 - `research/capabilities/policy-engines.md` and `research/capabilities/sessions.md` are acceptable now, but are still the two most likely capability notes to tighten further later if they drift abstract again.
 
 ## Read These First

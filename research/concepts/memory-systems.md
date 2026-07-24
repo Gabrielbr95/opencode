@@ -48,6 +48,55 @@
 - **Hierarchical promotion**: events → summaries → durable facts/procedures.
 - **Memory with provenance links**: every memory item points to its source.
 
+## Minimal Durable Model
+
+### 1. Memory unit
+What is the thing being remembered?
+
+Examples:
+- fact
+- decision
+- preference
+- episodic event
+- reusable procedure
+- summary linked to richer source material
+
+### 2. Time horizon
+How long should it remain useful?
+
+Typical layers:
+- current-step working state
+- session/thread continuity
+- cross-session durable memory
+
+### 3. Write path
+How does information enter memory?
+
+Typical options:
+- explicit user write
+- automatic event capture
+- model-generated summary or reflection
+- reviewed promotion from temporary notes into durable artifacts
+
+### 4. Retrieval path
+How is remembered information recalled later?
+
+Typical options:
+- direct structured lookup
+- lexical search
+- semantic retrieval
+- hand-maintained indexes or links
+- explicit user navigation to authoritative artifacts
+
+### 5. Governance
+Why should this memory be trusted and how can it be corrected?
+
+Minimum concerns:
+- provenance
+- confidence / status
+- review threshold
+- supersession / retirement path
+
 ## Advantages
 - Better continuity across sessions.
 - Lower prompt bloat.
@@ -68,12 +117,49 @@
 - **Per-user personalization vs reproducibility**: performance versus portability.
 - **Long context vs external memory**: bigger windows help but do not replace persistence or governance.
 
+## Durable Distinctions
+
+### Memory vs context
+Context is what is visible to the model now.
+
+Memory is what may persist and be recalled later.
+
+Something can exist in memory without being in the active prompt, and something can be in the active prompt without being durable memory.
+
+### Memory vs retrieval
+Retrieval is one access path into memory or other external corpora.
+
+It answers:
+- how do we find relevant material now?
+
+Memory also answers:
+- what should persist?
+- what gets promoted?
+- what can be trusted?
+- what should be retired or corrected?
+
+Retrieval can operate over documents that are not really "memory" at all, such as a product manual or source tree.
+
+### Memory vs retrieval pipeline
+A retrieval pipeline is the subsystem that ingests, indexes, refreshes, and returns evidence from a corpus.
+
+Memory architecture is broader. It also includes write policy, promotion rules, retention, correction, governance, and often multiple memory types.
+
+### Episodic vs semantic vs procedural memory
+- **Episodic memory** stores what happened.
+- **Semantic memory** stores distilled facts and concepts.
+- **Procedural memory** stores how to do recurring work.
+
+Confusing these usually leads to bad write policies and poor retrieval behavior.
+
 ## Relationships to Other Topics
 - Memory is a major part of [Context Engineering](./context-engineering.md).
 - Memory policies affect [Human-in-the-loop control points](./human-in-the-loop-control-points.md), especially for durable writes.
 - Procedural memory overlaps with [Skill Systems](./skill-systems.md).
 - Memory quality should be verified through [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
 - Memory operations benefit from [Observability / Traceability](./observability-traceability.md).
+- Retrieval infrastructure details live in `../capabilities/retrieval-pipelines.md`.
+- Repository write/retire/review rules live in `../syntheses/memory-policy.md`.
 
 ## Practical Applications for This Repository
 - Keep at least three memory layers: current task state, durable repo knowledge, and reusable lessons from prior runs.
@@ -81,6 +167,9 @@
 - Use write gates before promoting model-generated claims into durable truth.
 - Preserve provenance for summaries, decisions, and lessons.
 - Avoid storing every conversation indiscriminately.
+- Treat session continuity features as useful working memory, but not as a replacement for repo-backed durable truth.
+- Prefer exact lookup into authoritative files when the repository already has a known home for a fact.
+- Use retrieval-oriented stores only when the corpus is large or changing enough that direct navigation is no longer practical.
 
 ## Open Questions
 - What is the right write policy for durable memory?

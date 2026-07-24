@@ -25,6 +25,7 @@
 - Reflection and self-critique
 - Multi-agent collaboration patterns
 - RAG for prompt repositories (now partly covered by `retrieval-pipelines.md`; remaining question is repository-specific adoption/design)
+- Local-first agent retrieval over mixed corpora and structured records (now partly covered by `retrieval-pipelines.md`, product notes for SQLite/Docling/Qdrant/LanceDB/Chroma, and `syntheses/local-first-retrieval-tool-comparison.md`; remaining question is repository-specific architecture/adoption)
 - Knowledge representation / ontology for prompt repositories
 - Provenance models for prompts, memory, and evaluations
 

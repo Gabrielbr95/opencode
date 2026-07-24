@@ -131,11 +131,18 @@ Then ask one final question:
 - `../capabilities/retrieval-pipelines.md`
 
 #### Product
+- `../products/opencode/memory-and-retrieval.md`
 - `../products/opencode/references-and-external-context-basics.md`
 - `../products/opencode/mcp-and-tooling.md`
+- `../products/sqlite-fts5.md`
+- `../products/docling.md`
+- `../products/qdrant.md`
+- `../products/lancedb.md`
+- `../products/chroma.md`
 
 #### Syntheses
 - `../syntheses/memory-policy.md`
+- `../syntheses/local-first-retrieval-tool-comparison.md`
 
 #### Repository conclusion
 - The right default is not “give the system more context.”
@@ -145,6 +152,15 @@ Then ask one final question:
   - attachments decide what outside context surface is available
   - retrieval decides how relevant evidence is selected from a larger available corpus
 - Memory is broader still: persistence and promotion across time belong in memory architecture, not in attachment notes.
+- In opencode today, the product boundary appears to be:
+  - references and `@` surfaces for attachment
+  - bounded file/navigation tools for deterministic search
+  - not a first-class built-in semantic retrieval pipeline
+- External retrieval tooling shows the product layer splitting into distinct roles:
+  - lexical/structured local retrieval (SQLite FTS5)
+  - document ingestion/parsing (Docling)
+  - semantic retrieval engines (Qdrant, Chroma)
+  - integrated hybrid retrieval engines (LanceDB)
 
 ---
 
@@ -180,6 +196,7 @@ Then ask one final question:
 - `../capabilities/sessions.md`
 
 #### Product
+- `../products/opencode/memory-and-retrieval.md`
 - `../products/opencode/session-control-and-recovery.md`
 
 #### Syntheses
@@ -196,6 +213,7 @@ Then ask one final question:
   - retry and idempotency rules
 - Good session continuity is valuable, but it is not a substitute for durable external documentation.
 - Recovery features are strongest when paired with explicit wrap-up habits and Git-backed file history.
+- In opencode specifically, session continuity looks like working-memory infrastructure, not full long-term semantic memory.
 
 ---
 

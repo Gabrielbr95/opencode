@@ -38,13 +38,15 @@ This directory should **not** be the main home for:
 7. `permissions-and-agent-safety.md`
 8. `config-surface-and-volatility-map.md`
 9. `session-control-and-recovery.md`
-10. `mcp-and-tooling.md`
-11. `advanced-features-map.md`
-12. `system-prompt-control.md` *(advanced, verified hook exists, practical spike still unrun)*
+10. `memory-and-retrieval.md`
+11. `mcp-and-tooling.md`
+12. `advanced-features-map.md`
+13. `system-prompt-control.md` *(advanced, verified hook exists, practical spike still unrun)*
 
 ## Capability Bridges
 - `../../concepts/instruction-layering.md`
 - `../../capabilities/context-attachments.md`
+- `../../capabilities/retrieval-pipelines.md`
 - `../../capabilities/model-routing.md`
 - `../../capabilities/sessions.md`
 - `../../capabilities/mcp.md`

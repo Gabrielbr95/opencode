@@ -48,6 +48,41 @@
 - **Tool over transcription**: provide a query interface instead of raw data dumps.
 - **Salience-first ordering**: put critical facts where the model is more likely to use them.
 
+## Retrieval-Oriented Context Shapes
+
+### Direct navigation
+The agent searches or reads files directly using deterministic tools such as path lookup, globbing, grep, or paged reads.
+
+Best for:
+- known repositories
+- exact terms
+- inspectable local work
+
+### Corpus retrieval
+The agent consults an indexed corpus that returns candidate evidence from a larger set of documents or records.
+
+Best for:
+- large or mixed corpora
+- paraphrase-heavy queries
+- cases where the answer may be buried in many sources
+
+### Structured lookup
+The agent queries explicit records, tables, IDs, or metadata-filtered datasets.
+
+Best for:
+- inventories
+- plans
+- tickets
+- asset registers
+- structured operational knowledge
+
+### Hybrid consultation
+The system combines structured lookup, lexical search, semantic search, and document reading.
+
+Best for:
+- mixed corpora where no single retrieval mode is sufficient
+- real operational environments with documents, notes, and structured records together
+
 ## Advantages
 - Better factuality and relevance.
 - Better provenance when using retrieved or tool-sourced information.
@@ -67,12 +102,15 @@
 - **Raw history vs summaries**: raw history keeps detail; summaries reduce cost but can distort.
 - **Embedded tools vs embedded text**: tools improve freshness and precision but add complexity.
 - **Global memory vs task-local memory**: global memory improves continuity; local memory reduces contamination.
+- **Direct navigation vs indexed retrieval**: navigation is simpler and easier to inspect; indexed retrieval scales better across larger or fuzzier corpora.
+- **Lexical vs semantic retrieval**: lexical search is sharper and easier to debug; semantic search is better at paraphrase and latent similarity.
 
 ## Relationships to Other Topics
 - Context delivery shapes how [Agent Architectures](./agent-architectures.md) behave.
 - Skill loading is a targeted context-loading mechanism; see [Skill Systems](./skill-systems.md).
 - Planning often determines what context is needed next; see [Planning Systems](./planning-systems.md).
 - Context quality should be tested through [Evaluation / Prompt Testing](./evaluation-prompt-testing.md).
+- Retrieval subsystem design lives in `../capabilities/retrieval-pipelines.md`.
 
 ## Practical Applications for This Repository
 - Keep stable policies separate from task-specific context.
@@ -81,6 +119,9 @@
 - Maintain durable summaries for recurring workflows instead of replaying giant histories.
 - Put critical constraints and acceptance criteria in consistent high-salience positions.
 - Prefer tool/resource references for changing data rather than copied blobs of text.
+- A common pattern once a corpus outgrows easy `grep`/`glob` use is to introduce a consultation tool that returns a small evidence set rather than exposing the whole corpus at once.
+- Mixed-corpus retrieval is partly a context-engineering problem because source shape, evidence size, and salience all affect what the model actually sees.
+- Retrieval interfaces with source identity, metadata, and inspectable evidence generally make context failures easier to debug.
 
 ## Open Questions
 - How should the system decide between retrieval, summarization, and omission?
@@ -94,6 +135,7 @@
 - **Context and memory are not the same.** Memory is what may persist; context is what is actually presented for a specific step.
 - **Tool interfaces are part of context engineering.** Parameter names, descriptions, examples, and tool availability shape model behavior as much as prompt text does.
 - **Instruction persistence is easy to over-assume.** Some systems do not automatically carry prior instructions forward the way users expect.
+- **Better retrieval is not just “faster grep.”** It may require ingestion, indexing, metadata, ranking, and evidence-return contracts that ordinary filesystem tools do not provide.
 
 ## References
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) — arXiv / NeurIPS noted, 2020. Foundational paper for combining model knowledge with explicit retrieval.
