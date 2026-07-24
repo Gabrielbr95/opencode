@@ -20,6 +20,7 @@ permission:
     "git bundle*": allow
     "git commit*": allow
     "git diff*": allow
+    "git ls-files*": allow
     "git log*": allow
     "git status*": allow
     "git show*": allow
@@ -27,6 +28,7 @@ permission:
     "Test-Path *": allow
     "rg *": allow
     "cat *": allow
+    "ls *": allow
     "type *": allow
     "echo *": allow
     "where *": allow
