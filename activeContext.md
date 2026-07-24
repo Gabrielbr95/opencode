@@ -4,7 +4,7 @@
 - **Tier:** POC
 - **Current Slice:** Research capability-boundary cleanup + capability build-out
 - **Current Task:** N/A
-- **Next Action:** Read `research/index.md`, `research/capabilities/README.md`, and `research/syntheses/concept-capability-product-map.md`, then continue capability research with either `research/capabilities/retrieval-ingestion-and-index-freshness-pipelines.md` or `research/capabilities/task-artifact-and-run-record-models.md`.
+- **Next Action:** Read `research/index.md`, `research/capabilities/README.md`, and `research/syntheses/concept-capability-product-map.md`, then continue capability research with either `research/capabilities/retrieval-pipelines.md` or `research/capabilities/task-artifact-and-run-record-models.md`.
 
 ## Completed This Session
 - Audited the whole `research/` tree and concluded the capabilities layer was the most behind.

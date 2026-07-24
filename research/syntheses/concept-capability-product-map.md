@@ -128,6 +128,7 @@ Then ask one final question:
 
 #### Capability
 - `../capabilities/context-attachments.md`
+- `../capabilities/retrieval-pipelines.md`
 
 #### Product
 - `../products/opencode/references-and-external-context-basics.md`
@@ -140,6 +141,10 @@ Then ask one final question:
 - The right default is not “give the system more context.”
 - The right default is **attach bounded external context deliberately**.
 - In this workflow, references come before heavier integrations like MCP.
+- Attachment and retrieval are related but not identical:
+  - attachments decide what outside context surface is available
+  - retrieval decides how relevant evidence is selected from a larger available corpus
+- Memory is broader still: persistence and promotion across time belong in memory architecture, not in attachment notes.
 
 ---
 
@@ -280,7 +285,6 @@ Then ask one final question:
 The tree is cleaner now, but the following capability-level gaps still exist:
 
 - `task-artifact-and-run-record-models.md`
-- `retrieval-ingestion-and-index-freshness-pipelines.md`
 - `delegation-contracts-and-agent-interoperability.md`
 - `approval-pause-resume-and-human-gates.md`
 - possibly `plugin-and-hook-extensibility.md`

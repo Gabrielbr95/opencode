@@ -32,6 +32,7 @@ This directory stores notes about medium-volatility capabilities: protocols, fun
 ## Suggested Starter Notes
 - `mcp.md`
 - `context-attachments.md`
+- `retrieval-pipelines.md`
 - `model-routing.md`
 - `sessions.md`
 - `tool-calling.md`

@@ -35,7 +35,8 @@
 | Capability | Status | File | Notes |
 |---|---|---|---|
 | Capability branch scaffold | Active | `capabilities/README.md` | Medium-volatility bridge layer between durable concepts and volatile product implementations. |
-| Context attachments | Researched | `capabilities/context-attachments.md` | Cross-tool note on named outside context roots, aliasing, provenance, and permission-aware boundaries. |
+| Context attachments | Researched | `capabilities/context-attachments.md` | Cross-tool note on explicit external context binding through files, roots, stores, and bounded attachment surfaces. |
+| Retrieval pipelines | Researched | `capabilities/retrieval-pipelines.md` | Cross-tool note on document identity, ingestion, indexing, freshness, retrieval evidence, and the boundary from simple attachment into RAG-like systems. |
 | Model routing | Researched | `capabilities/model-routing.md` | Cross-tool note on backend routing, model catalogs, and local/internal/external boundaries. |
 | Sessions | Researched | `capabilities/sessions.md` | Cross-tool note on session continuity, compaction, interrupt/resume, and bounded rollback. |
 | MCP | Researched | `capabilities/mcp.md` | Cross-tool protocol note on capability expansion, tool/resource exposure, and trust/runtime implications. |
@@ -76,12 +77,13 @@
 11. `concepts/instruction-layering.md`
 12. `concepts/durable-execution.md`
 13. `capabilities/context-attachments.md`
-14. `capabilities/model-routing.md`
-15. `capabilities/sessions.md`
-16. `capabilities/mcp.md`
-17. `capabilities/tool-calling.md`
-18. `capabilities/eval-harnesses.md`
-19. `capabilities/policy-engines.md`
+14. `capabilities/retrieval-pipelines.md`
+15. `capabilities/model-routing.md`
+16. `capabilities/sessions.md`
+17. `capabilities/mcp.md`
+18. `capabilities/tool-calling.md`
+19. `capabilities/eval-harnesses.md`
+20. `capabilities/policy-engines.md`
 
 ## Cross-Cutting Themes
 - Prefer simple, inspectable workflows before adding autonomy.
