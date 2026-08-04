@@ -97,3 +97,16 @@
 
 ## Slice 16: Deferred harness-maintenance workflow follow-up
 - [ ] 38. Design a dedicated AI self-improvement or harness-maintenance skill later, after the general workflow skills are aligned and the need is still justified by observed maintenance work. (Verification: the deferred skill scope is explicit, not implemented prematurely, and clearly separated from the general-purpose planning, execution, review, and reconciliation skills.)
+
+## Slice 22: Pi-family product branch expansion
+- [x] 57. Create a dedicated `research/products/omp/` branch with an initial overview and foundations note so Oh My Pi is tracked as a separate Pi-family product rather than folded into baseline Pi notes. (Verification: the new branch exists, captures OMP's product identity and its batteries-included fork posture, and links cleanly back to adjacent Pi research.)
+
+## Slice 23: Pi-family comparison and trust follow-up
+- [x] 58. Add a short bridge to `research/products/pi/foundations.md` that points readers to OMP as a separately tracked batteries-included Pi-family fork. (Verification: the Pi foundations note still reads cleanly as a Pi-core mental model while explicitly preventing OMP from being collapsed into baseline Pi.)
+- [x] 59. Create `research/products/omp/security-and-trust.md` capturing OMP's stated trust, extension, and local-execution posture at a product-facts level. (Verification: the note exists, stays product-specific, and makes explicit what remains unverified or environment-dependent.)
+- [x] 60. Create a Pi-vs-OMP comparison note under `research/syntheses/` focused on evaluation-relevant differences for this repository. (Verification: the note distinguishes baseline Pi from OMP clearly enough to guide later migration or evaluation work without duplicating all product notes.)
+
+## Slice 24: OMP reachability and architecture clarification
+- [x] 61. Create a feature-by-feature OMP reachability matrix under `research/syntheses/` that distinguishes Pi-core parity, Pi-package parity, custom-extension possibility, and currently OMP-specific integrated surfaces. (Verification: the matrix exists, uses explicit status language, and is grounded in the current Pi/OMP product notes rather than speculation.)
+- [x] 62. Create `research/products/omp/architecture-and-divergence.md` to capture whether OMP is a bundle versus a real forked product with author-written code and explicit architectural divergence. (Verification: the note cites concrete repository/runtime signals such as monorepo structure, native code, and documented divergence from upstream Pi.)
+- [x] 63. Create a synthesis note on Pi-to-OMP reachability that answers whether a user can incrementally install Pi extensions until they effectively reach OMP, and where that path stops being package assembly and becomes custom engineering. (Verification: the note gives a practical yes/partly/no answer with explicit limits and uncertainty.)
