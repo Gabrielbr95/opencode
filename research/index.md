@@ -58,6 +58,7 @@ For unresolved questions and future topics, see `backlog.md`.
 | LanceDB | `products/lancedb.md` | Embedded full-text, vector, and hybrid retrieval engine. |
 | Chroma | `products/chroma.md` | Local persistent vector retrieval with filtering support. |
 | opencode branch | `products/opencode/README.md` | Navigation for product-specific opencode notes. |
+| Pi branch | `products/pi/README.md` | Navigation for product-specific Pi notes. |
 
 ### opencode product notes
 - `products/opencode/foundations.md`
@@ -74,6 +75,14 @@ For unresolved questions and future topics, see `backlog.md`.
 - `products/opencode/advanced-features-map.md`
 - `products/opencode/system-prompt-control.md`
 
+### Pi product notes
+- `products/pi/foundations.md`
+- `products/pi/config-and-instruction-loading.md`
+- `products/pi/security-and-trust.md`
+- `products/pi/sessions-and-compaction.md`
+- `products/pi/providers-and-programmatic-surfaces.md`
+- `products/pi/extension-ecosystem-and-core-gaps.md`
+
 ## Syntheses (`syntheses/`)
 
 | Synthesis | File | Notes |
@@ -84,6 +93,7 @@ For unresolved questions and future topics, see `backlog.md`.
 | Local-first retrieval tool comparison | `syntheses/local-first-retrieval-tool-comparison.md` | Role comparison of SQLite FTS5, Docling, Qdrant, LanceDB, and Chroma. |
 | Memory policy | `syntheses/memory-policy.md` | Repository policy for memory layers, provenance, and durable-write gates. |
 | Observability schema | `syntheses/observability-schema.md` | Canonical event and trace fields for workflow observability. |
+| opencode to Pi capability matrix | `syntheses/opencode-to-pi-capability-matrix.md` | Fact-only cross-product matrix of core, package, and current gap surfaces. |
 | Principles only | `syntheses/principles-only.md` | Distilled durable principles across the research tree. |
 | Second-brain and retrieval product comparison | `syntheses/second-brain-and-retrieval-product-comparison.md` | Decision aid for off-the-shelf local-first products under this repository's constraints. |
 | Task, run, and artifact records | `syntheses/task-run-artifact-records.md` | Shared record model linking work definitions, runs, artifacts, events, and lineage. |

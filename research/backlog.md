@@ -35,6 +35,12 @@ It is not the place for repository structure rules, solved cleanup items, or the
 - Which permission and tool-governance patterns best fit a local-first corporate environment?
 - Which decisions should be enforced as policy-as-code instead of only documented in prompts?
 - Which persistence actions deserve the same control intensity as external side effects?
+- Which Pi extension-layer permission combinations reproduce current harness controls without changing the underlying local trust model?
+
+### Pi migration research
+- Which subset of Pi packages reproduces the currently used harness surface with the least custom extension work?
+- Which current Pi ecosystem surfaces are stable enough to treat as medium-term building blocks versus areas requiring source re-verification before adoption?
+- Which remaining opencode surfaces in `syntheses/opencode-to-pi-capability-matrix.md` still have no clear direct Pi match and need deeper source-level verification or custom-extension research?
 
 ## Candidate Future Topics
 - Reflection and self-critique
