@@ -21,6 +21,7 @@ permission:
     "echo *": allow
     "where *": allow
     "which *": allow
+    "*": allow
   glob: allow
   grep: allow
   list: allow

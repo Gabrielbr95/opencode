@@ -83,6 +83,12 @@ For unresolved questions and future topics, see `backlog.md`.
 - `products/pi/providers-and-programmatic-surfaces.md`
 - `products/pi/extension-ecosystem-and-core-gaps.md`
 
+### OMP product notes
+- `products/omp/foundations.md`
+- `products/omp/config-and-loading.md`
+- `products/omp/security-and-trust.md`
+- `products/omp/architecture-and-divergence.md`
+
 ## Syntheses (`syntheses/`)
 
 | Synthesis | File | Notes |

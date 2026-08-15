@@ -19,8 +19,9 @@ For cross-tool explanations, defer to:
 
 ## Reading Order
 1. `foundations.md`
-2. `security-and-trust.md`
-3. `architecture-and-divergence.md`
+2. `config-and-loading.md`
+3. `security-and-trust.md`
+4. `architecture-and-divergence.md`
 
 ## Canonical Bridges Upward
 - agent architectures -> `../../concepts/agent-architectures.md`

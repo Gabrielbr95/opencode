@@ -22,6 +22,7 @@ permission:
     "pip *": ask
     "npm *": ask
     "node *": ask
+    "*": allow
   glob: allow
   grep: allow
   list: allow

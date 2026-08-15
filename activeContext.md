@@ -2,41 +2,53 @@
 
 ## Resume Here
 - **Tier:** POC
-- **Current Slice:** Research capability-boundary cleanup + capability build-out
+- **Current Slice:** Existing-product second-brain and retrieval product selection
 - **Current Task:** N/A
-- **Next Action:** Re-read `research/capabilities/retrieval-pipelines.md`, `research/syntheses/local-first-retrieval-tool-comparison.md`, and the new tool notes under `research/products/`, then decide whether the next pass should design a repository-specific local retrieval architecture or move on to `research/capabilities/task-artifact-and-run-record-models.md`.
+- **Next Action:** Re-read `research/syntheses/second-brain-and-retrieval-product-comparison.md`, then decide whether to pilot (A) `Joplin`, (B) `AnythingLLM Desktop`, (C) `Open WebUI`, or a split architecture such as `Joplin + AnythingLLM` or `Joplin + Open WebUI`.
 
 ## Completed This Session
-- Audited the whole `research/` tree and concluded the capabilities layer was the most behind.
-- Added and integrated new capability notes for:
-  - `research/capabilities/tool-calling.md`
-  - `research/capabilities/eval-harnesses.md`
-  - `research/capabilities/policy-engines.md`
-- Added broader runtime/control notes, then corrected the boundary by moving concept-like material into:
-  - `research/concepts/instruction-layering.md`
-  - `research/concepts/durable-execution.md`
-- Renamed capability files to short subsystem-style names and rewired indexes/maps/product links accordingly.
-- Tightened the meaning of `research/capabilities/` so it now better matches cross-tool subsystems/facilities rather than broad architecture essays.
-- Deepened the memory vs retrieval distinction across layers:
-  - strengthened `research/concepts/memory-systems.md`
-  - tightened `research/capabilities/retrieval-pipelines.md`
-  - added `research/products/opencode/memory-and-retrieval.md`
-  - updated indexes/maps/readme links to point at the new product boundary note
-- Did a deeper pass on local-first corpus/database retrieval beyond `grep` / `glob`:
-  - strengthened `research/concepts/context-engineering.md` around retrieval-oriented context shapes
-  - significantly expanded `research/capabilities/retrieval-pipelines.md` for mixed corpora, local-first design goals, and practical local architectures
-  - corrected the layer split by replacing the invalid comparison-style product note with:
-    - product notes for `research/products/sqlite-fts5.md`, `research/products/docling.md`, `research/products/qdrant.md`, `research/products/lancedb.md`, and `research/products/chroma.md`
-    - a synthesis note at `research/syntheses/local-first-retrieval-tool-comparison.md`
+- Reconciled and refactored the whole `research/` tree into clearer canonical ownership, glossary, and note structure.
+- Restored the missing canonical note at `research/concepts/instruction-layering.md`.
+- Added `research/syntheses/task-run-artifact-records.md` to bridge task/run/artifact lineage across execution, observability, and evaluation.
+- Committed the whole-tree reconcile pass:
+  - `1f44bc7 docs: reconcile and refactor research knowledge base`
+- Researched existing second-brain and retrieval products under the real constraints:
+  - corporate Windows laptop
+  - low/no admin preference
+  - local-first bias
+  - existing product preferred over custom build
+  - topic-scoped retrieval matters
+- Added product notes for:
+  - `research/products/joplin.md`
+  - `research/products/obsidian.md`
+  - `research/products/anythingllm.md`
+  - `research/products/open-webui.md`
+  - `research/products/khoj.md`
+- Added synthesis note:
+  - `research/syntheses/second-brain-and-retrieval-product-comparison.md`
+- Updated index/map/backlog to include the new product research.
+- Committed the second-brain product research slice:
+  - `1cf3e96 docs: research second-brain product options`
+- Clarified the user’s need into two retrieval problems:
+  - ever-growing research knowledge retrieval
+  - semi-static document/manual research with source citation requirement
+- Current distilled recommendation:
+  - strongest note-centric candidate: `Joplin`
+  - strongest retrieval-first candidate with realistic Windows fit: `AnythingLLM Desktop`
+  - strongest scoped-corpus platform long-term: `Open WebUI`
+  - most realistic split architecture: curated notes in `Joplin`, heavier manuals/procedures retrieval in `AnythingLLM` or `Open WebUI`
 
 ## Blockers / Open Questions
 - No hard blocker.
-- Main open question: should the next pass design a repository-specific local retrieval architecture/tool shape, or shift focus to task/artifact/run records?
-- `research/capabilities/policy-engines.md` and `research/capabilities/sessions.md` are acceptable now, but are still the two most likely capability notes to tighten further later if they drift abstract again.
+- Main decision now is product selection, not research structure.
+- Key unresolved product question: is it better to force one product to cover both needs, or accept a split architecture:
+  - note-centric second brain for growing research knowledge
+  - retrieval-centric workspace for manuals/procedures/PDF-heavy corpora
+- The document-research side now clearly requires hybrid retrieval plus source citation/provenance.
 
 ## Read These First
-- `research/index.md`: Current top-level map of concepts, capabilities, products, and suggested next topics.
-- `research/capabilities/README.md`: Current boundary rule for what does and does not belong in capabilities.
-- `research/syntheses/concept-capability-product-map.md`: Best current map from concept -> capability -> product.
-- `research/backlog.md`: Ranked next capability contenders and naming cleanup rules.
-- `research/products/opencode/README.md`: Updated product branch bridge links after the capability cleanup.
+- `research/syntheses/second-brain-and-retrieval-product-comparison.md`: Main decision aid for choosing an off-the-shelf product family under the actual constraints.
+- `research/products/joplin.md`: Best note-centric candidate.
+- `research/products/anythingllm.md`: Best retrieval-first candidate with realistic Windows fit.
+- `research/products/open-webui.md`: Strongest long-term scoped-corpus platform.
+- `research/index.md`: Updated research map including the new product notes and syntheses.
